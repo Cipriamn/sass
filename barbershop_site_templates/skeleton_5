@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skeleton 05 — Retro Vintage</title>
+<style>
+/*──────────────────────────────────────────────
+  SKELETON 05: RETRO VINTAGE
+  Best for: Classic barbershops, vintage-themed shops,
+  neighborhood joints with character.
+  
+  Layout: Bordered hero with badge → ornamental dividers →
+  2-col staggered about → vintage price board → 
+  Polaroid-style team → patterned hours section
+  
+  Vibe: Warm, nostalgic, characterful
+  Font pairing suggestion: Oswald + Lora
+──────────────────────────────────────────────*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --primary:#2c1810;
+  --primary-light:#4a2e20;
+  --highlight:#d4813b;
+  --highlight-dark:#b56a2a;
+  --dark:#1a0f09;
+  --darker:#110a06;
+  --light:#f5ede4;
+  --cream:#faf3eb;
+  --text:#3d2b1f;
+  --text-light:#8b7355;
+  --white:#fff;
+  --space-xs:.5rem;--space-sm:1rem;--space-md:2rem;--space-lg:4rem;--space-xl:6rem;--space-2xl:8rem;
+  --radius-sm:4px;--radius-md:8px;--radius-lg:16px;
+  --font-display:'Oswald',Impact,sans-serif;
+  --font-body:'Lora',Georgia,serif;
+}
+
+body{font-family:var(--font-body);color:var(--text);line-height:1.7;background:var(--cream)}
+.container{max-width:1100px;margin:0 auto;padding:0 var(--space-md)}
+section{padding:var(--space-xl) 0}
+h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.1;text-transform:uppercase;letter-spacing:2px}
+
+/* ─── ORNAMENTAL DIVIDER ─── */
+.ornament{
+  text-align:center;padding:var(--space-md) 0;
+  color:var(--highlight);font-size:1.2rem;letter-spacing:8px;
+}
+
+/* ─── HEADER ─── */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:var(--space-sm) 0;
+  transition:all 0.4s;
+}
+.header.scrolled{background:rgba(44,24,16,0.95);backdrop-filter:blur(8px)}
+.header .container{display:flex;justify-content:space-between;align-items:center}
+.header__logo{font-family:var(--font-display);font-size:1.4rem;color:var(--white);text-decoration:none;letter-spacing:4px;text-transform:uppercase}
+.header__nav{display:flex;gap:var(--space-md);list-style:none}
+.header__nav a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-family:var(--font-display);letter-spacing:2px;text-transform:uppercase}
+.header__nav a:hover{color:var(--highlight)}
+
+/* ─── HERO: Bordered with central badge ─── */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;color:var(--white);
+  position:relative;overflow:hidden;
+}
+.hero::before{content:'';position:absolute;inset:0;background:var(--dark);animation:heroZoom 20s ease infinite alternate}
+.hero::after{content:'';position:absolute;inset:0;background:rgba(44,24,16,0.65)}
+.hero__frame{
+  position:relative;z-index:2;
+  border:2px solid rgba(212,129,59,0.4);
+  padding:var(--space-2xl) var(--space-xl);
+  max-width:700px;
+}
+.hero__badge{
+  width:120px;height:120px;
+  border:2px solid var(--highlight);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto var(--space-md);
+  font-family:var(--font-display);font-size:0.65rem;
+  letter-spacing:3px;text-transform:uppercase;color:var(--highlight);
+}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);letter-spacing:6px;margin-bottom:var(--space-sm)}
+.hero__tagline{
+  font-family:var(--font-body);font-style:italic;
+  font-size:1.1rem;opacity:0.8;margin-bottom:var(--space-lg);
+}
+.hero__divider{width:50px;height:2px;background:var(--highlight);margin:0 auto var(--space-lg)}
+
+.btn{display:inline-block;padding:0.85rem 2.5rem;font-family:var(--font-display);font-size:0.85rem;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:all 0.3s}
+.btn-vintage{background:var(--highlight);color:var(--white);border:2px solid var(--highlight)}
+.btn-vintage:hover{background:transparent;color:var(--highlight)}
+.btn-border{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.3)}
+.btn-border:hover{border-color:var(--highlight);color:var(--highlight)}
+
+/* ─── ABOUT: Staggered 2-col ─── */
+.about__grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:var(--space-lg);
+}
+.about__image{
+  aspect-ratio:4/5;background:var(--light);
+  border:4px solid var(--white);
+  box-shadow:8px 8px 0 rgba(0,0,0,0.08);
+}
+.about__image:nth-child(1){margin-top:var(--space-xl)}
+.about__text{padding-top:var(--space-md)}
+.about__text h2{font-size:2rem;margin-bottom:var(--space-md)}
+.about__text p{color:var(--text-light);margin-bottom:var(--space-md)}
+
+/* ─── SERVICES: Vintage price board ─── */
+.services{background:var(--primary);color:var(--white);text-align:center}
+.services h2{font-size:2.5rem;letter-spacing:6px;margin-bottom:var(--space-xs)}
+.services__subtitle{font-family:var(--font-body);font-style:italic;color:var(--highlight);margin-bottom:var(--space-xl)}
+.price-board{
+  max-width:600px;margin:0 auto;
+  border:2px solid rgba(255,255,255,0.1);
+  padding:var(--space-lg);
+}
+.price-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:var(--space-sm) 0;
+  border-bottom:1px dotted rgba(255,255,255,0.15);
+}
+.price-row:last-child{border-bottom:none}
+.price-row__name{font-family:var(--font-display);font-size:1.1rem;letter-spacing:2px;text-transform:uppercase}
+.price-row__price{font-family:var(--font-display);font-size:1.3rem;color:var(--highlight)}
+.price-row__desc{width:100%;font-size:0.8rem;color:rgba(255,255,255,0.4);font-style:italic;padding-bottom:var(--space-xs)}
+
+/* ─── TEAM: Polaroid-style cards ─── */
+.team{background:var(--light)}
+.team h2{text-align:center;font-size:2.5rem;letter-spacing:4px;margin-bottom:var(--space-xl)}
+.team__grid{display:flex;justify-content:center;gap:var(--space-lg);flex-wrap:wrap}
+.polaroid{
+  background:var(--white);
+  padding:var(--space-sm) var(--space-sm) var(--space-lg);
+  box-shadow:4px 4px 0 rgba(0,0,0,0.06);
+  transform:rotate(-2deg);
+  transition:transform 0.3s;
+  width:250px;
+}
+.polaroid:nth-child(2){transform:rotate(1deg)}
+.polaroid:nth-child(3){transform:rotate(-1.5deg)}
+.polaroid:hover{transform:rotate(0) scale(1.03)}
+.polaroid__photo{aspect-ratio:1;background:var(--cream);margin-bottom:var(--space-sm)}
+.polaroid h3{font-size:1rem;text-align:center;letter-spacing:2px}
+.polaroid p{text-align:center;font-size:0.8rem;color:var(--highlight);font-style:italic}
+
+/* ─── HOURS: Patterned background ─── */
+.hours{
+  background:var(--cream);
+  background-image:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(0,0,0,0.015) 20px,rgba(0,0,0,0.015) 40px);
+  text-align:center;
+}
+.hours h2{font-size:2.5rem;letter-spacing:4px;margin-bottom:var(--space-lg)}
+.hours__table{
+  max-width:450px;margin:0 auto;border-collapse:collapse;width:100%;
+}
+.hours__table tr{border-bottom:1px solid rgba(0,0,0,0.06)}
+.hours__table td{padding:var(--space-sm);font-size:0.95rem}
+.hours__table td:first-child{text-align:left;font-family:var(--font-display);letter-spacing:1px;text-transform:uppercase}
+.hours__table td:last-child{text-align:right;color:var(--highlight);font-weight:600}
+.hours__table tr.today{background:rgba(212,129,59,0.08)}
+
+/* ─── CONTACT ─── */
+.contact{text-align:center}
+.contact h2{font-size:2.5rem;letter-spacing:4px;margin-bottom:var(--space-lg)}
+.contact__details{
+  display:flex;justify-content:center;gap:var(--space-xl);flex-wrap:wrap;
+  margin-bottom:var(--space-xl);
+}
+.contact__item h4{font-family:var(--font-display);font-size:0.8rem;letter-spacing:3px;color:var(--highlight);margin-bottom:var(--space-xs)}
+.contact__item p{font-size:0.95rem}
+.contact__map{
+  max-width:100%;height:350px;background:var(--light);
+  border:4px solid var(--white);box-shadow:4px 4px 0 rgba(0,0,0,0.06);
+}
+
+/* ─── FOOTER ─── */
+.footer{background:var(--primary);color:rgba(255,255,255,0.5);padding:var(--space-lg) 0;text-align:center}
+.footer__brand{font-family:var(--font-display);font-size:1.8rem;color:var(--white);letter-spacing:6px;margin-bottom:var(--space-sm)}
+.footer__tagline{font-style:italic;margin-bottom:var(--space-md);color:var(--highlight)}
+.footer__socials{display:flex;justify-content:center;gap:var(--space-md);list-style:none;margin-bottom:var(--space-md)}
+.footer__socials a{color:rgba(255,255,255,0.5);text-decoration:none}
+.footer__socials a:hover{color:var(--highlight)}
+.footer p{font-size:0.8rem}
+
+/* ─── ANIMATIONS ─── */
+.reveal{opacity:0;transform:translateY(40px);transition:all 1s ease}
+.reveal.active{opacity:1;transform:translate(0)}
+@keyframes heroZoom{from{transform:scale(1.05)}to{transform:scale(1.15)}}
+
+@media(max-width:768px){
+  .about__grid{grid-template-columns:1fr}
+  .about__image:nth-child(1){margin-top:0}
+  .contact__details{flex-direction:column;gap:var(--space-md)}
+  .team__grid{flex-direction:column;align-items:center}
+  .polaroid{transform:rotate(0)!important}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a href="#" class="header__logo">Brand Name</a>
+    <nav><ul class="header__nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero__frame">
+    <div class="hero__badge">Est.<br>1963</div>
+    <h1>Brand Name</h1>
+    <p class="hero__tagline">Traditional barbering since 1963</p>
+    <div class="hero__divider"></div>
+    <div style="display:flex;gap:var(--space-sm);justify-content:center;flex-wrap:wrap">
+      <a href="#book" class="btn btn-vintage">Book a Chair</a>
+      <a href="#services" class="btn btn-border">View Menu</a>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about__grid">
+      <div>
+        <div class="about__image reveal"></div>
+      </div>
+      <div class="about__text reveal">
+        <h2>Our Story</h2>
+        <p>About text goes here. Tell the vintage story.</p>
+        <p>Second paragraph with more details.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="reveal">Price List</h2>
+    <p class="services__subtitle reveal">Quality grooming at honest prices</p>
+    <div class="price-board reveal">
+      <div class="price-row"><span class="price-row__name">Gentleman's Cut</span><span class="price-row__price">€25</span></div>
+      <div class="price-row"><span class="price-row__desc">Consultation, wash, cut & style</span></div>
+      <div class="price-row"><span class="price-row__name">Hot Towel Shave</span><span class="price-row__price">€22</span></div>
+      <div class="price-row"><span class="price-row__desc">Traditional straight razor experience</span></div>
+      <div class="price-row"><span class="price-row__name">Beard Trim</span><span class="price-row__price">€15</span></div>
+      <div class="price-row"><span class="price-row__name">The Works</span><span class="price-row__price">€55</span></div>
+      <div class="price-row"><span class="price-row__desc">Cut, shave, beard trim & styling</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<section class="team" id="team">
+  <div class="container">
+    <h2 class="reveal">The Barbers</h2>
+    <div class="team__grid reveal">
+      <div class="polaroid"><div class="polaroid__photo"></div><h3>NAME</h3><p>Master Barber</p></div>
+      <div class="polaroid"><div class="polaroid__photo"></div><h3>NAME</h3><p>Senior Barber</p></div>
+      <div class="polaroid"><div class="polaroid__photo"></div><h3>NAME</h3><p>Apprentice</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="hours" id="hours">
+  <div class="container">
+    <h2 class="reveal">Opening Hours</h2>
+    <table class="hours__table reveal">
+      <tr data-day="1"><td>Monday</td><td>9:00 – 18:00</td></tr>
+      <tr data-day="2"><td>Tuesday</td><td>9:00 – 18:00</td></tr>
+      <tr data-day="3"><td>Wednesday</td><td>9:00 – 18:00</td></tr>
+      <tr data-day="4"><td>Thursday</td><td>9:00 – 20:00</td></tr>
+      <tr data-day="5"><td>Friday</td><td>9:00 – 20:00</td></tr>
+      <tr data-day="6"><td>Saturday</td><td>9:00 – 17:00</td></tr>
+      <tr data-day="0"><td>Sunday</td><td>Closed</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="reveal">Find Us</h2>
+    <div class="contact__details reveal">
+      <div class="contact__item"><h4>Address</h4><p>123 Main Street, City</p></div>
+      <div class="contact__item"><h4>Phone</h4><p>(555) 123-4567</p></div>
+      <div class="contact__item"><h4>Email</h4><p>info@brand.com</p></div>
+    </div>
+    <div class="contact__map reveal"><!-- Google Maps --></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__brand">BRAND NAME</div>
+    <p class="footer__tagline">Est. 1963 — Traditional Barbering</p>
+    <ul class="footer__socials"><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li></ul>
+    <p>© 2026 Brand Name</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,2418 @@
+{
+  "repo_path": "/Users/ciprian/Downloads/template_automation_website",
+  "indexed_at": "2026-02-26T20:00:21.032151",
+  "total_files": 443,
+  "directories": [
+    "animations",
+    "animations/ CSS text animations",
+    "animations/button_animations",
+    "animations/scroll_effects",
+    "barbershop_site_templates",
+    "barbershop_site_templates/template_1",
+    "barbershop_site_templates/template_1/brber-master",
+    "barbershop_site_templates/template_1/brber-master/Doc",
+    "barbershop_site_templates/template_1/brber-master/Doc/css",
+    "barbershop_site_templates/template_1/brber-master/Doc/fonts",
+    "barbershop_site_templates/template_1/brber-master/Doc/img",
+    "barbershop_site_templates/template_1/brber-master/Doc/js",
+    "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter",
+    "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts",
+    "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles",
+    "barbershop_site_templates/template_1/brber-master/assets",
+    "barbershop_site_templates/template_1/brber-master/assets/css",
+    "barbershop_site_templates/template_1/brber-master/assets/fonts",
+    "barbershop_site_templates/template_1/brber-master/assets/img",
+    "barbershop_site_templates/template_1/brber-master/assets/img/blog",
+    "barbershop_site_templates/template_1/brber-master/assets/img/elements",
+    "barbershop_site_templates/template_1/brber-master/assets/img/gallery",
+    "barbershop_site_templates/template_1/brber-master/assets/img/hero",
+    "barbershop_site_templates/template_1/brber-master/assets/img/logo",
+    "barbershop_site_templates/template_1/brber-master/assets/img/post",
+    "barbershop_site_templates/template_1/brber-master/assets/js",
+    "barbershop_site_templates/template_1/brber-master/assets/js/vendor",
+    "barbershop_site_templates/template_1/brber-master/assets/scss",
+    "barbershop_site_templates/template_2",
+    "barbershop_site_templates/template_2/BarberX-master",
+    "barbershop_site_templates/template_2/BarberX-master/css",
+    "barbershop_site_templates/template_2/BarberX-master/img",
+    "barbershop_site_templates/template_2/BarberX-master/js",
+    "barbershop_site_templates/template_2/BarberX-master/lib",
+    "barbershop_site_templates/template_2/BarberX-master/lib/animate",
+    "barbershop_site_templates/template_2/BarberX-master/lib/easing",
+    "barbershop_site_templates/template_2/BarberX-master/lib/isotope",
+    "barbershop_site_templates/template_2/BarberX-master/lib/lightbox",
+    "barbershop_site_templates/template_2/BarberX-master/lib/lightbox/css",
+    "barbershop_site_templates/template_2/BarberX-master/lib/lightbox/images",
+    "barbershop_site_templates/template_2/BarberX-master/lib/lightbox/js",
+    "barbershop_site_templates/template_2/BarberX-master/lib/owlcarousel",
+    "barbershop_site_templates/template_2/BarberX-master/lib/owlcarousel/assets",
+    "barbershop_site_templates/template_2/BarberX-master/mail",
+    "barbershop_site_templates/template_3",
+    "barbershop_site_templates/template_3/barberz-master",
+    "barbershop_site_templates/template_3/barberz-master/css",
+    "barbershop_site_templates/template_3/barberz-master/css/bootstrap",
+    "barbershop_site_templates/template_3/barberz-master/fonts",
+    "barbershop_site_templates/template_3/barberz-master/fonts/flaticon",
+    "barbershop_site_templates/template_3/barberz-master/fonts/flaticon-2",
+    "barbershop_site_templates/template_3/barberz-master/fonts/flaticon-2/font",
+    "barbershop_site_templates/template_3/barberz-master/fonts/flaticon-2/license",
+    "barbershop_site_templates/template_3/barberz-master/fonts/flaticon/font",
+    "barbershop_site_templates/template_3/barberz-master/fonts/flaticon/license",
+    "barbershop_site_templates/template_3/barberz-master/fonts/icomoon",
+    "barbershop_site_templates/template_3/barberz-master/fonts/icomoon/demo-files",
+    "barbershop_site_templates/template_3/barberz-master/fonts/icomoon/fonts",
+    "barbershop_site_templates/template_3/barberz-master/images",
+    "barbershop_site_templates/template_3/barberz-master/js",
+    "barbershop_site_templates/template_3/barberz-master/scss",
+    "barbershop_site_templates/template_3/barberz-master/scss/bootstrap",
+    "barbershop_site_templates/template_3/barberz-master/scss/bootstrap/mixins",
+    "barbershop_site_templates/template_3/barberz-master/scss/bootstrap/utilities",
+    "barbershop_site_templates/template_3/barberz-master/scss/bootstrap/vendor",
+    "barbershop_site_templates/template_4",
+    "barbershop_site_templates/template_4/alotan-master",
+    "barbershop_site_templates/template_4/alotan-master/css",
+    "barbershop_site_templates/template_4/alotan-master/fonts",
+    "barbershop_site_templates/template_4/alotan-master/fonts/flaticon",
+    "barbershop_site_templates/template_4/alotan-master/fonts/flaticon/font",
+    "barbershop_site_templates/template_4/alotan-master/fonts/flaticon/license",
+    "barbershop_site_templates/template_4/alotan-master/fonts/fontawesome",
+    "barbershop_site_templates/template_4/alotan-master/fonts/fontawesome/css",
+    "barbershop_site_templates/template_4/alotan-master/fonts/fontawesome/fonts",
+    "barbershop_site_templates/template_4/alotan-master/fonts/ionicons",
+    "barbershop_site_templates/template_4/alotan-master/fonts/ionicons/css",
+    "barbershop_site_templates/template_4/alotan-master/fonts/ionicons/fonts",
+    "barbershop_site_templates/template_4/alotan-master/images",
+    "barbershop_site_templates/template_4/alotan-master/js",
+    "barbershop_site_templates/template_4/alotan-master/scss",
+    "barbershop_site_templates/template_4/alotan-master/scss/mixins",
+    "barbershop_site_templates/template_4/alotan-master/scss/utilities",
+    "barbershop_site_templates/template_5",
+    "barbershop_site_templates/template_5/alotan-master",
+    "barbershop_site_templates/template_5/alotan-master/css",
+    "barbershop_site_templates/template_5/alotan-master/fonts",
+    "barbershop_site_templates/template_5/alotan-master/fonts/flaticon",
+    "barbershop_site_templates/template_5/alotan-master/fonts/flaticon/font",
+    "barbershop_site_templates/template_5/alotan-master/fonts/flaticon/license",
+    "barbershop_site_templates/template_5/alotan-master/fonts/fontawesome",
+    "barbershop_site_templates/template_5/alotan-master/fonts/fontawesome/css",
+    "barbershop_site_templates/template_5/alotan-master/fonts/fontawesome/fonts",
+    "barbershop_site_templates/template_5/alotan-master/fonts/ionicons",
+    "barbershop_site_templates/template_5/alotan-master/fonts/ionicons/css",
+    "barbershop_site_templates/template_5/alotan-master/fonts/ionicons/fonts",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/css",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/fonts",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/img",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/js",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/fonts",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/img",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/img/artist",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/img/blog",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/img/client",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/img/comment",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/img/elements",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/img/icon",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/img/post",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/img/pricing_img",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/img/service",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/sass",
+    "barbershop_site_templates/template_5/alotan-master/hipstyle-master/webfonts",
+    "barbershop_site_templates/template_5/alotan-master/images",
+    "barbershop_site_templates/template_5/alotan-master/js",
+    "barbershop_site_templates/template_5/alotan-master/scss",
+    "barbershop_site_templates/template_5/alotan-master/scss/mixins",
+    "barbershop_site_templates/template_5/alotan-master/scss/utilities",
+    "barbershop_site_templates/template_6",
+    "barbershop_site_templates/template_6/remake-master",
+    "barbershop_site_templates/template_6/remake-master/Remake Barber -doc",
+    "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/css",
+    "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/fonts",
+    "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/img",
+    "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/js",
+    "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter",
+    "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts",
+    "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles",
+    "barbershop_site_templates/template_6/remake-master/css",
+    "barbershop_site_templates/template_6/remake-master/img",
+    "barbershop_site_templates/template_6/remake-master/img/banner",
+    "barbershop_site_templates/template_6/remake-master/img/blog",
+    "barbershop_site_templates/template_6/remake-master/img/blog/cat-post",
+    "barbershop_site_templates/template_6/remake-master/img/blog/causes",
+    "barbershop_site_templates/template_6/remake-master/img/blog/latest-post",
+    "barbershop_site_templates/template_6/remake-master/img/blog/main-blog",
+    "barbershop_site_templates/template_6/remake-master/img/blog/popular-post",
+    "barbershop_site_templates/template_6/remake-master/img/home",
+    "barbershop_site_templates/template_6/remake-master/img/team",
+    "barbershop_site_templates/template_6/remake-master/js",
+    "barbershop_site_templates/template_6/remake-master/scss",
+    "barbershop_site_templates/template_6/remake-master/scss/theme",
+    "barbershop_site_templates/template_6/remake-master/vendors",
+    "barbershop_site_templates/template_6/remake-master/vendors/Magnific-Popup",
+    "barbershop_site_templates/template_6/remake-master/vendors/OwlCarousel",
+    "barbershop_site_templates/template_6/remake-master/vendors/bootstrap",
+    "barbershop_site_templates/template_6/remake-master/vendors/flat-icon",
+    "barbershop_site_templates/template_6/remake-master/vendors/fontawesome",
+    "barbershop_site_templates/template_6/remake-master/vendors/fontawesome/css",
+    "barbershop_site_templates/template_6/remake-master/vendors/fontawesome/webfonts",
+    "barbershop_site_templates/template_6/remake-master/vendors/iconfont",
+    "barbershop_site_templates/template_6/remake-master/vendors/jquery",
+    "barbershop_site_templates/template_6/remake-master/vendors/nice-select",
+    "barbershop_site_templates/template_6/remake-master/vendors/sticky",
+    "barbershop_site_templates/template_6/remake-master/vendors/themify-icons",
+    "barbershop_site_templates/template_6/remake-master/vendors/themify-icons/SVG",
+    "barbershop_site_templates/template_6/remake-master/vendors/themify-icons/demo-files",
+    "barbershop_site_templates/template_6/remake-master/vendors/themify-icons/fonts",
+    "barbershop_site_templates/template_6/remake-master/vendors/themify-icons/ie7",
+    "email_templates",
+    "fonts",
+    "fonts/ACCENT_CHARACTER",
+    "fonts/ACCENT_CHARACTER/Abril_Fatface",
+    "fonts/ACCENT_CHARACTER/Fraunces",
+    "fonts/ACCENT_CHARACTER/Fraunces/static",
+    "fonts/Body_Text",
+    "fonts/Body_Text/DM_Sans",
+    "fonts/Body_Text/DM_Sans/static",
+    "fonts/Body_Text/Lora",
+    "fonts/Body_Text/Lora/static",
+    "fonts/Body_Text/Outfit",
+    "fonts/Body_Text/Outfit/static",
+    "fonts/Body_Text/Source_Code_Pro",
+    "fonts/Body_Text/Source_Code_Pro/static",
+    "fonts/Body_Text/Space_Grotesk",
+    "fonts/Body_Text/Space_Grotesk/static",
+    "fonts/HEADLINES",
+    "fonts/HEADLINES/Bebas_Neue",
+    "fonts/HEADLINES/Cormorant_Garamond",
+    "fonts/HEADLINES/Cormorant_Garamond/static",
+    "fonts/HEADLINES/DM_Serif_Display",
+    "fonts/HEADLINES/Oswald",
+    "fonts/HEADLINES/Oswald/static",
+    "fonts/HEADLINES/Playfair_Display",
+    "fonts/HEADLINES/Playfair_Display/static",
+    "tools",
+    "workspace"
+  ],
+  "files": [
+    {
+      "path": "tools/token.json",
+      "extension": ".json",
+      "size_bytes": 534
+    },
+    {
+      "path": "tools/gmail-draft.js",
+      "extension": ".js",
+      "size_bytes": 7626
+    },
+    {
+      "path": "tools/package-lock.json",
+      "extension": ".json",
+      "size_bytes": 39556
+    },
+    {
+      "path": "tools/package.json",
+      "extension": ".json",
+      "size_bytes": 420
+    },
+    {
+      "path": "tools/credentials.json",
+      "extension": ".json",
+      "size_bytes": 411
+    },
+    {
+      "path": "email_templates/template_1.md",
+      "extension": ".md",
+      "size_bytes": 4882
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/hairstyle.html",
+      "extension": ".html",
+      "size_bytes": 14021
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/blog.html",
+      "extension": ".html",
+      "size_bytes": 11773
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/index.html",
+      "extension": ".html",
+      "size_bytes": 18809
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/about.html",
+      "extension": ".html",
+      "size_bytes": 12183
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/contact.html",
+      "extension": ".html",
+      "size_bytes": 10568
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/README.md",
+      "extension": ".md",
+      "size_bytes": 21
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/css/magnific-popup.css",
+      "extension": ".css",
+      "size_bytes": 6950
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/css/bootstrap.css",
+      "extension": ".css",
+      "size_bytes": 150001
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/css/animate.css",
+      "extension": ".css",
+      "size_bytes": 24196
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/css/owl.carousel.min.css",
+      "extension": ".css",
+      "size_bytes": 3440
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/css/style.css",
+      "extension": ".css",
+      "size_bytes": 23277
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/js/jquery-3.2.1.min.js",
+      "extension": ".js",
+      "size_bytes": 86658
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/js/jquery.magnific-popup.min.js",
+      "extension": ".js",
+      "size_bytes": 20216
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/js/jquery-migrate-3.0.0.js",
+      "extension": ".js",
+      "size_bytes": 14923
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/js/main.js",
+      "extension": ".js",
+      "size_bytes": 3666
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/js/owl.carousel.min.js",
+      "extension": ".js",
+      "size_bytes": 43237
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/js/bootstrap.min.js",
+      "extension": ".js",
+      "size_bytes": 50564
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/js/jquery.stellar.min.js",
+      "extension": ".js",
+      "size_bytes": 12597
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/js/popper.min.js",
+      "extension": ".js",
+      "size_bytes": 19235
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/js/magnific-popup-options.js",
+      "extension": ".js",
+      "size_bytes": 1284
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/js/jquery.waypoints.min.js",
+      "extension": ".js",
+      "size_bytes": 8835
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/fonts/fontawesome/css/font-awesome.min.css",
+      "extension": ".css",
+      "size_bytes": 31000
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/fonts/ionicons/cheatsheet.html",
+      "extension": ".html",
+      "size_bytes": 1276366
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/fonts/ionicons/css/ionicons.min.css",
+      "extension": ".css",
+      "size_bytes": 51284
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/fonts/ionicons/css/ionicons.css",
+      "extension": ".css",
+      "size_bytes": 57193
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/fonts/flaticon/font/_flaticon.css",
+      "extension": ".css",
+      "size_bytes": 1403
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/fonts/flaticon/font/flaticon.css",
+      "extension": ".css",
+      "size_bytes": 1253
+    },
+    {
+      "path": "barbershop_site_templates/template_4/alotan-master/fonts/flaticon/font/flaticon.html",
+      "extension": ".html",
+      "size_bytes": 19217
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/single.html",
+      "extension": ".html",
+      "size_bytes": 17069
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/blog.html",
+      "extension": ".html",
+      "size_bytes": 11523
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/index.html",
+      "extension": ".html",
+      "size_bytes": 20569
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/about.html",
+      "extension": ".html",
+      "size_bytes": 11304
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/contact.html",
+      "extension": ".html",
+      "size_bytes": 8627
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/barber-shop.html",
+      "extension": ".html",
+      "size_bytes": 11668
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/services.html",
+      "extension": ".html",
+      "size_bytes": 11938
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/bootstrap.min.css",
+      "extension": ".css",
+      "size_bytes": 218244
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/magnific-popup.css",
+      "extension": ".css",
+      "size_bytes": 6950
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/jquery.fancybox.min.css",
+      "extension": ".css",
+      "size_bytes": 12795
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/aos.css",
+      "extension": ".css",
+      "size_bytes": 25983
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/owl.theme.default.min.css",
+      "extension": ".css",
+      "size_bytes": 965
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/mediaelementplayer.css",
+      "extension": ".css",
+      "size_bytes": 15886
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/jquery-ui.css",
+      "extension": ".css",
+      "size_bytes": 21738
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/owl.carousel.min.css",
+      "extension": ".css",
+      "size_bytes": 2936
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/style.css",
+      "extension": ".css",
+      "size_bytes": 42845
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/bootstrap-datepicker.css",
+      "extension": ".css",
+      "size_bytes": 17144
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/bootstrap/bootstrap.css",
+      "extension": ".css",
+      "size_bytes": 218262
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/bootstrap/bootstrap-reboot.css",
+      "extension": ".css",
+      "size_bytes": 4934
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/css/bootstrap/bootstrap-grid.css",
+      "extension": ".css",
+      "size_bytes": 72623
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/jquery.countdown.min.js",
+      "extension": ".js",
+      "size_bytes": 5339
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/jquery-3.3.1.min.js",
+      "extension": ".js",
+      "size_bytes": 86926
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/mediaelement-and-player.min.js",
+      "extension": ".js",
+      "size_bytes": 152469
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/jquery.magnific-popup.min.js",
+      "extension": ".js",
+      "size_bytes": 20216
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/jquery.sticky.js",
+      "extension": ".js",
+      "size_bytes": 10084
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/bootstrap-datepicker.min.js",
+      "extension": ".js",
+      "size_bytes": 34172
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/typed.js",
+      "extension": ".js",
+      "size_bytes": 11699
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/jquery-migrate-3.0.0.js",
+      "extension": ".js",
+      "size_bytes": 14923
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/jquery.fancybox.min.js",
+      "extension": ".js",
+      "size_bytes": 68196
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/jquery.easing.1.3.js",
+      "extension": ".js",
+      "size_bytes": 8181
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/main.js",
+      "extension": ".js",
+      "size_bytes": 7492
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/owl.carousel.min.js",
+      "extension": ".js",
+      "size_bytes": 42766
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/bootstrap.min.js",
+      "extension": ".js",
+      "size_bytes": 58072
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/aos.js",
+      "extension": ".js",
+      "size_bytes": 14244
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/jquery.stellar.min.js",
+      "extension": ".js",
+      "size_bytes": 12597
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/popper.min.js",
+      "extension": ".js",
+      "size_bytes": 20336
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/jquery.waypoints.min.js",
+      "extension": ".js",
+      "size_bytes": 9028
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/jquery.animateNumber.min.js",
+      "extension": ".js",
+      "size_bytes": 1390
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/jquery-migrate-3.0.1.min.js",
+      "extension": ".js",
+      "size_bytes": 11421
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/jquery-ui.js",
+      "extension": ".js",
+      "size_bytes": 45799
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/js/slick.min.js",
+      "extension": ".js",
+      "size_bytes": 42863
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/fonts/icomoon/style.css",
+      "extension": ".css",
+      "size_bytes": 79820
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/fonts/icomoon/selection.json",
+      "extension": ".json",
+      "size_bytes": 1629715
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/fonts/icomoon/demo.html",
+      "extension": ".html",
+      "size_bytes": 1263120
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/fonts/icomoon/demo-files/demo.css",
+      "extension": ".css",
+      "size_bytes": 2024
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/fonts/icomoon/demo-files/demo.js",
+      "extension": ".js",
+      "size_bytes": 996
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/fonts/flaticon-2/font/flaticon.css",
+      "extension": ".css",
+      "size_bytes": 1250
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/fonts/flaticon-2/font/flaticon.html",
+      "extension": ".html",
+      "size_bytes": 17999
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/fonts/flaticon/font/flaticon.css",
+      "extension": ".css",
+      "size_bytes": 1262
+    },
+    {
+      "path": "barbershop_site_templates/template_3/barberz-master/fonts/flaticon/font/flaticon.html",
+      "extension": ".html",
+      "size_bytes": 18059
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/single.html",
+      "extension": ".html",
+      "size_bytes": 15090
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/blog.html",
+      "extension": ".html",
+      "size_bytes": 16444
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/team.html",
+      "extension": ".html",
+      "size_bytes": 11131
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/index.html",
+      "extension": ".html",
+      "size_bytes": 33891
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/about.html",
+      "extension": ".html",
+      "size_bytes": 12743
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/contact.html",
+      "extension": ".html",
+      "size_bytes": 11370
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/price.html",
+      "extension": ".html",
+      "size_bytes": 15260
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/service.html",
+      "extension": ".html",
+      "size_bytes": 10995
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/portfolio.html",
+      "extension": ".html",
+      "size_bytes": 12012
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/css/style.css",
+      "extension": ".css",
+      "size_bytes": 24604
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/js/main.js",
+      "extension": ".js",
+      "size_bytes": 3292
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/mail/jqBootstrapValidation.min.js",
+      "extension": ".js",
+      "size_bytes": 14877
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/mail/contact.js",
+      "extension": ".js",
+      "size_bytes": 2598
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/easing/easing.js",
+      "extension": ".js",
+      "size_bytes": 4092
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/easing/easing.min.js",
+      "extension": ".js",
+      "size_bytes": 2302
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/animate/animate.min.css",
+      "extension": ".css",
+      "size_bytes": 16953
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/animate/animate.css",
+      "extension": ".css",
+      "size_bytes": 23848
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/isotope/isotope.pkgd.min.js",
+      "extension": ".js",
+      "size_bytes": 35503
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/isotope/isotope.pkgd.js",
+      "extension": ".js",
+      "size_bytes": 91330
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/lightbox/css/lightbox.css",
+      "extension": ".css",
+      "size_bytes": 3714
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/lightbox/css/lightbox.min.css",
+      "extension": ".css",
+      "size_bytes": 2608
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/lightbox/js/lightbox.js",
+      "extension": ".js",
+      "size_bytes": 18410
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/lightbox/js/lightbox.min.js",
+      "extension": ".js",
+      "size_bytes": 9418
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/owlcarousel/owl.carousel.js",
+      "extension": ".js",
+      "size_bytes": 85368
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/owlcarousel/owl.carousel.min.js",
+      "extension": ".js",
+      "size_bytes": 42766
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/owlcarousel/assets/owl.theme.green.css",
+      "extension": ".css",
+      "size_bytes": 1301
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/owlcarousel/assets/owl.theme.green.min.css",
+      "extension": ".css",
+      "size_bytes": 936
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/owlcarousel/assets/owl.theme.default.min.css",
+      "extension": ".css",
+      "size_bytes": 936
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/owlcarousel/assets/owl.carousel.min.css",
+      "extension": ".css",
+      "size_bytes": 2936
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/owlcarousel/assets/owl.theme.default.css",
+      "extension": ".css",
+      "size_bytes": 1303
+    },
+    {
+      "path": "barbershop_site_templates/template_2/BarberX-master/lib/owlcarousel/assets/owl.carousel.css",
+      "extension": ".css",
+      "size_bytes": 4028
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hairstyle.html",
+      "extension": ".html",
+      "size_bytes": 14021
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/blog.html",
+      "extension": ".html",
+      "size_bytes": 11773
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/index.html",
+      "extension": ".html",
+      "size_bytes": 18809
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/about.html",
+      "extension": ".html",
+      "size_bytes": 12183
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/contact.html",
+      "extension": ".html",
+      "size_bytes": 10568
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/README.md",
+      "extension": ".md",
+      "size_bytes": 21
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/css/magnific-popup.css",
+      "extension": ".css",
+      "size_bytes": 6950
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/css/bootstrap.css",
+      "extension": ".css",
+      "size_bytes": 150001
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/css/animate.css",
+      "extension": ".css",
+      "size_bytes": 24196
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/css/owl.carousel.min.css",
+      "extension": ".css",
+      "size_bytes": 3440
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/css/style.css",
+      "extension": ".css",
+      "size_bytes": 23277
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/js/jquery-3.2.1.min.js",
+      "extension": ".js",
+      "size_bytes": 86658
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/js/jquery.magnific-popup.min.js",
+      "extension": ".js",
+      "size_bytes": 20216
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/js/jquery-migrate-3.0.0.js",
+      "extension": ".js",
+      "size_bytes": 14923
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/js/main.js",
+      "extension": ".js",
+      "size_bytes": 3666
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/js/owl.carousel.min.js",
+      "extension": ".js",
+      "size_bytes": 43237
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/js/bootstrap.min.js",
+      "extension": ".js",
+      "size_bytes": 50564
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/js/jquery.stellar.min.js",
+      "extension": ".js",
+      "size_bytes": 12597
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/js/popper.min.js",
+      "extension": ".js",
+      "size_bytes": 19235
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/js/magnific-popup-options.js",
+      "extension": ".js",
+      "size_bytes": 1284
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/js/jquery.waypoints.min.js",
+      "extension": ".js",
+      "size_bytes": 8835
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/blog.html",
+      "extension": ".html",
+      "size_bytes": 27560
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/team.html",
+      "extension": ".html",
+      "size_bytes": 21054
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/index.html",
+      "extension": ".html",
+      "size_bytes": 36281
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/about.html",
+      "extension": ".html",
+      "size_bytes": 19531
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/contact.html",
+      "extension": ".html",
+      "size_bytes": 12525
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/price.html",
+      "extension": ".html",
+      "size_bytes": 18327
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/elements.html",
+      "extension": ".html",
+      "size_bytes": 35168
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/service.html",
+      "extension": ".html",
+      "size_bytes": 16741
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/single-blog.html",
+      "extension": ".html",
+      "size_bytes": 30171
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/bootstrap.min.css",
+      "extension": ".css",
+      "size_bytes": 155758
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/all.css",
+      "extension": ".css",
+      "size_bytes": 69015
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/magnific-popup.css",
+      "extension": ".css",
+      "size_bytes": 5259
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/slick.css",
+      "extension": ".css",
+      "size_bytes": 1718
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/aos.css",
+      "extension": ".css",
+      "size_bytes": 26053
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/animate.css",
+      "extension": ".css",
+      "size_bytes": 77758
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/gijgo.min.css",
+      "extension": ".css",
+      "size_bytes": 43651
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/nice-select.css",
+      "extension": ".css",
+      "size_bytes": 4009
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/themify-icons.css",
+      "extension": ".css",
+      "size_bytes": 16450
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/swiper.min.css",
+      "extension": ".css",
+      "size_bytes": 19773
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/owl.carousel.min.css",
+      "extension": ".css",
+      "size_bytes": 3351
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/style.css",
+      "extension": ".css",
+      "size_bytes": 211774
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/font-awesome.min.css",
+      "extension": ".css",
+      "size_bytes": 27466
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/css/flaticon.css",
+      "extension": ".css",
+      "size_bytes": 971
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/jquery.validate.min.js",
+      "extension": ".js",
+      "size_bytes": 21068
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/mail-script.js",
+      "extension": ".js",
+      "size_bytes": 1230
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/jquery-3.3.1.slim.min.js",
+      "extension": ".js",
+      "size_bytes": 69917
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/swiper.min.js",
+      "extension": ".js",
+      "size_bytes": 122735
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/jquery.nice-select.min.js",
+      "extension": ".js",
+      "size_bytes": 2942
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/masonry.pkgd.min.js",
+      "extension": ".js",
+      "size_bytes": 28953
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/jquery.magnific-popup.js",
+      "extension": ".js",
+      "size_bytes": 20216
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/custom.js",
+      "extension": ".js",
+      "size_bytes": 3224
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/jquery.easing.min.js",
+      "extension": ".js",
+      "size_bytes": 5564
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/gijgo.min.js",
+      "extension": ".js",
+      "size_bytes": 255891
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/masonry.pkgd.js",
+      "extension": ".js",
+      "size_bytes": 63316
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/swiper_custom.js",
+      "extension": ".js",
+      "size_bytes": 595
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/owl.carousel.min.js",
+      "extension": ".js",
+      "size_bytes": 44245
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/bootstrap.min.js",
+      "extension": ".js",
+      "size_bytes": 58072
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/particles.min.js",
+      "extension": ".js",
+      "size_bytes": 23364
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/jquery.ajaxchimp.min.js",
+      "extension": ".js",
+      "size_bytes": 4820
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/contact.js",
+      "extension": ".js",
+      "size_bytes": 3024
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/jquery-1.12.1.min.js",
+      "extension": ".js",
+      "size_bytes": 97403
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/aos.js",
+      "extension": ".js",
+      "size_bytes": 14243
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/gmaps.min.js",
+      "extension": ".js",
+      "size_bytes": 31794
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/popper.min.js",
+      "extension": ".js",
+      "size_bytes": 21004
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/slick.min.js",
+      "extension": ".js",
+      "size_bytes": 33293
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/js/jquery.form.js",
+      "extension": ".js",
+      "size_bytes": 41095
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/index.html",
+      "extension": ".html",
+      "size_bytes": 11859
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shThemeFadeToGrey.css",
+      "extension": ".css",
+      "size_bytes": 2912
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shCoreMDUltra.css",
+      "extension": ".css",
+      "size_bytes": 8659
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shCoreFadeToGrey.css",
+      "extension": ".css",
+      "size_bytes": 8739
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shCoreMidnight.css",
+      "extension": ".css",
+      "size_bytes": 8680
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shCoreEmacs.css",
+      "extension": ".css",
+      "size_bytes": 8662
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shThemeMidnight.css",
+      "extension": ".css",
+      "size_bytes": 2853
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shThemeRDark.css",
+      "extension": ".css",
+      "size_bytes": 2849
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shThemeMDUltra.css",
+      "extension": ".css",
+      "size_bytes": 2832
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shThemeEmacs.css",
+      "extension": ".css",
+      "size_bytes": 2835
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shCore.css",
+      "extension": ".css",
+      "size_bytes": 6204
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shCoreDefault.css",
+      "extension": ".css",
+      "size_bytes": 8704
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shCoreEclipse.css",
+      "extension": ".css",
+      "size_bytes": 9020
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shCoreRDark.css",
+      "extension": ".css",
+      "size_bytes": 8676
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shThemeEclipse.css",
+      "extension": ".css",
+      "size_bytes": 3193
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shThemeDjango.css",
+      "extension": ".css",
+      "size_bytes": 2978
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shThemeDefault.css",
+      "extension": ".css",
+      "size_bytes": 2897
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/styles/shCoreDjango.css",
+      "extension": ".css",
+      "size_bytes": 8805
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shAutoloader.js",
+      "extension": ".js",
+      "size_bytes": 1451
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushErlang.js",
+      "extension": ".js",
+      "size_bytes": 1712
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushJavaFX.js",
+      "extension": ".js",
+      "size_bytes": 2238
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushJava.js",
+      "extension": ".js",
+      "size_bytes": 2101
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushPlain.js",
+      "extension": ".js",
+      "size_bytes": 750
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushVb.js",
+      "extension": ".js",
+      "size_bytes": 2281
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushPhp.js",
+      "extension": ".js",
+      "size_bytes": 5246
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushSql.js",
+      "extension": ".js",
+      "size_bytes": 3054
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushAppleScript.js",
+      "extension": ".js",
+      "size_bytes": 8178
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushRuby.js",
+      "extension": ".js",
+      "size_bytes": 2188
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushSass.js",
+      "extension": ".js",
+      "size_bytes": 5982
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushScala.js",
+      "extension": ".js",
+      "size_bytes": 1892
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushPerl.js",
+      "extension": ".js",
+      "size_bytes": 3176
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shCore.js",
+      "extension": ".js",
+      "size_bytes": 16175
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushDelphi.js",
+      "extension": ".js",
+      "size_bytes": 2382
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushBash.js",
+      "extension": ".js",
+      "size_bytes": 2835
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushCss.js",
+      "extension": ".js",
+      "size_bytes": 5694
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushCpp.js",
+      "extension": ".js",
+      "size_bytes": 5284
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushPowerShell.js",
+      "extension": ".js",
+      "size_bytes": 3911
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushXml.js",
+      "extension": ".js",
+      "size_bytes": 1998
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushPython.js",
+      "extension": ".js",
+      "size_bytes": 2437
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushDiff.js",
+      "extension": ".js",
+      "size_bytes": 1057
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushJScript.js",
+      "extension": ".js",
+      "size_bytes": 1649
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushCSharp.js",
+      "extension": ".js",
+      "size_bytes": 2528
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shLegacy.js",
+      "extension": ".js",
+      "size_bytes": 1870
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushAS3.js",
+      "extension": ".js",
+      "size_bytes": 2431
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushColdFusion.js",
+      "extension": ".js",
+      "size_bytes": 8296
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/syntax-highlighter/scripts/shBrushGroovy.js",
+      "extension": ".js",
+      "size_bytes": 3017
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/css/normalize.min.css",
+      "extension": ".css",
+      "size_bytes": 2502
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/css/main.css",
+      "extension": ".css",
+      "size_bytes": 3171
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/css/font-awesome.min.css",
+      "extension": ".css",
+      "size_bytes": 20766
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/js/custom.js",
+      "extension": ".js",
+      "size_bytes": 74
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/js/jquery-1.11.0.min.js",
+      "extension": ".js",
+      "size_bytes": 96381
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/hipstyle-master/Hipstyle Barber -DOC/js/jquery.nav.js",
+      "extension": ".js",
+      "size_bytes": 5723
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/fonts/fontawesome/css/font-awesome.min.css",
+      "extension": ".css",
+      "size_bytes": 31000
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/fonts/ionicons/cheatsheet.html",
+      "extension": ".html",
+      "size_bytes": 1276366
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/fonts/ionicons/css/ionicons.min.css",
+      "extension": ".css",
+      "size_bytes": 51284
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/fonts/ionicons/css/ionicons.css",
+      "extension": ".css",
+      "size_bytes": 57193
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/fonts/flaticon/font/_flaticon.css",
+      "extension": ".css",
+      "size_bytes": 1403
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/fonts/flaticon/font/flaticon.css",
+      "extension": ".css",
+      "size_bytes": 1253
+    },
+    {
+      "path": "barbershop_site_templates/template_5/alotan-master/fonts/flaticon/font/flaticon.html",
+      "extension": ".html",
+      "size_bytes": 19217
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/blog.html",
+      "extension": ".html",
+      "size_bytes": 36135
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/team.html",
+      "extension": ".html",
+      "size_bytes": 13174
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/index.html",
+      "extension": ".html",
+      "size_bytes": 25783
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/contact.html",
+      "extension": ".html",
+      "size_bytes": 10779
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/pricing.html",
+      "extension": ".html",
+      "size_bytes": 12221
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/service.html",
+      "extension": ".html",
+      "size_bytes": 12546
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/about-us.html",
+      "extension": ".html",
+      "size_bytes": 16656
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/single-blog.html",
+      "extension": ".html",
+      "size_bytes": 33091
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/bootstrap/bootstrap.min.css",
+      "extension": ".css",
+      "size_bytes": 140936
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/bootstrap/bootstrap.bundle.min.js",
+      "extension": ".js",
+      "size_bytes": 70966
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/fontawesome/css/all.min.css",
+      "extension": ".css",
+      "size_bytes": 53592
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/sticky/LICENSE.md",
+      "extension": ".md",
+      "size_bytes": 1076
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/sticky/example-center.html",
+      "extension": ".html",
+      "size_bytes": 1052
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/sticky/jquery.sticky.js",
+      "extension": ".js",
+      "size_bytes": 10085
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/sticky/bower.json",
+      "extension": ".json",
+      "size_bytes": 1048
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/sticky/README.md",
+      "extension": ".md",
+      "size_bytes": 3247
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/sticky/package.json",
+      "extension": ".json",
+      "size_bytes": 660
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/sticky/example-right.html",
+      "extension": ".html",
+      "size_bytes": 1122
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/sticky/example-header.html",
+      "extension": ".html",
+      "size_bytes": 997
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/Magnific-Popup/magnific-popup.css",
+      "extension": ".css",
+      "size_bytes": 6951
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/Magnific-Popup/jquery.magnific-popup.min.js",
+      "extension": ".js",
+      "size_bytes": 20216
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/jquery/jquery-3.2.1.min.js",
+      "extension": ".js",
+      "size_bytes": 86659
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/OwlCarousel/owl.theme.default.min.css",
+      "extension": ".css",
+      "size_bytes": 1013
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/OwlCarousel/owl.carousel.min.js",
+      "extension": ".js",
+      "size_bytes": 44342
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/OwlCarousel/owl.carousel.min.css",
+      "extension": ".css",
+      "size_bytes": 3351
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/iconfont/material-icons.css",
+      "extension": ".css",
+      "size_bytes": 970
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/iconfont/README.md",
+      "extension": ".md",
+      "size_bytes": 316
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/flat-icon/flaticon.css",
+      "extension": ".css",
+      "size_bytes": 1114
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/flat-icon/flaticon.html",
+      "extension": ".html",
+      "size_bytes": 18276
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/themify-icons/Themify IconFonts 5-23-2014.json",
+      "extension": ".json",
+      "size_bytes": 329179
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/themify-icons/index.html",
+      "extension": ".html",
+      "size_bytes": 45509
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/themify-icons/themify-icons.css",
+      "extension": ".css",
+      "size_bytes": 16435
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/themify-icons/ie7/ie7.css",
+      "extension": ".css",
+      "size_bytes": 35487
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/themify-icons/ie7/ie7.js",
+      "extension": ".js",
+      "size_bytes": 11598
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/themify-icons/demo-files/demo.css",
+      "extension": ".css",
+      "size_bytes": 838
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/nice-select/jquery.nice-select.min.js",
+      "extension": ".js",
+      "size_bytes": 2942
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/vendors/nice-select/nice-select.css",
+      "extension": ".css",
+      "size_bytes": 4007
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/css/style.css",
+      "extension": ".css",
+      "size_bytes": 40181
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/index.html",
+      "extension": ".html",
+      "size_bytes": 13218
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shThemeFadeToGrey.css",
+      "extension": ".css",
+      "size_bytes": 2912
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shCoreMDUltra.css",
+      "extension": ".css",
+      "size_bytes": 8659
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shCoreFadeToGrey.css",
+      "extension": ".css",
+      "size_bytes": 8739
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shCoreMidnight.css",
+      "extension": ".css",
+      "size_bytes": 8680
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shCoreEmacs.css",
+      "extension": ".css",
+      "size_bytes": 8662
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shThemeMidnight.css",
+      "extension": ".css",
+      "size_bytes": 2853
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shThemeRDark.css",
+      "extension": ".css",
+      "size_bytes": 2849
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shThemeMDUltra.css",
+      "extension": ".css",
+      "size_bytes": 2832
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shThemeEmacs.css",
+      "extension": ".css",
+      "size_bytes": 2835
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shCore.css",
+      "extension": ".css",
+      "size_bytes": 6204
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shCoreDefault.css",
+      "extension": ".css",
+      "size_bytes": 8704
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shCoreEclipse.css",
+      "extension": ".css",
+      "size_bytes": 9020
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shCoreRDark.css",
+      "extension": ".css",
+      "size_bytes": 8676
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shThemeEclipse.css",
+      "extension": ".css",
+      "size_bytes": 3193
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shThemeDjango.css",
+      "extension": ".css",
+      "size_bytes": 2978
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shThemeDefault.css",
+      "extension": ".css",
+      "size_bytes": 2897
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/styles/shCoreDjango.css",
+      "extension": ".css",
+      "size_bytes": 8805
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shAutoloader.js",
+      "extension": ".js",
+      "size_bytes": 1451
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushErlang.js",
+      "extension": ".js",
+      "size_bytes": 1712
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushJavaFX.js",
+      "extension": ".js",
+      "size_bytes": 2238
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushJava.js",
+      "extension": ".js",
+      "size_bytes": 2101
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushPlain.js",
+      "extension": ".js",
+      "size_bytes": 750
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushVb.js",
+      "extension": ".js",
+      "size_bytes": 2281
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushPhp.js",
+      "extension": ".js",
+      "size_bytes": 5246
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushSql.js",
+      "extension": ".js",
+      "size_bytes": 3054
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushAppleScript.js",
+      "extension": ".js",
+      "size_bytes": 8178
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushRuby.js",
+      "extension": ".js",
+      "size_bytes": 2188
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushSass.js",
+      "extension": ".js",
+      "size_bytes": 5982
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushScala.js",
+      "extension": ".js",
+      "size_bytes": 1892
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushPerl.js",
+      "extension": ".js",
+      "size_bytes": 3176
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shCore.js",
+      "extension": ".js",
+      "size_bytes": 16175
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushDelphi.js",
+      "extension": ".js",
+      "size_bytes": 2382
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushBash.js",
+      "extension": ".js",
+      "size_bytes": 2835
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushCss.js",
+      "extension": ".js",
+      "size_bytes": 5694
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushCpp.js",
+      "extension": ".js",
+      "size_bytes": 5284
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushPowerShell.js",
+      "extension": ".js",
+      "size_bytes": 3911
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushXml.js",
+      "extension": ".js",
+      "size_bytes": 1998
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushPython.js",
+      "extension": ".js",
+      "size_bytes": 2437
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushDiff.js",
+      "extension": ".js",
+      "size_bytes": 1057
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushJScript.js",
+      "extension": ".js",
+      "size_bytes": 1649
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushCSharp.js",
+      "extension": ".js",
+      "size_bytes": 2528
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shLegacy.js",
+      "extension": ".js",
+      "size_bytes": 1870
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushAS3.js",
+      "extension": ".js",
+      "size_bytes": 2431
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushColdFusion.js",
+      "extension": ".js",
+      "size_bytes": 8296
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/syntax-highlighter/scripts/shBrushGroovy.js",
+      "extension": ".js",
+      "size_bytes": 3017
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/css/normalize.min.css",
+      "extension": ".css",
+      "size_bytes": 2502
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/css/main.css",
+      "extension": ".css",
+      "size_bytes": 3093
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/css/font-awesome.min.css",
+      "extension": ".css",
+      "size_bytes": 20766
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/js/custom.js",
+      "extension": ".js",
+      "size_bytes": 74
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/js/jquery-1.11.0.min.js",
+      "extension": ".js",
+      "size_bytes": 96381
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/Remake Barber -doc/js/jquery.nav.js",
+      "extension": ".js",
+      "size_bytes": 5723
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/js/jquery.validate.min.js",
+      "extension": ".js",
+      "size_bytes": 21068
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/js/mail-script.js",
+      "extension": ".js",
+      "size_bytes": 1230
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/js/main.js",
+      "extension": ".js",
+      "size_bytes": 744
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/js/jquery.ajaxchimp.min.js",
+      "extension": ".js",
+      "size_bytes": 4820
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/js/contact.js",
+      "extension": ".js",
+      "size_bytes": 3024
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/js/skrollr.min.js",
+      "extension": ".js",
+      "size_bytes": 12615
+    },
+    {
+      "path": "barbershop_site_templates/template_6/remake-master/js/jquery.form.js",
+      "extension": ".js",
+      "size_bytes": 41095
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/blog.html",
+      "extension": ".html",
+      "size_bytes": 32026
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/index.html",
+      "extension": ".html",
+      "size_bytes": 37203
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/about.html",
+      "extension": ".html",
+      "size_bytes": 25980
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/contact.html",
+      "extension": ".html",
+      "size_bytes": 48040
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/blog_details.html",
+      "extension": ".html",
+      "size_bytes": 34878
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/elements.html",
+      "extension": ".html",
+      "size_bytes": 40701
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/main.html",
+      "extension": ".html",
+      "size_bytes": 931
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/services.html",
+      "extension": ".html",
+      "size_bytes": 17831
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/portfolio.html",
+      "extension": ".html",
+      "size_bytes": 14862
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/index.html",
+      "extension": ".html",
+      "size_bytes": 11258
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shThemeFadeToGrey.css",
+      "extension": ".css",
+      "size_bytes": 2912
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shCoreMDUltra.css",
+      "extension": ".css",
+      "size_bytes": 8659
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shCoreFadeToGrey.css",
+      "extension": ".css",
+      "size_bytes": 8739
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shCoreMidnight.css",
+      "extension": ".css",
+      "size_bytes": 8680
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shCoreEmacs.css",
+      "extension": ".css",
+      "size_bytes": 8662
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shThemeMidnight.css",
+      "extension": ".css",
+      "size_bytes": 2853
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shThemeRDark.css",
+      "extension": ".css",
+      "size_bytes": 2849
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shThemeMDUltra.css",
+      "extension": ".css",
+      "size_bytes": 2832
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shThemeEmacs.css",
+      "extension": ".css",
+      "size_bytes": 2835
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shCore.css",
+      "extension": ".css",
+      "size_bytes": 6204
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shCoreDefault.css",
+      "extension": ".css",
+      "size_bytes": 8704
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shCoreEclipse.css",
+      "extension": ".css",
+      "size_bytes": 9020
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shCoreRDark.css",
+      "extension": ".css",
+      "size_bytes": 8676
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shThemeEclipse.css",
+      "extension": ".css",
+      "size_bytes": 3193
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shThemeDjango.css",
+      "extension": ".css",
+      "size_bytes": 2978
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shThemeDefault.css",
+      "extension": ".css",
+      "size_bytes": 2897
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/styles/shCoreDjango.css",
+      "extension": ".css",
+      "size_bytes": 8805
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shAutoloader.js",
+      "extension": ".js",
+      "size_bytes": 1451
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushErlang.js",
+      "extension": ".js",
+      "size_bytes": 1712
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushJavaFX.js",
+      "extension": ".js",
+      "size_bytes": 2238
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushJava.js",
+      "extension": ".js",
+      "size_bytes": 2101
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushPlain.js",
+      "extension": ".js",
+      "size_bytes": 750
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushVb.js",
+      "extension": ".js",
+      "size_bytes": 2281
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushPhp.js",
+      "extension": ".js",
+      "size_bytes": 5246
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushSql.js",
+      "extension": ".js",
+      "size_bytes": 3054
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushAppleScript.js",
+      "extension": ".js",
+      "size_bytes": 8178
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushRuby.js",
+      "extension": ".js",
+      "size_bytes": 2188
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushSass.js",
+      "extension": ".js",
+      "size_bytes": 5982
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushScala.js",
+      "extension": ".js",
+      "size_bytes": 1892
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushPerl.js",
+      "extension": ".js",
+      "size_bytes": 3176
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushDelphi.js",
+      "extension": ".js",
+      "size_bytes": 2382
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushBash.js",
+      "extension": ".js",
+      "size_bytes": 2835
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushCss.js",
+      "extension": ".js",
+      "size_bytes": 5694
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushCpp.js",
+      "extension": ".js",
+      "size_bytes": 5284
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushPowerShell.js",
+      "extension": ".js",
+      "size_bytes": 3911
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushXml.js",
+      "extension": ".js",
+      "size_bytes": 1998
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushPython.js",
+      "extension": ".js",
+      "size_bytes": 2437
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushDiff.js",
+      "extension": ".js",
+      "size_bytes": 1057
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushJScript.js",
+      "extension": ".js",
+      "size_bytes": 1649
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushCSharp.js",
+      "extension": ".js",
+      "size_bytes": 2528
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shLegacy.js",
+      "extension": ".js",
+      "size_bytes": 1870
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushAS3.js",
+      "extension": ".js",
+      "size_bytes": 2431
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushColdFusion.js",
+      "extension": ".js",
+      "size_bytes": 8296
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/syntax-highlighter/scripts/shBrushGroovy.js",
+      "extension": ".js",
+      "size_bytes": 3017
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/css/normalize.min.css",
+      "extension": ".css",
+      "size_bytes": 2502
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/css/main.css",
+      "extension": ".css",
+      "size_bytes": 3171
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/css/font-awesome.min.css",
+      "extension": ".css",
+      "size_bytes": 20766
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/js/custom.js",
+      "extension": ".js",
+      "size_bytes": 74
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/js/jquery-1.11.0.min.js",
+      "extension": ".js",
+      "size_bytes": 96381
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/Doc/js/jquery.nav.js",
+      "extension": ".js",
+      "size_bytes": 5723
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/bootstrap.min.css",
+      "extension": ".css",
+      "size_bytes": 140936
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/gijgo.css",
+      "extension": ".css",
+      "size_bytes": 57518
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/magnific-popup.css",
+      "extension": ".css",
+      "size_bytes": 6951
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/price_rangs.css",
+      "extension": ".css",
+      "size_bytes": 6078
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/slick.css",
+      "extension": ".css",
+      "size_bytes": 1776
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/animate.min.css",
+      "extension": ".css",
+      "size_bytes": 56048
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/slicknav.css",
+      "extension": ".css",
+      "size_bytes": 5732
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/main.css",
+      "extension": ".css",
+      "size_bytes": 90219
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/fontawesome-all.min.css",
+      "extension": ".css",
+      "size_bytes": 34680
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/nice-select.css",
+      "extension": ".css",
+      "size_bytes": 4007
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/themify-icons.css",
+      "extension": ".css",
+      "size_bytes": 16452
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/responsive.css",
+      "extension": ".css",
+      "size_bytes": 449
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/owl.carousel.min.css",
+      "extension": ".css",
+      "size_bytes": 2936
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/style.css",
+      "extension": ".css",
+      "size_bytes": 92988
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/flaticon.css",
+      "extension": ".css",
+      "size_bytes": 988
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/css/animated-headline.css",
+      "extension": ".css",
+      "size_bytes": 27021
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/jquery.countdown.min.js",
+      "extension": ".js",
+      "size_bytes": 5369
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/jquery.validate.min.js",
+      "extension": ".js",
+      "size_bytes": 21068
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/mail-script.js",
+      "extension": ".js",
+      "size_bytes": 1230
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/jquery.sticky.js",
+      "extension": ".js",
+      "size_bytes": 10085
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/jquery.nice-select.min.js",
+      "extension": ".js",
+      "size_bytes": 2942
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/jquery.slicknav.min.js",
+      "extension": ".js",
+      "size_bytes": 8415
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/jquery.paroller.min.js",
+      "extension": ".js",
+      "size_bytes": 3532
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/plugins.js",
+      "extension": ".js",
+      "size_bytes": 760
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/jquery.magnific-popup.js",
+      "extension": ".js",
+      "size_bytes": 20216
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/wow.min.js",
+      "extension": ".js",
+      "size_bytes": 8415
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/one-page-nav-min.js",
+      "extension": ".js",
+      "size_bytes": 3240
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/animated.headline.js",
+      "extension": ".js",
+      "size_bytes": 5532
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/gijgo.min.js",
+      "extension": ".js",
+      "size_bytes": 177487
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/waypoints.min.js",
+      "extension": ".js",
+      "size_bytes": 8044
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/hover-direction-snake.min.js",
+      "extension": ".js",
+      "size_bytes": 867
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/main.js",
+      "extension": ".js",
+      "size_bytes": 6943
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/owl.carousel.min.js",
+      "extension": ".js",
+      "size_bytes": 42766
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/bootstrap.min.js",
+      "extension": ".js",
+      "size_bytes": 48944
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/jquery.ajaxchimp.min.js",
+      "extension": ".js",
+      "size_bytes": 4820
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/price-range.js",
+      "extension": ".js",
+      "size_bytes": 83096
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/contact.js",
+      "extension": ".js",
+      "size_bytes": 3024
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/popper.min.js",
+      "extension": ".js",
+      "size_bytes": 19188
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/slick.min.js",
+      "extension": ".js",
+      "size_bytes": 42863
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/jquery.form.js",
+      "extension": ".js",
+      "size_bytes": 41095
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/jquery.counterup.min.js",
+      "extension": ".js",
+      "size_bytes": 1067
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/vendor/modernizr-3.5.0.min.js",
+      "extension": ".js",
+      "size_bytes": 8636
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/js/vendor/jquery-1.12.4.min.js",
+      "extension": ".js",
+      "size_bytes": 97163
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/fonts/flaticon.css",
+      "extension": ".css",
+      "size_bytes": 983
+    },
+    {
+      "path": "barbershop_site_templates/template_1/brber-master/assets/fonts/flaticon.html",
+      "extension": ".html",
+      "size_bytes": 17461
+    }
+  ]
+}

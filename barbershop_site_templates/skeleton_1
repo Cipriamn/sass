@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skeleton 01 — Classic Heritage</title>
+<style>
+/*──────────────────────────────────────────────
+  SKELETON 01: CLASSIC HERITAGE
+  Best for: Traditional barbershops, heritage brands, 
+  established businesses with history.
+  
+  Layout: Full-width hero → info strip → alternating 
+  2-col sections → dark hours block → contact + map → footer
+  
+  Vibe: Timeless, warm, trustworthy
+  Font pairing suggestion: Playfair Display + Source Sans Pro
+──────────────────────────────────────────────*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  /* — THEME TOKENS (swap these per brand) — */
+  --primary: #1a1a2e;
+  --primary-light: #2d2d44;
+  --highlight: #c9a96e;
+  --highlight-dark: #b08d50;
+  --dark: #111;
+  --darker: #0a0a0a;
+  --light: #f8f5f0;
+  --text: #333;
+  --text-light: #777;
+  --white: #fff;
+
+  /* — SPACING SCALE — */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+  --space-2xl: 8rem;
+
+  /* — RADIUS — */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* — SHADOWS — */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 8px 30px rgba(0,0,0,0.12);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.15);
+
+  /* — TYPOGRAPHY — */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Sans Pro', sans-serif;
+}
+
+body{font-family:var(--font-body);color:var(--text);line-height:1.6;background:var(--white)}
+.container{max-width:1200px;margin:0 auto;padding:0 var(--space-md)}
+section{padding:var(--space-xl) 0}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;line-height:1.2}
+img{max-width:100%;display:block}
+
+/* ─── HEADER ─── */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:var(--space-sm) 0;
+  background:transparent;
+  transition:background 0.4s,backdrop-filter 0.4s;
+}
+.header.scrolled{
+  background:rgba(26,26,46,0.85);
+  backdrop-filter:blur(12px);
+}
+.header .container{display:flex;justify-content:space-between;align-items:center}
+.header__logo{font-family:var(--font-display);font-size:1.5rem;color:var(--white);text-decoration:none}
+.header__nav{display:flex;gap:var(--space-md);list-style:none}
+.header__nav a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.9rem;letter-spacing:0.5px;text-transform:uppercase}
+
+/* ─── HERO: Full viewport, centered text ─── */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  color:var(--white);
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:var(--dark);/* Replace with: background-image:url(hero.jpg);background-size:cover */
+  transform:scale(1.05);
+  animation:heroZoom 20s ease infinite alternate;
+}
+.hero::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.5)}
+.hero__content{position:relative;z-index:2;max-width:700px;padding:var(--space-md)}
+.hero__badge{display:inline-block;border:1px solid var(--highlight);color:var(--highlight);padding:var(--space-xs) var(--space-sm);font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:var(--space-md)}
+.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);margin-bottom:var(--space-sm)}
+.hero__subtitle{font-size:1.1rem;opacity:0.8;margin-bottom:var(--space-lg)}
+.hero__buttons{display:flex;gap:var(--space-sm);justify-content:center;flex-wrap:wrap}
+
+/* ─── BUTTONS ─── */
+.btn{display:inline-block;padding:0.85rem 2rem;border-radius:var(--radius-pill);font-size:0.9rem;font-weight:600;text-decoration:none;letter-spacing:0.5px;text-transform:uppercase;transition:all 0.3s}
+.btn-main{background:var(--highlight);color:var(--white);border:2px solid var(--highlight)}
+.btn-main:hover{background:transparent;color:var(--highlight)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.4)}
+.btn-outline:hover{border-color:var(--highlight);color:var(--highlight)}
+
+/* ─── QUICK INFO STRIP ─── */
+.info-strip{
+  background:var(--primary);color:var(--white);
+  padding:var(--space-lg) 0;
+}
+.info-strip__grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:var(--space-md);
+  text-align:center;
+}
+.info-strip__item h4{color:var(--highlight);font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:var(--space-xs)}
+.info-strip__item p{font-size:0.95rem;opacity:0.9}
+
+/* ─── ABOUT: Image left, text right ─── */
+.about__grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--space-xl);
+  align-items:center;
+}
+.about__image{
+  aspect-ratio:4/5;
+  background:var(--light);/* Replace with img */
+  border-radius:var(--radius-md);
+  overflow:hidden;
+}
+.about__text h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:var(--space-sm)}
+.about__text p{color:var(--text-light);margin-bottom:var(--space-md)}
+
+/* ─── HISTORY TIMELINE ─── */
+.timeline{background:var(--light)}
+.timeline h2{text-align:center;font-size:2.5rem;margin-bottom:var(--space-xl)}
+.timeline__track{
+  display:flex;justify-content:center;gap:var(--space-xl);
+  position:relative;
+}
+.timeline__track::before{
+  content:'';position:absolute;top:50%;left:10%;right:10%;
+  height:2px;background:var(--highlight);opacity:0.3;
+}
+.timeline__node{text-align:center;position:relative;z-index:1}
+.timeline__year{
+  width:80px;height:80px;border-radius:50%;
+  background:var(--highlight);color:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-size:1.1rem;font-weight:700;
+  margin:0 auto var(--space-sm);
+}
+.timeline__label{font-size:0.9rem;color:var(--text-light)}
+
+/* ─── SERVICES: Card grid ─── */
+.services h2{text-align:center;font-size:2.5rem;margin-bottom:var(--space-xl)}
+.services__grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:var(--space-md);
+}
+.service-card{
+  background:var(--white);
+  border:1px solid rgba(0,0,0,0.08);
+  border-radius:var(--radius-md);
+  padding:var(--space-lg) var(--space-md);
+  text-align:center;
+  transition:transform 0.3s,box-shadow 0.3s;
+}
+.service-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md)}
+.service-card__icon{font-size:2.5rem;color:var(--highlight);margin-bottom:var(--space-sm)}
+.service-card h3{margin-bottom:var(--space-xs)}
+.service-card__price{font-family:var(--font-display);font-size:1.5rem;color:var(--highlight);margin-top:var(--space-sm)}
+
+/* ─── TEAM: Icon cards ─── */
+.team{background:var(--light)}
+.team h2{text-align:center;font-size:2.5rem;margin-bottom:var(--space-xl)}
+.team__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:var(--space-md)}
+.team-card{
+  text-align:center;
+  padding:var(--space-lg) var(--space-md);
+  background:var(--white);
+  border-radius:var(--radius-md);
+  transition:transform 0.3s,box-shadow 0.3s;
+}
+.team-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg)}
+.team-card__avatar{
+  width:100px;height:100px;border-radius:50%;
+  background:var(--primary-light);
+  margin:0 auto var(--space-sm);
+}
+.team-card h3{margin-bottom:var(--space-xs)}
+.team-card__role{color:var(--highlight);font-size:0.85rem;text-transform:uppercase;letter-spacing:1px}
+
+/* ─── HOURS: Dark block with table ─── */
+.hours{background:var(--dark);color:var(--white);text-align:center}
+.hours h2{font-size:2.5rem;margin-bottom:var(--space-lg)}
+.hours__table{
+  max-width:500px;margin:0 auto;
+  border-collapse:collapse;width:100%;
+}
+.hours__table tr{border-bottom:1px solid rgba(255,255,255,0.1)}
+.hours__table td{padding:var(--space-sm) var(--space-md);font-size:0.95rem}
+.hours__table td:first-child{text-align:left;opacity:0.7}
+.hours__table td:last-child{text-align:right;color:var(--highlight)}
+.hours__table tr.today{background:rgba(201,169,110,0.1)}
+.hours__table tr.today td{color:var(--highlight);opacity:1}
+
+/* ─── CONTACT + MAP ─── */
+.contact__grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--space-xl);
+  align-items:start;
+}
+.contact__card{
+  background:var(--light);
+  padding:var(--space-xl);
+  border-radius:var(--radius-md);
+}
+.contact__card h2{font-size:2rem;margin-bottom:var(--space-md)}
+.contact__info{list-style:none;display:flex;flex-direction:column;gap:var(--space-sm)}
+.contact__info li{display:flex;align-items:center;gap:var(--space-sm)}
+.contact__map{
+  aspect-ratio:1/1;
+  background:var(--light);/* Replace with iframe */
+  border-radius:var(--radius-md);
+  overflow:hidden;
+}
+
+/* ─── FOOTER ─── */
+.footer{
+  background:var(--darker);color:rgba(255,255,255,0.6);
+  padding:var(--space-xl) 0 var(--space-md);
+}
+.footer__grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:var(--space-xl);margin-bottom:var(--space-lg)}
+.footer__brand{font-family:var(--font-display);font-size:1.3rem;color:var(--white);margin-bottom:var(--space-sm)}
+.footer h4{color:var(--white);margin-bottom:var(--space-sm);font-size:0.85rem;text-transform:uppercase;letter-spacing:1px}
+.footer ul{list-style:none}
+.footer ul li{margin-bottom:var(--space-xs)}
+.footer a{color:rgba(255,255,255,0.6);text-decoration:none;transition:all 0.3s}
+.footer a:hover{color:var(--highlight);transform:translateX(5px)}
+.footer__bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:var(--space-md);text-align:center;font-size:0.85rem}
+
+/* ─── STICKY BOOKING BUTTON ─── */
+.sticky-book{
+  position:fixed;bottom:var(--space-md);right:var(--space-md);z-index:99;
+  background:var(--highlight);color:var(--white);
+  padding:0.9rem 1.8rem;border-radius:var(--radius-pill);
+  text-decoration:none;font-weight:600;font-size:0.9rem;
+  box-shadow:0 4px 20px rgba(201,169,110,0.4);
+  opacity:0;transform:translateY(20px);
+  transition:all 0.4s;
+}
+.sticky-book.visible{opacity:1;transform:translateY(0)}
+.sticky-book:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(201,169,110,0.6)}
+
+/* ─── REVEAL ANIMATIONS ─── */
+.reveal{opacity:0;transform:translateY(40px);transition:all 1s ease}
+.reveal-left{opacity:0;transform:translateX(-50px);transition:all 1s ease}
+.reveal-right{opacity:0;transform:translateX(50px);transition:all 1s ease}
+.reveal.active,.reveal-left.active,.reveal-right.active{opacity:1;transform:translate(0)}
+
+@keyframes heroZoom{from{transform:scale(1.05)}to{transform:scale(1.15)}}
+@keyframes heroFadeIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:768px){
+  .info-strip__grid{grid-template-columns:repeat(2,1fr)}
+  .about__grid,.contact__grid{grid-template-columns:1fr}
+  .footer__grid{grid-template-columns:1fr}
+  .timeline__track{flex-direction:column;align-items:center}
+  .timeline__track::before{display:none}
+  .header__nav{display:none}/* toggle via JS */
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <a href="#" class="header__logo">Brand Name</a>
+    <nav><ul class="header__nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero__content">
+    <span class="hero__badge">Est. 1963</span>
+    <h1>Classic Cuts,<br>Modern Style</h1>
+    <p class="hero__subtitle">Where tradition meets precision craftsmanship</p>
+    <div class="hero__buttons">
+      <a href="#book" class="btn btn-main">Book Now</a>
+      <a href="#services" class="btn btn-outline">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK INFO STRIP -->
+<div class="info-strip">
+  <div class="container">
+    <div class="info-strip__grid">
+      <div class="info-strip__item"><h4>Location</h4><p>123 Main Street</p></div>
+      <div class="info-strip__item"><h4>Today</h4><p class="js-today-hours">9:00 – 18:00</p></div>
+      <div class="info-strip__item"><h4>Call Us</h4><p>(555) 123-4567</p></div>
+      <div class="info-strip__item"><h4>Email</h4><p>info@brand.com</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__image reveal-left"><!-- image here --></div>
+      <div class="about__text reveal-right">
+        <h2>About Us</h2>
+        <p>Description text goes here. Tell the story of the business.</p>
+        <a href="#" class="btn btn-main">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY TIMELINE -->
+<section class="timeline" id="history">
+  <div class="container">
+    <h2 class="reveal">Our Story</h2>
+    <div class="timeline__track reveal">
+      <div class="timeline__node"><div class="timeline__year">1963</div><p class="timeline__label">Founded</p></div>
+      <div class="timeline__node"><div class="timeline__year">1985</div><p class="timeline__label">Expanded</p></div>
+      <div class="timeline__node"><div class="timeline__year">Now</div><p class="timeline__label">3rd Generation</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="reveal">Our Services</h2>
+    <div class="services__grid">
+      <div class="service-card reveal"><div class="service-card__icon">✂</div><h3>Classic Cut</h3><p>Description</p><div class="service-card__price">€25</div></div>
+      <div class="service-card reveal"><div class="service-card__icon">🪒</div><h3>Hot Shave</h3><p>Description</p><div class="service-card__price">€20</div></div>
+      <div class="service-card reveal"><div class="service-card__icon">💈</div><h3>Beard Trim</h3><p>Description</p><div class="service-card__price">€15</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="container">
+    <h2 class="reveal">Meet the Team</h2>
+    <div class="team__grid">
+      <div class="team-card reveal"><div class="team-card__avatar"></div><h3>Name</h3><p class="team-card__role">Master Barber</p></div>
+      <div class="team-card reveal"><div class="team-card__avatar"></div><h3>Name</h3><p class="team-card__role">Stylist</p></div>
+      <div class="team-card reveal"><div class="team-card__avatar"></div><h3>Name</h3><p class="team-card__role">Junior Barber</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<section class="hours" id="hours">
+  <div class="container">
+    <h2 class="reveal">Opening Hours</h2>
+    <table class="hours__table reveal">
+      <tr data-day="1"><td>Monday</td><td>9:00 – 18:00</td></tr>
+      <tr data-day="2"><td>Tuesday</td><td>9:00 – 18:00</td></tr>
+      <tr data-day="3"><td>Wednesday</td><td>9:00 – 18:00</td></tr>
+      <tr data-day="4"><td>Thursday</td><td>9:00 – 20:00</td></tr>
+      <tr data-day="5"><td>Friday</td><td>9:00 – 20:00</td></tr>
+      <tr data-day="6"><td>Saturday</td><td>9:00 – 17:00</td></tr>
+      <tr data-day="0"><td>Sunday</td><td>Closed</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact__grid">
+      <div class="contact__card reveal-left">
+        <h2>Get In Touch</h2>
+        <ul class="contact__info">
+          <li>📍 123 Main Street, City</li>
+          <li>📞 (555) 123-4567</li>
+          <li>✉ info@brand.com</li>
+        </ul>
+      </div>
+      <div class="contact__map reveal-right"><!-- Google Maps iframe --></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><div class="footer__brand">Brand Name</div><p>Short brand description here.</p></div>
+      <div><h4>Quick Links</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Follow Us</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><p>© 2026 Brand Name. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<!-- STICKY BOOKING -->
+<a href="#book" class="sticky-book">Book Appointment</a>
+
+</body>
+</html>

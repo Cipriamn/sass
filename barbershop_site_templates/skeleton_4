@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skeleton 04 — Minimal Clean</title>
+<style>
+/*──────────────────────────────────────────────
+  SKELETON 04: MINIMAL CLEAN
+  Best for: Modern salons, unisex studios, 
+  design-conscious brands.
+  
+  Layout: Oversized type hero → horizontal scroll gallery →
+  minimal about → accordion services → stacked team → 
+  minimal footer with hours inline
+  
+  Vibe: Airy, minimal, Scandinavian-inspired
+  Font pairing suggestion: Bebas Neue + Space Grotesk
+──────────────────────────────────────────────*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --primary:#1a1a1a;
+  --highlight:#ff5e3a;
+  --highlight-dark:#e04d2d;
+  --dark:#111;
+  --light:#fafafa;
+  --text:#333;
+  --text-light:#999;
+  --white:#fff;
+  --space-xs:.5rem;--space-sm:1rem;--space-md:2rem;--space-lg:4rem;--space-xl:6rem;--space-2xl:10rem;
+  --radius-sm:4px;--radius-md:8px;--radius-pill:999px;
+  --font-display:'Bebas Neue',Impact,sans-serif;
+  --font-body:'Space Grotesk',sans-serif;
+}
+
+body{font-family:var(--font-body);color:var(--text);line-height:1.6;background:var(--white)}
+.container{max-width:1100px;margin:0 auto;padding:0 var(--space-md)}
+section{padding:var(--space-2xl) 0}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1;text-transform:uppercase}
+
+/* ─── HEADER ─── */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:var(--space-md) 0;
+  mix-blend-mode:difference;
+}
+.header .container{display:flex;justify-content:space-between;align-items:center}
+.header__logo{font-family:var(--font-display);font-size:1.8rem;color:var(--white);text-decoration:none;letter-spacing:3px}
+.header__nav{display:flex;gap:var(--space-lg);list-style:none}
+.header__nav a{color:var(--white);text-decoration:none;font-size:0.85rem;letter-spacing:1px}
+
+/* ─── HERO: Giant typography ─── */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:flex-end;
+  padding-bottom:var(--space-xl);
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:var(--dark);/* Replace with bg image */
+}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(0,0,0,0.7))}
+.hero__content{position:relative;z-index:2;width:100%}
+.hero h1{
+  font-size:clamp(4rem,12vw,10rem);
+  color:var(--white);
+  letter-spacing:-2px;
+  line-height:0.9;
+}
+.hero h1 span{color:var(--highlight)}
+.hero__meta{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  margin-top:var(--space-md);color:var(--white);
+}
+.hero__meta p{font-size:0.9rem;opacity:0.7;max-width:350px}
+.hero__scroll{
+  font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);
+  writing-mode:vertical-lr;
+}
+
+/* ─── GALLERY: Horizontal scroll ─── */
+.gallery{
+  padding:var(--space-xl) 0;
+  overflow:hidden;
+}
+.gallery__track{
+  display:flex;gap:var(--space-sm);
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding:0 var(--space-md);
+  -ms-overflow-style:none;scrollbar-width:none;
+}
+.gallery__track::-webkit-scrollbar{display:none}
+.gallery__item{
+  flex:0 0 35vw;min-width:300px;
+  aspect-ratio:3/4;
+  background:var(--light);
+  border-radius:var(--radius-md);
+  scroll-snap-align:start;
+}
+
+/* ─── ABOUT: Minimal centered ─── */
+.about{text-align:center;max-width:700px;margin:0 auto;padding:var(--space-2xl) var(--space-md)}
+.about h2{font-size:clamp(2.5rem,5vw,4rem);margin-bottom:var(--space-md)}
+.about p{color:var(--text-light);font-size:1.05rem;line-height:1.8}
+.about__divider{width:40px;height:3px;background:var(--highlight);margin:var(--space-lg) auto}
+
+/* ─── SERVICES: Accordion ─── */
+.services{background:var(--light)}
+.services h2{font-size:3rem;margin-bottom:var(--space-xl)}
+.accordion{max-width:800px}
+.accordion__item{border-bottom:1px solid rgba(0,0,0,0.08)}
+.accordion__header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:var(--space-md) 0;
+  cursor:pointer;
+}
+.accordion__title{font-family:var(--font-display);font-size:1.5rem;letter-spacing:1px;text-transform:uppercase}
+.accordion__price{font-size:1.2rem;color:var(--highlight);font-weight:600}
+.accordion__icon{font-size:1.5rem;color:var(--text-light);transition:transform 0.3s}
+.accordion__item.open .accordion__icon{transform:rotate(45deg)}
+.accordion__body{
+  max-height:0;overflow:hidden;transition:max-height 0.4s ease;
+}
+.accordion__item.open .accordion__body{max-height:200px}
+.accordion__body p{padding-bottom:var(--space-md);color:var(--text-light);font-size:0.9rem}
+
+/* ─── TEAM: Stacked full-width rows ─── */
+.team h2{font-size:3rem;margin-bottom:var(--space-xl)}
+.team-row{
+  display:grid;grid-template-columns:200px 1fr auto;
+  gap:var(--space-md);align-items:center;
+  padding:var(--space-md) 0;
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  transition:background 0.3s;
+}
+.team-row:hover{background:var(--light)}
+.team-row__photo{width:200px;aspect-ratio:1;background:var(--light);border-radius:var(--radius-md)}
+.team-row h3{font-size:1.8rem}
+.team-row__role{color:var(--text-light);font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;margin-top:var(--space-xs)}
+.team-row__link{
+  color:var(--highlight);text-decoration:none;font-size:0.85rem;
+  letter-spacing:1px;text-transform:uppercase;
+}
+
+/* ─── CTA SECTION ─── */
+.cta{
+  background:var(--primary);color:var(--white);text-align:center;
+  padding:var(--space-2xl) var(--space-md);
+}
+.cta h2{font-size:clamp(3rem,8vw,6rem);margin-bottom:var(--space-md)}
+.btn-cta{
+  display:inline-block;
+  background:var(--highlight);color:var(--white);
+  padding:1rem 3rem;font-size:0.85rem;letter-spacing:2px;
+  text-transform:uppercase;text-decoration:none;
+  border-radius:var(--radius-pill);
+  transition:all 0.3s;
+}
+.btn-cta:hover{background:var(--white);color:var(--primary);transform:translateY(-3px)}
+
+/* ─── FOOTER: Minimal with hours inline ─── */
+.footer{padding:var(--space-xl) 0;border-top:1px solid rgba(0,0,0,0.06)}
+.footer__grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:var(--space-lg)}
+.footer__brand{font-family:var(--font-display);font-size:2rem;letter-spacing:2px}
+.footer h4{font-family:var(--font-display);font-size:1rem;letter-spacing:2px;margin-bottom:var(--space-sm)}
+.footer p,.footer li{font-size:0.85rem;color:var(--text-light)}
+.footer ul{list-style:none}
+.footer ul li{margin-bottom:var(--space-xs)}
+.footer a{color:var(--text-light);text-decoration:none;transition:color 0.3s}
+.footer a:hover{color:var(--highlight)}
+.footer__bottom{margin-top:var(--space-xl);padding-top:var(--space-md);border-top:1px solid rgba(0,0,0,0.06);display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-light)}
+
+/* ─── ANIMATIONS ─── */
+.reveal{opacity:0;transform:translateY(40px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1)}
+.reveal.active{opacity:1;transform:translateY(0)}
+@keyframes heroZoom{from{transform:scale(1.05)}to{transform:scale(1.15)}}
+
+@media(max-width:768px){
+  .hero h1{font-size:clamp(3rem,15vw,5rem)}
+  .team-row{grid-template-columns:1fr;text-align:center}
+  .team-row__photo{margin:0 auto}
+  .footer__grid{grid-template-columns:1fr 1fr}
+  .header__nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a href="#" class="header__logo">BRAND</a>
+    <nav><ul class="header__nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero__content">
+      <h1>CUT<span>.</span><br>STYLE<span>.</span><br>REPEAT<span>.</span></h1>
+      <div class="hero__meta">
+        <p>Modern grooming studio in the heart of the city</p>
+        <span class="hero__scroll">Scroll ↓</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gallery">
+  <div class="gallery__track">
+    <div class="gallery__item"></div>
+    <div class="gallery__item"></div>
+    <div class="gallery__item"></div>
+    <div class="gallery__item"></div>
+    <div class="gallery__item"></div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <h2 class="reveal">LESS TALK.<br>MORE CRAFT.</h2>
+  <div class="about__divider"></div>
+  <p class="reveal">About text goes here. Keep it minimal, punchy, and direct.</p>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="reveal">SERVICES</h2>
+    <div class="accordion reveal">
+      <div class="accordion__item">
+        <div class="accordion__header">
+          <span class="accordion__title">Classic Cut</span>
+          <span class="accordion__price">€25</span>
+          <span class="accordion__icon">+</span>
+        </div>
+        <div class="accordion__body"><p>Description here.</p></div>
+      </div>
+      <div class="accordion__item">
+        <div class="accordion__header">
+          <span class="accordion__title">Skin Fade</span>
+          <span class="accordion__price">€30</span>
+          <span class="accordion__icon">+</span>
+        </div>
+        <div class="accordion__body"><p>Description here.</p></div>
+      </div>
+      <div class="accordion__item">
+        <div class="accordion__header">
+          <span class="accordion__title">Beard & Shave</span>
+          <span class="accordion__price">€20</span>
+          <span class="accordion__icon">+</span>
+        </div>
+        <div class="accordion__body"><p>Description here.</p></div>
+      </div>
+      <div class="accordion__item">
+        <div class="accordion__header">
+          <span class="accordion__title">Full Package</span>
+          <span class="accordion__price">€50</span>
+          <span class="accordion__icon">+</span>
+        </div>
+        <div class="accordion__body"><p>Description here.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="container">
+    <h2 class="reveal">THE CREW</h2>
+    <div class="team-row reveal"><div class="team-row__photo"></div><div><h3>NAME</h3><p class="team-row__role">Master Barber</p></div><a href="#" class="team-row__link">Book →</a></div>
+    <div class="team-row reveal"><div class="team-row__photo"></div><div><h3>NAME</h3><p class="team-row__role">Stylist</p></div><a href="#" class="team-row__link">Book →</a></div>
+    <div class="team-row reveal"><div class="team-row__photo"></div><div><h3>NAME</h3><p class="team-row__role">Junior</p></div><a href="#" class="team-row__link">Book →</a></div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>BOOK<br>NOW</h2>
+  <a href="#book" class="btn-cta">Get Appointment</a>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><div class="footer__brand">BRAND</div><p>Modern grooming.</p></div>
+      <div><h4>HOURS</h4><ul><li>Mon–Fri: 9–19</li><li>Sat: 9–17</li><li>Sun: Closed</li></ul></div>
+      <div><h4>CONTACT</h4><ul><li>123 Main St</li><li>(555) 123-4567</li><li>info@brand.com</li></ul></div>
+      <div><h4>SOCIAL</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li><li><a href="#">Facebook</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Brand</span>
+      <span>Design by ORCHA</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

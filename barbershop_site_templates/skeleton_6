@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skeleton 06 — Urban Street</title>
+<style>
+/*──────────────────────────────────────────────
+  SKELETON 06: URBAN STREET
+  Best for: Hip urban barbershops, streetwear-adjacent,
+  younger clientele, high-energy brands.
+  
+  Layout: Video-ready hero with glitch text → marquee strip →
+  grid cards with image bg → horizontal team → 
+  neon CTA → brutalist footer
+  
+  Vibe: Bold, edgy, high-energy
+  Font pairing suggestion: Bebas Neue + Inter Tight
+──────────────────────────────────────────────*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --primary:#0e0e0e;
+  --highlight:#00ff88;
+  --highlight-dark:#00cc6a;
+  --accent:#ff3366;
+  --dark:#080808;
+  --darker:#000;
+  --light:#151515;
+  --text:#e0e0e0;
+  --text-light:#666;
+  --white:#fff;
+  --space-xs:.5rem;--space-sm:1rem;--space-md:2rem;--space-lg:4rem;--space-xl:6rem;--space-2xl:8rem;
+  --radius-sm:4px;--radius-md:8px;--radius-none:0;
+  --font-display:'Bebas Neue',Impact,sans-serif;
+  --font-body:'Inter Tight','Inter',sans-serif;
+}
+
+body{font-family:var(--font-body);color:var(--text);line-height:1.6;background:var(--primary)}
+.container{max-width:1200px;margin:0 auto;padding:0 var(--space-md)}
+section{padding:var(--space-xl) 0}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1;text-transform:uppercase;letter-spacing:2px}
+
+/* ─── HEADER ─── */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:var(--space-sm) 0;
+  transition:all 0.3s;
+}
+.header.scrolled{background:rgba(14,14,14,0.95);border-bottom:1px solid rgba(0,255,136,0.1)}
+.header .container{display:flex;justify-content:space-between;align-items:center}
+.header__logo{font-family:var(--font-display);font-size:2rem;color:var(--white);text-decoration:none;letter-spacing:4px}
+.header__logo span{color:var(--highlight)}
+.header__nav{display:flex;gap:var(--space-md);list-style:none}
+.header__nav a{color:var(--text-light);text-decoration:none;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;transition:color 0.3s}
+.header__nav a:hover{color:var(--highlight)}
+.header__book{
+  background:var(--highlight);color:var(--primary);
+  padding:0.5rem 1.2rem;font-family:var(--font-display);
+  font-size:0.9rem;letter-spacing:2px;text-decoration:none;
+}
+
+/* ─── HERO: Full screen with glitch-ready text ─── */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+}
+.hero::before{content:'';position:absolute;inset:0;background:var(--dark)}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,var(--primary))}
+.hero__content{position:relative;z-index:2}
+.hero h1{
+  font-size:clamp(4rem,14vw,12rem);
+  letter-spacing:-2px;line-height:0.85;
+  color:var(--white);
+}
+.hero h1 .neon{
+  color:var(--highlight);
+  text-shadow:0 0 20px rgba(0,255,136,0.3),0 0 60px rgba(0,255,136,0.1);
+}
+.hero__info{
+  display:flex;gap:var(--space-xl);margin-top:var(--space-lg);
+}
+.hero__info-item{border-left:2px solid var(--highlight);padding-left:var(--space-sm)}
+.hero__info-item span{display:block;font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:var(--text-light);margin-bottom:4px}
+.hero__info-item p{font-size:0.95rem}
+
+/* ─── MARQUEE STRIP ─── */
+.marquee{
+  background:var(--highlight);color:var(--primary);
+  padding:var(--space-sm) 0;
+  overflow:hidden;white-space:nowrap;
+}
+.marquee__inner{
+  display:inline-block;
+  animation:scroll-left 20s linear infinite;
+  font-family:var(--font-display);font-size:1rem;letter-spacing:4px;text-transform:uppercase;
+}
+.marquee__inner span{margin:0 var(--space-xl)}
+@keyframes scroll-left{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ─── SERVICES: Image background cards ─── */
+.services h2{font-size:3rem;margin-bottom:var(--space-xl)}
+.services__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px}
+.service-block{
+  background:var(--light);
+  padding:var(--space-xl) var(--space-lg);
+  position:relative;overflow:hidden;
+  border:1px solid rgba(255,255,255,0.03);
+  transition:all 0.4s;
+}
+.service-block:hover{background:var(--dark)}
+.service-block::after{
+  content:'';position:absolute;top:0;left:0;width:3px;height:0;
+  background:var(--highlight);transition:height 0.4s;
+}
+.service-block:hover::after{height:100%}
+.service-block h3{font-size:1.5rem;margin-bottom:var(--space-xs)}
+.service-block p{color:var(--text-light);font-size:0.85rem;margin-bottom:var(--space-sm)}
+.service-block__price{font-family:var(--font-display);font-size:2rem;color:var(--highlight)}
+
+/* ─── TEAM: Horizontal layout ─── */
+.team h2{font-size:3rem;margin-bottom:var(--space-xl)}
+.team__row{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:2px;
+}
+.team-block{
+  background:var(--light);
+  position:relative;overflow:hidden;
+}
+.team-block__photo{aspect-ratio:1;background:var(--dark)}
+.team-block__info{
+  padding:var(--space-sm);
+  background:var(--light);
+}
+.team-block h3{font-size:1rem;letter-spacing:1px}
+.team-block p{font-size:0.7rem;color:var(--highlight);text-transform:uppercase;letter-spacing:1.5px}
+
+/* ─── NEON CTA ─── */
+.neon-cta{
+  text-align:center;
+  padding:var(--space-2xl) var(--space-md);
+  background:var(--dark);
+  position:relative;
+}
+.neon-cta h2{
+  font-size:clamp(3rem,10vw,8rem);
+  color:var(--highlight);
+  text-shadow:0 0 40px rgba(0,255,136,0.2),0 0 80px rgba(0,255,136,0.1);
+  margin-bottom:var(--space-md);
+}
+.btn-neon{
+  display:inline-block;
+  background:transparent;color:var(--highlight);
+  border:2px solid var(--highlight);
+  padding:1rem 3rem;font-family:var(--font-display);
+  font-size:1rem;letter-spacing:3px;text-decoration:none;
+  transition:all 0.3s;
+}
+.btn-neon:hover{
+  background:var(--highlight);color:var(--primary);
+  box-shadow:0 0 30px rgba(0,255,136,0.3);
+}
+
+/* ─── HOURS + CONTACT: Split ─── */
+.info-section{border-top:1px solid rgba(255,255,255,0.05)}
+.info-section__grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.info-section__half{padding:var(--space-xl)}
+.info-section__half:first-child{border-right:1px solid rgba(255,255,255,0.05)}
+.info-section h3{font-size:1.2rem;letter-spacing:3px;margin-bottom:var(--space-lg);color:var(--highlight)}
+.hours-list{list-style:none}
+.hours-list li{display:flex;justify-content:space-between;padding:var(--space-xs) 0;border-bottom:1px solid rgba(255,255,255,0.03);font-size:0.9rem}
+.hours-list li span:first-child{color:var(--text-light)}
+.hours-list li.today span{color:var(--highlight);font-weight:600}
+.contact-list{list-style:none;display:flex;flex-direction:column;gap:var(--space-md)}
+.contact-list li span{display:block;font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:var(--text-light);margin-bottom:4px}
+
+/* ─── MAP ─── */
+.map{height:300px;background:var(--light);filter:grayscale(1) contrast(1.2)}
+
+/* ─── FOOTER: Brutalist ─── */
+.footer{
+  background:var(--darker);padding:var(--space-lg) 0;
+  border-top:2px solid var(--highlight);
+}
+.footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-md)}
+.footer__brand{font-family:var(--font-display);font-size:1.5rem;color:var(--white);letter-spacing:4px}
+.footer__links{display:flex;gap:var(--space-md);list-style:none}
+.footer__links a{color:var(--text-light);text-decoration:none;font-size:0.8rem;letter-spacing:1px}
+.footer__links a:hover{color:var(--highlight)}
+.footer__copy{font-size:0.75rem;color:var(--text-light)}
+
+/* ─── ANIMATIONS ─── */
+.reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1)}
+.reveal.active{opacity:1;transform:translateY(0)}
+@keyframes heroZoom{from{transform:scale(1.05)}to{transform:scale(1.15)}}
+
+@media(max-width:768px){
+  .services__grid,.info-section__grid{grid-template-columns:1fr}
+  .info-section__half:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,0.05)}
+  .hero__info{flex-direction:column;gap:var(--space-md)}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a href="#" class="header__logo">BR<span>.</span>ND</a>
+    <nav><ul class="header__nav">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <a href="#book" class="header__book">BOOK</a>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero__content">
+      <h1>FRESH<br><span class="neon">CUTS</span><br>DAILY</h1>
+      <div class="hero__info">
+        <div class="hero__info-item"><span>Location</span><p>123 Main St</p></div>
+        <div class="hero__info-item"><span>Hours</span><p>Mon–Sat 9–21</p></div>
+        <div class="hero__info-item"><span>Walk-ins</span><p>Always Welcome</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee__inner">
+    <span>CUTS</span><span>★</span><span>FADES</span><span>★</span><span>BEARDS</span><span>★</span><span>STYLES</span><span>★</span>
+    <span>CUTS</span><span>★</span><span>FADES</span><span>★</span><span>BEARDS</span><span>★</span><span>STYLES</span><span>★</span>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="reveal">SERVICES</h2>
+    <div class="services__grid reveal">
+      <div class="service-block"><h3>CLASSIC CUT</h3><p>Wash, cut, style</p><span class="service-block__price">€25</span></div>
+      <div class="service-block"><h3>SKIN FADE</h3><p>Precision fade work</p><span class="service-block__price">€30</span></div>
+      <div class="service-block"><h3>BEARD SHAPE</h3><p>Line up & trim</p><span class="service-block__price">€15</span></div>
+      <div class="service-block"><h3>THE COMBO</h3><p>Cut + beard + style</p><span class="service-block__price">€40</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="container">
+    <h2 class="reveal">CREW</h2>
+    <div class="team__row reveal">
+      <div class="team-block"><div class="team-block__photo"></div><div class="team-block__info"><h3>NAME</h3><p>Head Barber</p></div></div>
+      <div class="team-block"><div class="team-block__photo"></div><div class="team-block__info"><h3>NAME</h3><p>Fade Specialist</p></div></div>
+      <div class="team-block"><div class="team-block__photo"></div><div class="team-block__info"><h3>NAME</h3><p>Stylist</p></div></div>
+      <div class="team-block"><div class="team-block__photo"></div><div class="team-block__info"><h3>NAME</h3><p>Junior</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="neon-cta">
+  <h2>BOOK<br>NOW</h2>
+  <a href="#book" class="btn-neon">GET YOUR SLOT →</a>
+</section>
+
+<section class="info-section" id="contact">
+  <div class="container">
+    <div class="info-section__grid">
+      <div class="info-section__half">
+        <h3>HOURS</h3>
+        <ul class="hours-list">
+          <li data-day="1"><span>Monday</span><span>9:00 – 19:00</span></li>
+          <li data-day="2"><span>Tuesday</span><span>9:00 – 19:00</span></li>
+          <li data-day="3"><span>Wednesday</span><span>9:00 – 19:00</span></li>
+          <li data-day="4"><span>Thursday</span><span>9:00 – 21:00</span></li>
+          <li data-day="5"><span>Friday</span><span>9:00 – 21:00</span></li>
+          <li data-day="6"><span>Saturday</span><span>9:00 – 17:00</span></li>
+          <li data-day="0"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="info-section__half">
+        <h3>FIND US</h3>
+        <ul class="contact-list">
+          <li><span>Address</span>123 Main Street, City</li>
+          <li><span>Phone</span>(555) 123-4567</li>
+          <li><span>Email</span>info@brand.com</li>
+          <li><span>Social</span>@brand everywhere</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="map"></div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__brand">BR.ND</div>
+    <ul class="footer__links"><li><a href="#">IG</a></li><li><a href="#">TT</a></li><li><a href="#">FB</a></li></ul>
+    <span class="footer__copy">© 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
