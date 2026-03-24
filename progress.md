@@ -1,30 +1,27 @@
 # DAG Progress
 
-**Run ID**: 19790645-b8fa-4fa9-ba84-e6cfbd1784a7
-**Created**: 2026-03-24 19:52 UTC
+**Run ID**: bce804c6-15be-44bd-8476-a1be3faa49a3
+**Created**: 2026-03-24 20:00 UTC
 
 ---
 
 # Quick Summary
 
-- Build a modern, mobile-friendly single-page website for Mods Barber, a barbershop in Central Bucharest
-- Replace their dated HTTP-only WordPress site with a fresh design inspired by their vintage 60s theme concept
-- Ensure the new site captures the retro aesthetic while feeling contemporary and professional
-- Validate HTML/CSS quality and cross-browser compatibility before deployment
-- Deploy the completed site to the workspace directory structure
+- Create a single-page website for Expert Barbers, a barbershop located in Floreasca (Sector 1), Bucharest
+- Design should reflect a premium, elegant aesthetic with black/white theme
+- Website will be built, validated by QA, then deployed
+- Reference URL: https://www.expert-barbers.ro/en/
 
 # Plan
 
-- Website Coder creates the site structure, extracting content/branding from the existing site at modsbarber.ro
-- Website Coder builds responsive HTML/CSS with vintage 60s inspired modern design
-- QA Engineer validates HTML, accessibility, responsive behavior, and link integrity
-- QA Engineer reports any issues back for fixes
-- Deploy Agent moves final assets to production location and confirms deployment
+- Website Coder creates the site structure and content based on the premium men-only salon concept
+- QA Engineer validates HTML, accessibility, and design requirements after Website Coder completes
+- Deploy Agent handles final deployment after QA approval
 
 # Global Notes
 
-- **Constraints**: Original site is HTTP-only (no SSL), so fetching may require handling insecure connection; design should honor vintage 60s theme while modernizing
-- **Unknowns to verify**: Exact services offered, pricing, contact details, opening hours, team info - must be extracted from live site; logo/branding assets availability
+- **Constraints**: "Men Only" establishment; premium branding with Keune, Uppercut Deluxe, Kerastase Paris, BarberStore, Fudge products
+- **Verified from source**: Address (Calea Floreasca nr.49, Sector 1), phone (0723.69.23.23), hours (Tue-Fri 10-20, Sat 9-18, Mon/Sun closed), services, Facebook (TheMister.ro)
 
 # Agent Checklists
 
@@ -32,44 +29,41 @@
 
 ### Checklist
 
-- [x] Fetch content from http://modsbarber.ro/en/home/ (handle HTTP-only)
-- [x] Extract business info: name, address, phone, email, hours, services
-- [x] Identify color scheme and branding from existing site
-- [x] Create directory workspace/sites/mods-barber/
-- [x] Build index.html with semantic HTML5 structure
-- [x] Implement responsive CSS with vintage 60s modern aesthetic
-- [x] Include all standard sections: hero, services, about, contact, location
-- [x] Add meta tags for SEO and social sharing
-- [x] Ensure all images have alt text
-- [x] Create outgoing_email.html and outgoing_email.txt templates
+- [x] Fetch and analyze reference URL https://www.expert-barbers.ro/en/ for content, services, branding, and contact info
+- [x] Create site directory at workspace/sites/expert-barbers/
+- [x] Build index.html with premium black/white/gold aesthetic
+- [x] Include all relevant sections: hero, about, services, brands, why us, schedule, contact
+- [x] Implement responsive CSS with elegant design
+- [x] Create outgoing_email.html template for client outreach
+- [x] Create outgoing_email.txt plain text version
 
 ### Agent Updates
 
-**2026-03-24 19:58 UTC**: Website complete at `workspace/sites/mods-barber/index.html`
+**2026-03-24 20:02 UTC**: Website complete at `workspace/sites/expert-barbers/index.html`
 
-**Data extracted from modsbarber.ro:**
-- Business name: Mods Barber Shop & Social Club
-- Address: Str. Luterana 3, București Centru
-- Phone: (0738) 262 336
-- Hours: Monday-Saturday 10:00-21:00, Sunday closed
-- Services: Haircut, Haircut & Wash, Beard & Wash, Shaving, Wash & Styling, Full Service (Haircut & Beard & Wash)
-- Social: facebook.com/modsbarber, instagram.com/modsbarbershop
-- Brand aesthetic: Vintage 60s, jazz/soul/R&B music, Vespa scooter decor, social club atmosphere
-- Original colors: Black background, white text, grey accents (#cccccc)
+**Data extracted from expert-barbers.ro:**
+- Business name: Expert Barbers
+- Address: Calea Floreasca nr.49, Sector 1, București, 011601
+- Phone: 0723.69.23.23
+- Hours: Mon closed, Tue-Fri 10:00-20:00, Sat 09:00-18:00, Sun closed
+- Services: Haircut, Shaving, Manicure, Pedicure (50-200 RON range)
+- Team: 1 master barber, 2 beauticians, 3 stylists
+- Products: Keune Haircosmetics, Uppercut Deluxe, Kerastase Paris, BarberStore, Fudge
+- Social: Facebook - TheMister.ro
+- USP: "Men only" establishment, clientele includes diplomats, academics, athletes, TV personalities
 
 **Design implemented:**
-- **Color scheme**: Black (#0a0a0a), cream (#f5f0e6), gold accent (#c9a227) - modernized vintage palette
-- **Typography**: Bebas Neue (display), Playfair Display (serif accents), Montserrat (body)
-- **Sections**: Hero (large typography + taglines), Vintage Strip (Jazz/Soul/R&B), About (with Vespa icon), Services (6 cards), Atmosphere (social club vibe), Location (with Google Maps), Hours, CTA, Footer
-- **Vintage elements**: Subtle line patterns, serif italic taglines, gold accents, minimalist geometry
-- **Accessibility**: Skip link, ARIA labels, semantic HTML, keyboard navigation, reduced-motion support
-- **Mobile**: Hamburger menu, responsive breakpoints (1024px, 768px, 480px), full-width sticky CTA
-- **SEO**: Meta tags, Open Graph, JSON-LD BarberShop schema with geo coordinates
+- **Color scheme**: Black (#0a0a0a), white (#ffffff), gold accent (#c9a227) - premium elegant palette
+- **Typography**: Cinzel (display/serif), Lato (body) - classic masculine fonts
+- **Sections**: Hero ("Men Only" badge + royal treatment tagline), About (team & history), Services (6 cards with prices), Brands (premium product showcase), Why Us (3 reasons), Schedule, Contact (with Google Maps), CTA, Footer
+- **Accessibility**: Skip link, ARIA labels, semantic HTML, keyboard navigation
+- **Mobile**: Responsive breakpoints (900px, 768px), hamburger menu
+- **SEO**: Meta tags, Open Graph, JSON-LD BarberShop schema with geo, opening hours
 
 **Files created:**
-- `workspace/sites/mods-barber/index.html` (full website)
-- `workspace/sites/mods-barber/outgoing_email.txt` (plain text email)
-- `workspace/sites/mods-barber/outgoing_email.html` (HTML email)
+- `workspace/sites/expert-barbers/index.html` (full website)
+- `workspace/sites/expert-barbers/outgoing_email.txt` (plain text email)
+- `workspace/sites/expert-barbers/outgoing_email.html` (HTML email)
 
 Ready for QA review.
 
@@ -77,29 +71,26 @@ Ready for QA review.
 
 ### Checklist
 
-- [ ] Validate HTML using W3C standards (no errors)
-- [ ] Check CSS for syntax errors
-- [ ] Verify responsive design at mobile/tablet/desktop breakpoints
-- [ ] Test all internal links and anchors
-- [ ] Verify contact information is accurate and visible
-- [ ] Check accessibility basics (contrast, alt text, heading hierarchy)
-- [ ] Confirm no console errors in browser
-- [ ] Verify email templates are properly formatted
+- [ ] Validate HTML using W3C validator standards
+- [ ] Verify all links and references are correct
+- [ ] Check that design matches premium black/white aesthetic requirement
+- [ ] Verify contact information and location details are accurate
+- [ ] Test email templates for proper formatting
+- [ ] Document any issues found and verify fixes
 
 ### Agent Updates
 
-- (append-only log; downstream agent writes updates here)
+- (append-only log; QA Engineer writes updates here)
 
 ## Deploy Agent
 
 ### Checklist
 
-- [ ] Confirm QA Engineer has approved the build
-- [ ] Verify all files present in workspace/sites/mods-barber/
-- [ ] Run final file integrity check
-- [ ] Document deployment completion in progress.md
-- [ ] Update issue status to completed
+- [ ] Verify QA approval is complete
+- [ ] Deploy site files to appropriate hosting location
+- [ ] Verify deployment is successful and site is accessible
+- [ ] Update progress.md with deployment confirmation
 
 ### Agent Updates
 
-- (append-only log; downstream agent writes updates here)
+- (append-only log; Deploy Agent writes updates here)

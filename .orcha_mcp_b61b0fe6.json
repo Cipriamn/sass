@@ -3,7 +3,7 @@
     "Gmail": {
       "command": "python3",
       "args": [
-        "/Users/ciprian/Desktop/Munca/NightCity/desktop/release/mac-arm64/Orcha.app/Contents/Resources/mcp-bridge/mcp_stdio_bridge.py",
+        "/Applications/Orcha-Stable.app/Contents/Resources/mcp-bridge/mcp_stdio_bridge.py",
         "--server-id",
         "c2c63e61-a1aa-46a7-9db6-352a7fc5fc61",
         "--port",

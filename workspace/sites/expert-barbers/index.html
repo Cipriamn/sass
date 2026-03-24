@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expert Barbers | Salon Premium pentru Barbati - Floreasca, Sector 1, București</title>
+<meta name="description" content="Expert Barbers - salon exclusiv pentru barbati in Floreasca, Sector 1. Tuns, barbierit, manichiura, pedichiura. Tratament regal cu produse premium Keune, Uppercut Deluxe. Tel: 0723.69.23.23">
+<meta name="keywords" content="frizerie barbati, barber shop, tuns, barbierit, manichiura, pedichiura, Floreasca, Sector 1, București, salon premium">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.expert-barbers.ro/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Expert Barbers | Salon Premium Floreasca București">
+<meta property="og:description" content="Salon exclusiv pentru barbati. Tuns, barbierit, manichiura, pedichiura. Tratament regal cu produse premium.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+/*──────────────────────────────────────────────
+  EXPERT BARBERS - Premium Black & White Theme
+  Men-only establishment, royal treatment focus
+──────────────────────────────────────────────*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --primary: #0a0a0a;
+  --primary-light: #1a1a1a;
+  --accent: #c9a227;
+  --accent-light: #d4b84a;
+  --white: #ffffff;
+  --gray-100: #f8f8f8;
+  --gray-200: #e8e8e8;
+  --gray-300: #d0d0d0;
+  --gray-600: #666666;
+  --gray-800: #333333;
+  --dark: #000000;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Lato', sans-serif;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--gray-800);line-height:1.8;background:var(--white)}
+.container{max-width:1100px;margin:0 auto;padding:0 var(--space-md)}
+section{padding:var(--space-xl) 0}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.2}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* Skip link */
+.skip-link{position:absolute;top:-100px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--dark);padding:var(--space-sm) var(--space-md);z-index:9999;font-weight:600}
+.skip-link:focus{top:10px}
+
+/* ─── HEADER ─── */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:var(--space-sm) 0;
+  background:rgba(0,0,0,0.95);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  transition:all 0.3s ease;
+}
+.header .container{display:flex;justify-content:space-between;align-items:center}
+.header__logo{
+  font-family:var(--font-display);
+  font-size:1.5rem;
+  color:var(--white);
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.header__logo span{color:var(--accent)}
+.header__nav{display:flex;gap:var(--space-md);list-style:none}
+.header__nav a{
+  color:rgba(255,255,255,0.8);
+  font-size:0.85rem;
+  font-weight:400;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:color 0.3s;
+}
+.header__nav a:hover{color:var(--accent)}
+.header__cta{
+  background:var(--accent);
+  color:var(--dark);
+  padding:0.6rem 1.5rem;
+  font-weight:700;
+  font-size:0.8rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:all 0.3s;
+}
+.header__cta:hover{background:var(--accent-light)}
+
+/* Mobile menu */
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:var(--space-xs)}
+.menu-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:0.3s}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;
+  background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%23111"/><circle cx="50" cy="50" r="40" fill="none" stroke="%23222" stroke-width="0.5"/></svg>');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:var(--white);
+  padding-top:80px;
+}
+.hero__content{max-width:800px;padding:var(--space-md)}
+.hero__badge{
+  display:inline-block;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  font-size:0.75rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  padding:0.5rem 1.5rem;
+  margin-bottom:var(--space-md);
+}
+.hero h1{
+  font-size:clamp(2.5rem,6vw,4.5rem);
+  margin-bottom:var(--space-md);
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+.hero h1 span{color:var(--accent)}
+.hero__tagline{
+  font-size:1.1rem;
+  color:rgba(255,255,255,0.7);
+  margin-bottom:var(--space-lg);
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+  font-weight:300;
+  line-height:1.9;
+}
+.hero__cta{
+  display:inline-flex;
+  align-items:center;
+  gap:var(--space-sm);
+  background:var(--accent);
+  color:var(--dark);
+  padding:1rem 2.5rem;
+  font-weight:700;
+  font-size:0.9rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  transition:all 0.3s;
+}
+.hero__cta:hover{background:var(--accent-light);transform:translateY(-2px)}
+.hero__phone{
+  display:block;
+  margin-top:var(--space-md);
+  color:var(--accent);
+  font-size:1.3rem;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+/* ─── SECTION HEADER ─── */
+.section-header{text-align:center;margin-bottom:var(--space-lg)}
+.section-header h2{
+  font-size:clamp(1.8rem,4vw,2.5rem);
+  margin-bottom:var(--space-sm);
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+.section-header p{
+  color:var(--gray-600);
+  max-width:600px;
+  margin:0 auto;
+}
+.section-divider{
+  width:60px;
+  height:3px;
+  background:var(--accent);
+  margin:var(--space-sm) auto 0;
+}
+
+/* ─── ABOUT ─── */
+.about{background:var(--gray-100)}
+.about__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg);align-items:center}
+.about__image{
+  background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);
+  height:450px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+.about__image::before{
+  content:'EB';
+  font-family:var(--font-display);
+  font-size:8rem;
+  color:rgba(255,255,255,0.05);
+  position:absolute;
+}
+.about__image-icon{
+  width:120px;
+  height:120px;
+  border:3px solid var(--accent);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.about__image-icon svg{width:60px;height:60px;fill:var(--accent)}
+.about__content h2{
+  font-size:2rem;
+  margin-bottom:var(--space-md);
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+.about__content p{
+  color:var(--gray-600);
+  margin-bottom:var(--space-sm);
+  text-align:justify;
+}
+.about__highlight{
+  background:var(--primary);
+  color:var(--white);
+  padding:var(--space-md);
+  margin-top:var(--space-md);
+  border-left:4px solid var(--accent);
+}
+.about__highlight p{color:rgba(255,255,255,0.8);margin:0}
+.about__highlight strong{color:var(--accent)}
+
+/* ─── SERVICES ─── */
+.services{background:var(--primary);color:var(--white)}
+.services .section-header h2{color:var(--white)}
+.services .section-header p{color:rgba(255,255,255,0.6)}
+.services__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-md)}
+.service-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:var(--space-lg) var(--space-md);
+  text-align:center;
+  transition:all 0.3s;
+}
+.service-card:hover{
+  background:rgba(255,255,255,0.08);
+  border-color:var(--accent);
+  transform:translateY(-5px);
+}
+.service-card__icon{
+  width:70px;
+  height:70px;
+  margin:0 auto var(--space-md);
+  border:2px solid var(--accent);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.service-card__icon svg{width:32px;height:32px;fill:var(--accent)}
+.service-card h3{
+  font-size:1.1rem;
+  margin-bottom:var(--space-sm);
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.service-card p{
+  color:rgba(255,255,255,0.6);
+  font-size:0.9rem;
+  line-height:1.7;
+}
+.service-card__price{
+  display:inline-block;
+  margin-top:var(--space-md);
+  color:var(--accent);
+  font-weight:700;
+  font-size:1.1rem;
+}
+
+/* ─── BRANDS ─── */
+.brands{background:var(--white);padding:var(--space-lg) 0}
+.brands__title{
+  text-align:center;
+  font-family:var(--font-display);
+  font-size:0.9rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gray-600);
+  margin-bottom:var(--space-md);
+}
+.brands__grid{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:var(--space-lg);
+}
+.brands__item{
+  color:var(--gray-600);
+  font-size:0.85rem;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:0.7;
+  transition:opacity 0.3s;
+}
+.brands__item:hover{opacity:1}
+
+/* ─── WHY US ─── */
+.why-us{background:var(--gray-100)}
+.why-us__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-md)}
+.why-card{
+  background:var(--white);
+  padding:var(--space-lg);
+  border-bottom:3px solid transparent;
+  transition:all 0.3s;
+}
+.why-card:hover{border-bottom-color:var(--accent);box-shadow:0 10px 40px rgba(0,0,0,0.08)}
+.why-card__number{
+  font-family:var(--font-display);
+  font-size:3rem;
+  color:var(--accent);
+  line-height:1;
+  margin-bottom:var(--space-sm);
+}
+.why-card h3{
+  font-size:1rem;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:var(--space-sm);
+}
+.why-card p{color:var(--gray-600);font-size:0.95rem}
+
+/* ─── SCHEDULE ─── */
+.schedule{background:var(--white)}
+.schedule__box{
+  max-width:600px;
+  margin:0 auto;
+  background:var(--primary);
+  color:var(--white);
+  padding:var(--space-lg);
+}
+.schedule__title{
+  font-family:var(--font-display);
+  font-size:1.5rem;
+  text-align:center;
+  margin-bottom:var(--space-md);
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.schedule__row{
+  display:flex;
+  justify-content:space-between;
+  padding:var(--space-sm) 0;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.schedule__row:last-child{border:none}
+.schedule__day{color:rgba(255,255,255,0.7)}
+.schedule__time{color:var(--accent);font-weight:600}
+.schedule__closed{color:rgba(255,255,255,0.4)}
+
+/* ─── CONTACT ─── */
+.contact{background:var(--gray-100)}
+.contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg)}
+.contact__info h3{
+  font-size:1.3rem;
+  margin-bottom:var(--space-md);
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+.contact__item{
+  display:flex;
+  align-items:flex-start;
+  gap:var(--space-sm);
+  margin-bottom:var(--space-md);
+  padding-bottom:var(--space-md);
+  border-bottom:1px solid var(--gray-200);
+}
+.contact__item:last-child{border:none}
+.contact__icon{
+  width:45px;
+  height:45px;
+  background:var(--primary);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.contact__icon svg{width:20px;height:20px;fill:var(--accent)}
+.contact__text strong{display:block;margin-bottom:0.3rem}
+.contact__text span{color:var(--gray-600);font-size:0.95rem}
+.contact__text a{color:var(--primary);font-weight:600}
+.contact__text a:hover{color:var(--accent)}
+.contact__map{
+  background:var(--gray-200);
+  min-height:350px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.contact__map iframe{width:100%;height:350px;border:0}
+
+/* ─── CTA ─── */
+.cta{
+  background:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%23111"/></svg>');
+  color:var(--white);
+  text-align:center;
+  padding:var(--space-xl) 0;
+}
+.cta h2{
+  font-size:clamp(1.8rem,4vw,2.5rem);
+  margin-bottom:var(--space-sm);
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+.cta p{color:rgba(255,255,255,0.7);margin-bottom:var(--space-md);max-width:500px;margin-left:auto;margin-right:auto}
+.cta__phone{
+  display:inline-flex;
+  align-items:center;
+  gap:var(--space-sm);
+  background:var(--accent);
+  color:var(--dark);
+  padding:1rem 2.5rem;
+  font-weight:700;
+  font-size:1.1rem;
+  letter-spacing:2px;
+  transition:all 0.3s;
+}
+.cta__phone:hover{background:var(--accent-light)}
+.cta__phone svg{width:24px;height:24px;fill:var(--dark)}
+
+/* ─── FOOTER ─── */
+.footer{
+  background:var(--dark);
+  color:rgba(255,255,255,0.6);
+  padding:var(--space-lg) 0 var(--space-md);
+}
+.footer__grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:var(--space-lg);
+  margin-bottom:var(--space-lg);
+}
+.footer__brand h4{
+  font-family:var(--font-display);
+  font-size:1.3rem;
+  color:var(--white);
+  margin-bottom:var(--space-sm);
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.footer__brand h4 span{color:var(--accent)}
+.footer__brand p{font-size:0.9rem;line-height:1.8}
+.footer__links h5{
+  color:var(--white);
+  font-size:0.9rem;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:var(--space-sm);
+}
+.footer__links ul{list-style:none}
+.footer__links li{margin-bottom:0.5rem}
+.footer__links a{font-size:0.9rem;transition:color 0.3s}
+.footer__links a:hover{color:var(--accent)}
+.footer__social{display:flex;gap:var(--space-sm);margin-top:var(--space-sm)}
+.footer__social a{
+  width:40px;
+  height:40px;
+  border:1px solid rgba(255,255,255,0.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:all 0.3s;
+}
+.footer__social a:hover{border-color:var(--accent);background:var(--accent)}
+.footer__social svg{width:18px;height:18px;fill:rgba(255,255,255,0.6)}
+.footer__social a:hover svg{fill:var(--dark)}
+.footer__bottom{
+  border-top:1px solid rgba(255,255,255,0.1);
+  padding-top:var(--space-md);
+  text-align:center;
+  font-size:0.85rem;
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .about__grid,.contact__grid{grid-template-columns:1fr}
+  .about__image{height:300px}
+  .footer__grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .header__nav,.header__cta{display:none}
+  .menu-toggle{display:block}
+  .hero h1{font-size:2rem}
+  .hero__tagline{font-size:1rem}
+  section{padding:var(--space-lg) 0}
+  .service-card{padding:var(--space-md)}
+}
+</style>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  "name": "Expert Barbers",
+  "description": "Salon exclusiv pentru barbati in Floreasca, Sector 1. Tuns, barbierit, manichiura, pedichiura cu produse premium.",
+  "url": "https://www.expert-barbers.ro/",
+  "telephone": "+40723692323",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calea Floreasca nr.49",
+    "addressLocality": "București",
+    "addressRegion": "Sector 1",
+    "postalCode": "011601",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "44.4614",
+    "longitude": "26.1006"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Monday","opens": "00:00","closes": "00:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Tuesday","opens": "10:00","closes": "20:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Wednesday","opens": "10:00","closes": "20:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Thursday","opens": "10:00","closes": "20:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Friday","opens": "10:00","closes": "20:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Saturday","opens": "09:00","closes": "18:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Sunday","opens": "00:00","closes": "00:00"}
+  ],
+  "priceRange": "50 - 200 RON",
+  "image": "https://www.expert-barbers.ro/images/salon.jpg",
+  "sameAs": ["https://www.facebook.com/TheMister.ro"]
+}
+</script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Salt la continut</a>
+
+<!-- HEADER -->
+<header class="header" role="banner">
+  <div class="container">
+    <a href="#" class="header__logo" aria-label="Expert Barbers - Acasa">Expert <span>Barbers</span></a>
+    <nav aria-label="Navigare principala">
+      <ul class="header__nav">
+        <li><a href="#despre">Despre Noi</a></li>
+        <li><a href="#servicii">Servicii</a></li>
+        <li><a href="#program">Program</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+40723692323" class="header__cta">Suna Acum</a>
+    <button class="menu-toggle" aria-label="Meniu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero__content">
+    <span class="hero__badge">Men Only</span>
+    <h1>Expert <span>Barbers</span></h1>
+    <p class="hero__tagline">Experienta suprema, tratament regal. Un loc exclusiv pentru barbatii care apreciaza calitatea, serviciile premium si atmosfera relaxanta. Diplomati, academicieni, sportivi si personalitati TV ne acorda increderea lor.</p>
+    <a href="tel:+40723692323" class="hero__cta">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      Programeaza-te
+    </a>
+    <a href="tel:+40723692323" class="hero__phone">0723.69.23.23</a>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main id="main">
+
+<!-- ABOUT -->
+<section class="about" id="despre">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__image">
+        <div class="about__image-icon">
+          <svg viewBox="0 0 24 24"><path d="M22.83 12.99l-1.63-1.26c-.04-.32-.07-.64-.07-.98s.03-.66.07-.98l1.63-1.26c.29-.22.37-.62.2-.94l-1.55-2.68c-.18-.32-.56-.45-.9-.32l-1.92.77c-.52-.4-1.08-.73-1.69-.98l-.29-2.04c-.05-.35-.35-.62-.71-.62h-3.1c-.36 0-.66.27-.71.62l-.29 2.04c-.61.25-1.17.58-1.69.98l-1.92-.77c-.34-.14-.72 0-.9.32L4.57 7.57c-.18.32-.09.72.2.94l1.63 1.26c-.04.32-.07.65-.07.98s.03.66.07.98l-1.63 1.26c-.29.22-.37.62-.2.94l1.55 2.68c.18.32.56.45.9.32l1.92-.77c.52.4 1.08.73 1.69.98l.29 2.04c.05.35.35.62.71.62h3.1c.36 0 .66-.27.71-.62l.29-2.04c.61-.25 1.17-.58 1.69-.98l1.92.77c.34.14.72 0 .9-.32l1.55-2.68c.18-.32.09-.72-.2-.94zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+        </div>
+      </div>
+      <div class="about__content">
+        <h2>Despre Expert Barbers</h2>
+        <p>Expert Barbers este un salon exclusiv pentru barbati, situat in inima cartierului Floreasca din Sector 1, Bucuresti. Echipa noastra este formata dintr-un master barber, 2 cosmeticiene si 3 stilisti profesionisti, dedicati sa va ofere cea mai buna experienta.</p>
+        <p>Clientela noastra selecta include diplomati romani, academicieni, sportivi de performanta si personalitati din lumea televiziunii. Fiecare vizita la salonul nostru este o experienta unica, un tratament regal in adevaratul sens al cuvantului.</p>
+        <div class="about__highlight">
+          <p><strong>Produse Premium:</strong> Folosim exclusiv branduri de top - Keune Haircosmetics, Uppercut Deluxe, Kerastase Paris, BarberStore si Fudge pentru rezultate impecabile.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicii">
+  <div class="container">
+    <div class="section-header">
+      <h2>Serviciile Noastre</h2>
+      <p>Oferim o gama completa de servicii de ingrijire pentru barbati, de la tuns si barbierit pana la manichiura si pedichiura.</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="services__grid">
+      <article class="service-card">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M9.5 2A1.5 1.5 0 008 3.5v1A1.5 1.5 0 009.5 6h5A1.5 1.5 0 0016 4.5v-1A1.5 1.5 0 0014.5 2h-5zM4 7a2 2 0 012-2h12a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V7zm5.5 3a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h5a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-5z"/></svg>
+        </div>
+        <h3>Tuns Clasic</h3>
+        <p>Tunsoare profesionala adaptata formei fetei si stilului personal. Include spalare, tuns si styling final.</p>
+        <span class="service-card__price">de la 50 RON</span>
+      </article>
+      <article class="service-card">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M20.58 16.17l-6.17-6.17 1.41-1.41 6.18 6.17-1.42 1.41zM7.59 10.59L9 9.17l2.83 2.83 1.41-1.41L10.41 7.76l1.42-1.41L9 3.5 3.5 9l2.83 2.83 1.26-1.24z"/></svg>
+        </div>
+        <h3>Barbierit Traditional</h3>
+        <p>Barbierit clasic cu brici, prosop cald si produse premium. Experienta autentica de barbershop.</p>
+        <span class="service-card__price">de la 80 RON</span>
+      </article>
+      <article class="service-card">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+        </div>
+        <h3>Manichiura Barbati</h3>
+        <p>Ingrijire profesionala a mainilor si unghiilor. Taiere, pilire si hidratare pentru aspect ingrijit.</p>
+        <span class="service-card__price">de la 60 RON</span>
+      </article>
+      <article class="service-card">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z"/></svg>
+        </div>
+        <h3>Pedichiura Barbati</h3>
+        <p>Tratament complet pentru picioare. Ingrijire unghii, indepartare piele moarta si masaj relaxant.</p>
+        <span class="service-card__price">de la 100 RON</span>
+      </article>
+      <article class="service-card">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <h3>Tuns + Barba</h3>
+        <p>Pachet complet: tunsoare si aranjare barba. Ideal pentru un look complet si armonios.</p>
+        <span class="service-card__price">de la 120 RON</span>
+      </article>
+      <article class="service-card">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <h3>Tratament VIP</h3>
+        <p>Experienta completa: tuns, barbierit, manichiura si pedichiura. Tratamentul regal pentru barbatul modern.</p>
+        <span class="service-card__price">de la 200 RON</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands" aria-label="Branduri partenere">
+  <div class="container">
+    <p class="brands__title">Produse Premium pe care le folosim</p>
+    <div class="brands__grid">
+      <span class="brands__item">Keune Haircosmetics</span>
+      <span class="brands__item">Uppercut Deluxe</span>
+      <span class="brands__item">Kerastase Paris</span>
+      <span class="brands__item">BarberStore</span>
+      <span class="brands__item">Fudge</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us">
+  <div class="container">
+    <div class="section-header">
+      <h2>De Ce Expert Barbers</h2>
+      <p>Motivele pentru care clientii nostri ne aleg si revin cu incredere.</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="why-us__grid">
+      <article class="why-card">
+        <span class="why-card__number">01</span>
+        <h3>Experienta Premium</h3>
+        <p>Fiecare vizita este o experienta, nu doar un serviciu. Atmosfera relaxanta, muzica placuta si atentie la detalii.</p>
+      </article>
+      <article class="why-card">
+        <span class="why-card__number">02</span>
+        <h3>Echipa Profesionista</h3>
+        <p>Master barber, cosmeticiene si stilisti cu experienta vasta. Fiecare membru al echipei este expert in domeniul sau.</p>
+      </article>
+      <article class="why-card">
+        <span class="why-card__number">03</span>
+        <h3>Produse de Top</h3>
+        <p>Folosim exclusiv branduri internationale recunoscute pentru calitate si rezultate de durata.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule" id="program">
+  <div class="container">
+    <div class="section-header">
+      <h2>Program de Functionare</h2>
+      <p>Va asteptam la salon de marti pana sambata.</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="schedule__box">
+      <h3 class="schedule__title">Orar</h3>
+      <div class="schedule__row">
+        <span class="schedule__day">Luni</span>
+        <span class="schedule__closed">Inchis</span>
+      </div>
+      <div class="schedule__row">
+        <span class="schedule__day">Marti - Vineri</span>
+        <span class="schedule__time">10:00 - 20:00</span>
+      </div>
+      <div class="schedule__row">
+        <span class="schedule__day">Sambata</span>
+        <span class="schedule__time">09:00 - 18:00</span>
+      </div>
+      <div class="schedule__row">
+        <span class="schedule__day">Duminica</span>
+        <span class="schedule__closed">Inchis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <h2>Contact</h2>
+      <p>Sunati pentru programari sau vizitati-ne la adresa din Floreasca.</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="contact__grid">
+      <div class="contact__info">
+        <h3>Informatii Contact</h3>
+        <div class="contact__item">
+          <div class="contact__icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="contact__text">
+            <strong>Adresa</strong>
+            <span>Calea Floreasca nr.49, Sector 1<br>Bucuresti, 011601</span>
+          </div>
+        </div>
+        <div class="contact__item">
+          <div class="contact__icon">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div class="contact__text">
+            <strong>Telefon</strong>
+            <a href="tel:+40723692323">0723.69.23.23</a>
+          </div>
+        </div>
+        <div class="contact__item">
+          <div class="contact__icon">
+            <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+          </div>
+          <div class="contact__text">
+            <strong>Facebook</strong>
+            <a href="https://www.facebook.com/TheMister.ro" target="_blank" rel="noopener">TheMister.ro</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.3!2d26.0980!3d44.4614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4b!2sCalea+Floreasca+49%2C+Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Locatie Expert Barbers pe harta">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Programeaza-te Acum</h2>
+    <p>Suna pentru o programare sau vino direct la salon. Te asteptam!</p>
+    <a href="tel:+40723692323" class="cta__phone">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      0723.69.23.23
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <h4>Expert <span>Barbers</span></h4>
+        <p>Salon exclusiv pentru barbati in Floreasca, Sector 1. Experienta suprema, tratament regal. De ani de zile, oferim servicii premium pentru barbatii care apreciaza calitatea.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/TheMister.ro" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h5>Link-uri Rapide</h5>
+        <ul>
+          <li><a href="#despre">Despre Noi</a></li>
+          <li><a href="#servicii">Servicii</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h5>Contact</h5>
+        <ul>
+          <li>Calea Floreasca nr.49</li>
+          <li>Sector 1, Bucuresti</li>
+          <li><a href="tel:+40723692323">0723.69.23.23</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 Expert Barbers. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header scroll effect
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.header__nav');
+if (menuToggle && nav) {
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('active');
+  });
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href !== '#') {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>

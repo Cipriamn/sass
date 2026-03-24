@@ -217,9 +217,9 @@ a{text-decoration:none;color:inherit}
 .accordion{max-width:700px}
 .accordion__item{border-bottom:1px solid rgba(0,0,0,0.1)}
 .accordion__header{
-  display:flex;justify-content:space-between;align-items:center;
+  display:flex;justify-content:space-between;align-items:center;width:100%;
   padding:var(--space-md) 0;
-  cursor:pointer;
+  cursor:pointer;background:none;border:none;font-family:inherit;text-align:left;
 }
 .accordion__title{font-family:var(--font-display);font-size:1.4rem;letter-spacing:1px;text-transform:uppercase}
 .accordion__icon{
@@ -334,7 +334,7 @@ a:focus,button:focus{outline:2px solid var(--highlight);outline-offset:2px}
 <a href="#main" class="skip-link">Sari la conținut</a>
 
 <!-- HEADER -->
-<header class="header" role="banner">
+<header class="header">
   <div class="container">
     <a href="#" class="header__logo" aria-label="Atelierul de Tuns - Acasă">ATELIERUL<span>.</span></a>
     <nav aria-label="Navigație principală">
@@ -345,7 +345,7 @@ a:focus,button:focus{outline:2px solid var(--highlight);outline-offset:2px}
       </ul>
     </nav>
     <a href="https://www.atelieruldetuns.ro/#formularpro" class="header__book" target="_blank" rel="noopener">Programează-te</a>
-    <button class="menu-toggle" aria-label="Meniu" aria-expanded="false">
+    <button type="button" class="menu-toggle" aria-label="Meniu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -400,55 +400,55 @@ a:focus,button:focus{outline:2px solid var(--highlight);outline-offset:2px}
     <p class="services__subtitle reveal">Selectează serviciul dorit la programare</p>
     <div class="accordion reveal">
       <div class="accordion__item">
-        <div class="accordion__header" role="button" tabindex="0" aria-expanded="false">
+        <button type="button" class="accordion__header" aria-expanded="false">
           <span class="accordion__title">Tuns</span>
           <span class="accordion__icon" aria-hidden="true">+</span>
-        </div>
+        </button>
         <div class="accordion__body">
           <p>Tunsoare clasică sau modernă, adaptată stilului tău. Include spălat și styling.</p>
         </div>
       </div>
       <div class="accordion__item">
-        <div class="accordion__header" role="button" tabindex="0" aria-expanded="false">
+        <button type="button" class="accordion__header" aria-expanded="false">
           <span class="accordion__title">Tuns + Shaver</span>
           <span class="accordion__icon" aria-hidden="true">+</span>
-        </div>
+        </button>
         <div class="accordion__body">
           <p>Pachet complet: tunsoare și finisare cu mașina de ras pentru un look impecabil.</p>
         </div>
       </div>
       <div class="accordion__item">
-        <div class="accordion__header" role="button" tabindex="0" aria-expanded="false">
+        <button type="button" class="accordion__header" aria-expanded="false">
           <span class="accordion__title">Tuns Barbă</span>
           <span class="accordion__icon" aria-hidden="true">+</span>
-        </div>
+        </button>
         <div class="accordion__body">
           <p>Aranjat și conturare barbă. Definim liniile și aducem forma perfectă bărbii tale.</p>
         </div>
       </div>
       <div class="accordion__item">
-        <div class="accordion__header" role="button" tabindex="0" aria-expanded="false">
+        <button type="button" class="accordion__header" aria-expanded="false">
           <span class="accordion__title">Abonament 4 Ședințe</span>
           <span class="accordion__icon" aria-hidden="true">+</span>
-        </div>
+        </button>
         <div class="accordion__body">
           <p>Pachet economic cu 4 ședințe de tuns. Valabil 3 luni de la achiziție.</p>
         </div>
       </div>
       <div class="accordion__item">
-        <div class="accordion__header" role="button" tabindex="0" aria-expanded="false">
+        <button type="button" class="accordion__header" aria-expanded="false">
           <span class="accordion__title">Mască Puncte Negre</span>
           <span class="accordion__icon" aria-hidden="true">+</span>
-        </div>
+        </button>
         <div class="accordion__body">
           <p>Tratament facial cu mască pentru curățarea tenului și eliminarea punctelor negre.</p>
         </div>
       </div>
       <div class="accordion__item">
-        <div class="accordion__header" role="button" tabindex="0" aria-expanded="false">
+        <button type="button" class="accordion__header" aria-expanded="false">
           <span class="accordion__title">Masaj Capilar</span>
           <span class="accordion__icon" aria-hidden="true">+</span>
-        </div>
+        </button>
         <div class="accordion__body">
           <p>Masaj relaxant al scalpului care stimulează circulația și sănătatea părului.</p>
         </div>
@@ -492,7 +492,7 @@ a:focus,button:focus{outline:2px solid var(--highlight);outline-offset:2px}
 </main>
 
 <!-- FOOTER -->
-<footer class="footer" role="contentinfo">
+<footer class="footer">
   <div class="container">
     <div class="footer__grid">
       <div>
@@ -557,11 +557,8 @@ document.querySelectorAll('.accordion__header').forEach(header=>{
     const item=header.parentElement;
     const isOpen=item.classList.contains('open');
     document.querySelectorAll('.accordion__item').forEach(i=>i.classList.remove('open'));
-    if(!isOpen)item.classList.add('open');
-    header.setAttribute('aria-expanded',!isOpen);
-  });
-  header.addEventListener('keydown',e=>{
-    if(e.key==='Enter'||e.key===' '){e.preventDefault();header.click();}
+    document.querySelectorAll('.accordion__header').forEach(h=>h.setAttribute('aria-expanded','false'));
+    if(!isOpen){item.classList.add('open');header.setAttribute('aria-expanded','true');}
   });
 });
 
