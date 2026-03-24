@@ -81,7 +81,52 @@ Ready for QA review.
 
 ### Agent Updates
 
-- (append-only log; downstream agent writes updates here)
+**2026-03-24**: QA Complete ✅
+
+**Issues Fixed:**
+- Title ampersand encoded (`&` → `&amp;`)
+- Section heading ampersand encoded
+- Phone numbers: added `&nbsp;` for non-breaking spaces, `&#8209;` for non-breaking hyphens
+- Gallery items: added `role="img"` for proper ARIA usage
+- Inline styles moved to CSS class `.location-card__address--secondary`
+
+**Validation Results:**
+- ✅ HTML: Valid (0 errors)
+- ✅ CSS: Valid (all styles in `<style>` block)
+- ✅ JavaScript: Valid (scroll effects, mobile menu, reveal animations)
+
+**Content Verified:**
+- ✅ Business name: "Salon Margal" + "Salon Adora"
+- ✅ Location 1: Bd. Chișinău, nr. 1, Sector 2, București | 021 255 58 49
+- ✅ Location 2: Șos. Iancului, nr. 6, bl. 113B, sc. B | 0762 647 751
+- ✅ Heritage: "22+ Ani" prominently displayed
+- ✅ Services: Coafor, Vopsit, Manichiură, Pedichiură, Cosmetică, Tratamente Corp
+
+**Responsive Design:**
+- ✅ 4 breakpoints (1024px, 968px, 768px, 480px)
+- ✅ Mobile menu (hamburger toggle)
+- ✅ Fluid typography (clamp functions)
+
+**Accessibility:**
+- ✅ Skip link
+- ✅ ARIA labels on interactive elements
+- ✅ Semantic HTML5 structure
+- ✅ Focus-visible styles
+- ✅ 48px minimum touch targets
+
+**SEO:**
+- ✅ Meta tags (description, keywords, robots)
+- ✅ Open Graph tags
+- ✅ Canonical URL
+- ✅ JSON-LD BeautySalon schema
+
+**Links Validated:**
+- 9 internal navigation links (#despre, #servicii, #oferte, #contact, etc.)
+- 6 phone links (tel:+40212555849, tel:+40762647751)
+- 2 social links (Facebook)
+- 1 canonical URL
+
+**Status: QA APPROVED** - Ready for deployment.
 
 ## Deploy Agent
 
