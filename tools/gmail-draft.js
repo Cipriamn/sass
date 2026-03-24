@@ -18,6 +18,7 @@
  * Usage:
  *   node gmail-draft.js --to "recipient@example.com" --subject "Hello" --body "Message body"
  *   node gmail-draft.js --to "a@example.com,b@example.com" --subject "Hi" --body "Hello all"
+ *   node gmail-draft.js --html-file "/path/to/email.html" --to "user@example.com" --subject "Hello"
  *   node gmail-draft.js --interactive
  */
 
@@ -101,15 +102,15 @@ async function getNewToken(oAuth2Client) {
   });
 }
 
-function createMimeMessage(to, subject, body, from = 'me') {
-  const boundary = '----=_Part_' + Date.now().toString(36);
+function createMimeMessage(to, subject, body, from = 'me', isHtml = false) {
+  const contentType = isHtml ? 'text/html' : 'text/plain';
 
   const mimeMessage = [
     `From: ${from}`,
     `To: ${to}`,
     `Subject: ${subject}`,
     'MIME-Version: 1.0',
-    `Content-Type: text/plain; charset="UTF-8"`,
+    `Content-Type: ${contentType}; charset="UTF-8"`,
     '',
     body,
   ].join('\r\n');
@@ -122,11 +123,11 @@ function createMimeMessage(to, subject, body, from = 'me') {
     .replace(/=+$/, '');
 }
 
-async function createDraft(auth, to, subject, body) {
+async function createDraft(auth, to, subject, body, isHtml = false) {
   const { google } = await loadGoogleApis();
   const gmail = google.gmail({ version: 'v1', auth });
 
-  const raw = createMimeMessage(to, subject, body);
+  const raw = createMimeMessage(to, subject, body, 'me', isHtml);
 
   try {
     const response = await gmail.users.drafts.create({
@@ -181,6 +182,8 @@ function parseArgs(args) {
       result.subject = args[++i];
     } else if (arg === '--body' && args[i + 1]) {
       result.body = args[++i];
+    } else if (arg === '--html-file' && args[i + 1]) {
+      result.htmlFile = args[++i];
     } else if (arg === '--interactive') {
       result.interactive = true;
     } else if (arg === '--setup') {
@@ -202,13 +205,15 @@ Usage:
 Options:
   --to <emails>      Recipient email(s), comma-separated
   --subject <text>   Email subject
-  --body <text>      Email body
+  --body <text>      Email body (plain text)
+  --html-file <path> Path to HTML file to use as email body
   --interactive      Interactive mode (prompts for input)
   --setup            Run OAuth setup
   --help, -h         Show this help
 
 Examples:
   node gmail-draft.js --to "user@example.com" --subject "Hello" --body "Hi there!"
+  node gmail-draft.js --to "user@example.com" --subject "Hello" --html-file "./email.html"
   node gmail-draft.js --interactive
   node gmail-draft.js --setup
 
@@ -238,6 +243,7 @@ async function main() {
   }
 
   let to, subject, body;
+  let isHtml = false;
 
   if (args.interactive) {
     const input = await interactiveMode();
@@ -247,19 +253,33 @@ async function main() {
   } else {
     to = args.to;
     subject = args.subject;
-    body = args.body;
+
+    // If --html-file is provided, read the HTML file
+    if (args.htmlFile) {
+      if (!fs.existsSync(args.htmlFile)) {
+        console.error('Error: HTML file not found:', args.htmlFile);
+        process.exit(1);
+      }
+      body = fs.readFileSync(args.htmlFile, 'utf8');
+      isHtml = true;
+    } else {
+      body = args.body;
+    }
   }
 
   if (!to || !subject || !body) {
-    console.error('Error: Missing required fields (to, subject, body)');
+    console.error('Error: Missing required fields (to, subject, body or html-file)');
     console.error('Use --help for usage information');
     process.exit(1);
   }
 
   console.log('\nCreating draft...');
+  if (isHtml) {
+    console.log('  (using HTML content)');
+  }
 
   try {
-    const draft = await createDraft(auth, to, subject, body);
+    const draft = await createDraft(auth, to, subject, body, isHtml);
     console.log('\n✓ Draft created successfully!');
     console.log('  Draft ID:', draft.id);
     console.log('  Message ID:', draft.message.id);

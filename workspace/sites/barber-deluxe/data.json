@@ -1,0 +1,105 @@
+{
+  "business": {
+    "name": "Barber Deluxe",
+    "tagline": "Experiență de lux pentru bărbați pretențioși",
+    "description": "Te invităm să ne vizitezi și să descoperi pasiunea și priceperea noastră în arta frumuseții masculine. La Barber Deluxe, vei găsi mai mult decât o simplă tunsoare – vei găsi o experiență de lux pentru bărbați pretențioși ca tine.",
+    "phone": "0732 397 057",
+    "phone_alt": "0137 555 101",
+    "email": "office@barber-deluxe.ro",
+    "whatsapp": "40732397057",
+    "social": {
+      "facebook": "https://www.facebook.com/barberdeluxebucuresti",
+      "instagram": "https://www.instagram.com/barberdeluxe.ro/",
+      "tiktok": "https://www.tiktok.com/@barberdeluxe.ro",
+      "youtube": "https://www.youtube.com/@BarberDeluxe"
+    }
+  },
+  "locations": [
+    {
+      "name": "Cortina Residence",
+      "area": "Băneasa - Sector 1",
+      "address": "Strada Amiral Vasile Urseanu, București",
+      "phone": "0732 397 057"
+    },
+    {
+      "name": "Asmita Gardens",
+      "area": "Splaiul Unirii - Sector 4",
+      "address": "Splaiul Unirii, București",
+      "phone": "0732 397 057"
+    },
+    {
+      "name": "Tudor Vladimirescu",
+      "area": "Sector 5",
+      "address": "Bulevardul Tudor Vladimirescu, București",
+      "phone": "0732 397 057"
+    }
+  ],
+  "services": [
+    {
+      "name": "Tuns clasic",
+      "price": "de la 60 lei",
+      "description": "Tunsoare profesională adaptată stilului tău"
+    },
+    {
+      "name": "Tuns + Barbă",
+      "price": "de la 90 lei",
+      "description": "Pachet complet pentru un look perfect"
+    },
+    {
+      "name": "Aranjat barbă",
+      "price": "de la 40 lei",
+      "description": "Îngrijire profesională a bărbii"
+    },
+    {
+      "name": "Epilat cu ceară",
+      "price": "de la 30 lei",
+      "description": "Epilare precisă pentru un look îngrijit"
+    },
+    {
+      "name": "Vopsit păr",
+      "price": "de la 80 lei",
+      "description": "Culoare profesională pentru păr"
+    },
+    {
+      "name": "Vopsit barbă",
+      "price": "de la 50 lei",
+      "description": "Acoperire completă a firelor albe"
+    }
+  ],
+  "packages": [
+    {
+      "name": "BASIC",
+      "description": "Pachetul perfect pentru întreținere rapidă",
+      "features": ["Tuns clasic", "Spălat", "Styling"],
+      "price": "60 lei"
+    },
+    {
+      "name": "MEDIUM",
+      "description": "Combinație ideală pentru look complet",
+      "features": ["Tuns clasic", "Aranjat barbă", "Spălat", "Styling"],
+      "price": "90 lei"
+    },
+    {
+      "name": "LONG",
+      "description": "Îngrijire completă cu atenție la detalii",
+      "features": ["Tuns clasic", "Barbă cu brici", "Tratament față", "Spălat", "Styling"],
+      "price": "120 lei"
+    },
+    {
+      "name": "DELUXE",
+      "description": "Experiența premium completă",
+      "features": ["Tuns premium", "Barbă cu brici", "Tratament facial complet", "Masaj", "Spălat", "Styling premium"],
+      "price": "150 lei"
+    }
+  ],
+  "hours": {
+    "weekdays": "Luni - Vineri: 10:00 - 20:00",
+    "saturday": "Sâmbătă: 10:00 - 18:00",
+    "sunday": "Duminică: Închis"
+  },
+  "images": {
+    "logo": "logo.png",
+    "hero": "hero.webp",
+    "gallery": ["gallery1.jpg", "gallery2.jpg"]
+  }
+}

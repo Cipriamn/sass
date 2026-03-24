@@ -1,0 +1,45 @@
+{
+  "business": {
+    "name": "Damoti Barbershop",
+    "city": "București",
+    "address": "Strada Colței 38, București, Sector 3",
+    "phone": "0768 642 864",
+    "email": "contact@damotibarbershop.ro",
+    "bookingUrl": "https://mero.ro/p/damoti-barbershop"
+  },
+  "hours": {
+    "monday": "12:00 - 20:00",
+    "tuesday": "12:00 - 20:00",
+    "wednesday": "12:00 - 20:00",
+    "thursday": "12:00 - 20:00",
+    "friday": "12:00 - 20:00",
+    "saturday": "12:00 - 18:00",
+    "sunday": "Închis / Closed"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/damotibarbershop",
+    "facebook": "https://www.facebook.com/damotibarbershop"
+  },
+  "team": [
+    {"name": "Timmy", "role": "Barber", "image": "timmy.jpg"},
+    {"name": "Dani", "role": "Barber", "image": "dani.jpg"},
+    {"name": "Mocăniță", "role": "Barber", "image": "mocanita.jpg"},
+    {"name": "Edi", "role": "Barber", "image": "edi.jpg"}
+  ],
+  "services": {
+    "note": "All services listed on Mero.ro booking platform",
+    "url": "https://mero.ro/p/damoti-barbershop"
+  },
+  "content": {
+    "ro": {
+      "tagline": "Stilul tău, semnătura noastră",
+      "hero": "Frizerie premium în inima Bucureștiului. Locul în care vii pentru un tuns și pleci cu vibe-ul ridicat.",
+      "about": "Damoti Barbershop este un concept dedicat exclusiv bărbaților care caută confort, calitate și stil. Situat pe Strada Colței 38, suntem locul unde pasiunea devine meserie. Fie că te pregătești pentru un eveniment sau îți dorești un tuns clasic, noi ne focalizăm pe fade-uri curate, aranjat barbă ca la carte și o atmosferă fără grabă."
+    },
+    "en": {
+      "tagline": "Your style, our signature",
+      "hero": "Premium barbershop in the heart of Bucharest. The place where you come for a haircut and leave with your vibe elevated.",
+      "about": "Damoti Barbershop is a concept dedicated exclusively to men seeking comfort, quality, and style. Located on Strada Colței 38, we are the place where passion becomes profession. Whether you're preparing for an event or want a classic cut, we focus on clean fades, proper beard grooming, and an unhurried atmosphere."
+    }
+  }
+}

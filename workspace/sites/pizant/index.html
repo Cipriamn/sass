@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barbershop Pizant Purmerend - Op en top service en aandacht. Op afspraak voor knippen, scheren, baard trimmen. Venediën 36, 1441 AK Purmerend.">
+    <title>Barbershop Pizant - Purmerend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=600;900&family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --dark-bg: #1a1a1a;
+            --darker-bg: #0f0f0f;
+            --accent: #c9a227;
+            --text: #e0e0e0;
+            --text-dim: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Open Sans Condensed', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 50px,
+                rgba(201, 162, 39, 0.03) 50px,
+                rgba(201, 162, 39, 0.03) 51px
+            );
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 1rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: var(--text-dim);
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent);
+            color: var(--darker-bg);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            animation: fadeInUp 1.4s ease;
+            border: 2px solid var(--accent);
+        }
+
+        .cta-btn:hover {
+            background: transparent;
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Section */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent);
+            opacity: 0.3;
+            margin-bottom: -1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+            text-transform: lowercase;
+        }
+
+        .section-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 700px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--darker-bg);
+            padding: 2rem;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--darker-bg);
+        }
+
+        .service-name {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .service-price {
+            font-size: 2rem;
+            color: var(--accent);
+            font-weight: 900;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--darker-bg);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .contact-item h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-item p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .hours-table {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 300px;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+        }
+
+        .hours-row.today {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker-bg);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(201, 162, 39, 0.2);
+            color: var(--text-dim);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-cta .cta-btn {
+            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.4);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @media (max-width: 768px) {
+            .section-number {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-cta {
+                bottom: 10px;
+                right: 10px;
+            }
+
+            .floating-cta .cta-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Barbershop Pizant</h1>
+        <p class="hero-tagline">Op en top service en aandacht. Je komt fris en energiek weer naar buiten.</p>
+        <a href="https://www.fresha.com/lvp/barbershop-pizant-venedien-purmerend-rwKlbP" class="cta-btn" target="_blank">Maak Afspraak</a>
+    </section>
+
+    <!-- Section 01: Over Ons -->
+    <section class="section">
+        <div class="section-number">/ 01</div>
+        <h2 class="section-title">Over ons</h2>
+        <p class="section-subtitle">beste kapsels</p>
+        <div class="section-content">
+            <p>Wij werken op afspraak, zo hoef jij niet te lang te wachten op je knip of scheerbeurt. Moet je toch nog even wachten? Dan bieden we je uiteraard een heerlijk bakje koffie aan!</p>
+            <p style="margin-top: 1.5rem;">Bij Barbershop Pizant in Purmerend staan kwaliteit en persoonlijke aandacht centraal. Iedere klant verdient een verzorgde uitstraling en een prettige ervaring in onze stoel.</p>
+        </div>
+    </section>
+
+    <!-- Section 02: Services -->
+    <section class="section">
+        <div class="section-number">/ 02</div>
+        <h2 class="section-title">Services</h2>
+        <p class="section-subtitle">waarvoor kun je bij Pizant terecht?</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">✂</div>
+                <h3 class="service-name">Knippen</h3>
+                <p class="service-price">€28</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🪒</div>
+                <h3 class="service-name">Scheren</h3>
+                <p class="service-price">€14</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3 class="service-name">Baard trimmen</h3>
+                <p class="service-price">€8</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🧹</div>
+                <h3 class="service-name">Borstel</h3>
+                <p class="service-price">€3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2 class="section-title">Contact & Bezoek</h2>
+
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>📍 Adres</h3>
+                <p>Venediën 36<br>1441 AK Purmerend</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>📞 Telefoon</h3>
+                <p><a href="tel:+31687868406" style="color: var(--accent); text-decoration: none;">+31 6 87868406</a></p>
+            </div>
+
+            <div class="contact-item">
+                <h3>🕒 Openingstijden</h3>
+                <div class="hours-table">
+                    <div class="hours-row">
+                        <span>Maandag</span>
+                        <span>Gesloten</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Dinsdag</span>
+                        <span>10:30 - 18:30</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Woensdag</span>
+                        <span>10:30 - 18:30</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Donderdag</span>
+                        <span>10:30 - 19:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Vrijdag</span>
+                        <span>10:00 - 21:30</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Zaterdag</span>
+                        <span>10:00 - 18:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Zondag</span>
+                        <span>Gesloten</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.123456789!2d4.9594444!3d52.5083333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609e0e0e0e0e0%3A0x1234567890abcdef!2sVenedi%C3%ABn%2036%2C%201441%20AK%20Purmerend!5e0!3m2!1snl!2snl!4v1234567890123!5m2!1snl!2snl" width="100%" height="400" style="border:1px solid rgba(201, 162, 39, 0.2); max-width: 900px; margin: 0 auto; display: block;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Barbershop Pizant Purmerend | Venediën 36, 1441 AK</p>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="https://www.fresha.com/lvp/barbershop-pizant-venedien-purmerend-rwKlbP" class="cta-btn" target="_blank">Boek Nu</a>
+    </div>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        // Scroll reveal animation
+        const sections = document.querySelectorAll('.section');
+
+        const revealSection = () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (sectionTop < windowHeight * 0.75) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealSection);
+        window.addEventListener('load', revealSection);
+
+        // Highlight current day
+        const days = ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'];
+        const today = days[new Date().getDay()];
+
+        document.querySelectorAll('.hours-row').forEach(row => {
+            if (row.textContent.includes(today)) {
+                row.classList.add('today');
+            }
+        });
+    </script>
+
+</body>
+</html>

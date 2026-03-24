@@ -1,0 +1,47 @@
+{
+  "business": {
+    "name": "Aat's Barbershop",
+    "tagline_ro": "Frizer pentru bărbați de peste 51 de ani în Alphen aan den Rijn",
+    "tagline_en": "Men's barber for over 51 years in Alphen aan den Rijn",
+    "phone": "0172-475 339",
+    "email": "info@aatsbarbershop.nl",
+    "address": "Raadhuisstraat 257, 2406 AD Alphen a/d Rijn",
+    "city": "Alphen aan den Rijn"
+  },
+  "hero": {
+    "title_ro": "Herenkapper Aat's Barbershop",
+    "title_en": "Aat's Barbershop Men's Barber",
+    "description_ro": "Bun venit la Aat's Barbershop, salonul de coafură pentru bărbați din Alphen aan den Rijn de peste 51 de ani. Echipa noastră este specializată în tunsori pentru bărbați. Aat's Barbershop este situat pe Raadhuisstraat 257 în centrul orașului Alphen aan den Rijn.",
+    "description_en": "Welcome to Aat's Barbershop, the men's barber in Alphen aan den Rijn for over 51 years. Our team specializes in men's haircuts. Aat's Barbershop is located at Raadhuisstraat 257 in the center of Alphen aan den Rijn.",
+    "images": ["banner.jpg", "banner2.jpg", "banner5.jpg", "banner3.jpg"]
+  },
+  "hours": {
+    "title_ro": "Program",
+    "title_en": "Opening Hours",
+    "schedule": {
+      "Dinsdag": "8:30 - 17:30",
+      "Woensdag": "8:30 - 13:30",
+      "Donderdag": "8:30 - 17:30",
+      "Vrijdag": "8:30 - 17:30",
+      "Zaterdag": "8:30 - 14:30"
+    }
+  },
+  "services": [
+    {"name": "Knippen", "price": "€ 27,50"},
+    {"name": "Knippen 65+", "price": "€ 26,-"},
+    {"name": "Tondeuse 1 stand", "price": "€ 18,-"},
+    {"name": "Tondeuse 65+", "price": "€ 17,50"},
+    {"name": "Wassen", "price": "€ 3,50"},
+    {"name": "Knippen 0 t/m 3 jaar", "price": "€ 23,50"},
+    {"name": "Knippen 4 t/m 12 jaar", "price": "€ 25,-"},
+    {"name": "Knippen + Baard", "price": "€ 33,-"},
+    {"name": "Knippen + Baard 65+", "price": "€ 31,50"},
+    {"name": "Baard trimmen/knippen", "price": "vanaf € 9,50"}
+  ],
+  "appointment": {
+    "message_ro": "Lucrăm pe bază de programare, vă rugăm să ne contactați prin e-mail:",
+    "message_en": "We work by appointment, please contact us via email:",
+    "note_ro": "(vă rugăm să nu sunați)",
+    "note_en": "(please do not call)"
+  }
+}

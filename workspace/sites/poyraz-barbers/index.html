@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poyraz Barbers - Heren kapper van Zaandam</title>
+    <meta name="description" content="Welkom bij Poyraz Barbers. Men-only barbershop in Zaandam gespecialiseerd in het knippen en scheren van uw kapsel of baard.">
+    <meta name="keywords" content="barbershop, kapper, zaandam, heren kapper, baard scheren, haircut">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.poyrazbarbers.nl/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Poyraz Barbers - Heren kapper van Zaandam">
+    <meta property="og:description" content="Men-only barbershop in Zaandam. Gespecialiseerd in knippen en scheren.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.poyrazbarbers.nl/">
+    <meta property="og:site_name" content="Poyraz Barbers">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:image" content="https://www.poyrazbarbers.nl/assets/hero.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Poyraz Barbers - Heren kapper van Zaandam">
+    <meta name="twitter:description" content="Men-only barbershop in Zaandam. Gespecialiseerd in knippen en scheren.">
+    <meta name="twitter:image" content="https://www.poyrazbarbers.nl/assets/hero.jpg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 50vh;
+            min-height: 300px;
+            background: url('assets/hero.jpg') center center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Welcome Section */
+        .welcome {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-out 0.2s both;
+        }
+
+        .welcome h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: #222;
+        }
+
+        .welcome p {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Price List Section */
+        .price-list {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-out 0.4s both;
+        }
+
+        .price-list h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: #222;
+            text-align: center;
+        }
+
+        .service-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .service-item:last-child {
+            border-bottom: none;
+        }
+
+        .service-name {
+            flex: 1;
+        }
+
+        .service-name strong {
+            display: block;
+            font-size: 1.1rem;
+            color: #222;
+            margin-bottom: 0.25rem;
+        }
+
+        .service-name em {
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+        }
+
+        .service-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #000;
+            margin-left: 1rem;
+        }
+
+        /* Hours Section */
+        .hours {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .hours h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: #222;
+            text-align: center;
+        }
+
+        .hours-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        .hours-day {
+            font-weight: 600;
+            color: #333;
+            text-transform: capitalize;
+        }
+
+        .hours-time {
+            color: #555;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .welcome,
+            .price-list,
+            .hours {
+                padding: 1.5rem;
+            }
+
+            .service-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .service-price {
+                margin-left: 0;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BarberShop",
+      "name": "Poyraz Barbers",
+      "description": "Men-only barbershop in Zaandam gespecialiseerd in het knippen en scheren van uw kapsel of baard",
+      "url": "https://www.poyrazbarbers.nl/",
+      "telephone": "+31752023091",
+      "email": "info@poyrazbarbers.nl",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Czaar Peterstraat 9B",
+        "addressLocality": "Zaandam",
+        "postalCode": "1506 SK",
+        "addressCountry": "NL"
+      },
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "18:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "09:00", "closes": "18:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "21:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "20:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "20:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "18:00"}
+      ],
+      "priceRange": "€10-€25",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Barbershop Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Heren knippen"}, "price": "17.50", "priceCurrency": "EUR"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Heren knippen en wassen"}, "price": "20.00", "priceCurrency": "EUR"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Heren knippen en scheren"}, "price": "25.00", "priceCurrency": "EUR"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Scheren en contouren"}, "price": "10.00", "priceCurrency": "EUR"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kinderen knippen"}, "price": "15.00", "priceCurrency": "EUR"}
+        ]
+      }
+    }
+    </script>
+
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Ga naar inhoud</a>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Poyraz Barbers</h1>
+            <p>Heren kapper van Zaandam</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+    <div class="container">
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <h2>Welkom</h2>
+            <p>Welkom bij Poyraz Barbers. We zijn een men-only barbershop met een team gespecialiseerd in het knippen en scheren van uw kapsel of baard.</p>
+            <p>Wij adviseren u ook graag vanuit ons brede assortiment haarproducten om ervoor te zorgen dat uw kapsel of baard er elke dag perfect uit ziet.</p>
+        </section>
+
+        <!-- Price List Section -->
+        <section class="price-list">
+            <h2>Prijslijst</h2>
+            <div class="service-item">
+                <div class="service-name">
+                    <strong>Heren knippen</strong>
+                </div>
+                <div class="service-price">€17.50</div>
+            </div>
+            <div class="service-item">
+                <div class="service-name">
+                    <strong>Heren knippen en wassen</strong>
+                    <em>inclusief massage</em>
+                </div>
+                <div class="service-price">€20.00</div>
+            </div>
+            <div class="service-item">
+                <div class="service-name">
+                    <strong>Heren knippen en scheren</strong>
+                </div>
+                <div class="service-price">€25.00</div>
+            </div>
+            <div class="service-item">
+                <div class="service-name">
+                    <strong>Scheren en contouren</strong>
+                </div>
+                <div class="service-price">€10.00</div>
+            </div>
+            <div class="service-item">
+                <div class="service-name">
+                    <strong>Kinderen knippen</strong>
+                    <em>onder de 12 jaar</em>
+                </div>
+                <div class="service-price">€15.00</div>
+            </div>
+        </section>
+
+        <!-- Opening Hours -->
+        <section class="hours">
+            <h2>Openingstijden</h2>
+            <div class="hours-grid">
+                <div class="hours-row">
+                    <span class="hours-day">Maandag</span>
+                    <span class="hours-time">Gesloten</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Dinsdag</span>
+                    <span class="hours-time">09:00 - 18:00</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Woensdag</span>
+                    <span class="hours-time">09:00 - 18:00</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Donderdag</span>
+                    <span class="hours-time">09:00 - 21:00</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Vrijdag</span>
+                    <span class="hours-time">09:00 - 20:00</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Zaterdag</span>
+                    <span class="hours-time">09:00 - 20:00</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Zondag</span>
+                    <span class="hours-time">11:00 - 18:00</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="hours">
+            <h2>Contact & Locatie</h2>
+            <div class="hours-grid">
+                <div class="hours-row">
+                    <span class="hours-day">Telefoon</span>
+                    <span class="hours-time"><a href="tel:+31752023091" style="color: #555; text-decoration: none;">075-202 30 91</a></span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Email</span>
+                    <span class="hours-time"><a href="mailto:info@poyrazbarbers.nl" style="color: #555; text-decoration: none;">info@poyrazbarbers.nl</a></span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Adres</span>
+                    <span class="hours-time">Czaar Peterstraat 9B, 1506 SK Zaandam</span>
+                </div>
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2433.1234567890!2d4.8243!3d52.4486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5fb6c1234abcd%3A0x1234567890abcdef!2sCzaar%20Peterstraat%209B%2C%201506%20SK%20Zaandam!5e0!3m2!1snl!2snl!4v1234567890" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Locatie Poyraz Barbers op Google Maps"></iframe>
+            </div>
+        </section>
+    </div>
+    </main>
+</body>
+</html>

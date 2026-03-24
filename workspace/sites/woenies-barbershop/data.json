@@ -1,0 +1,39 @@
+{
+  "business": {
+    "name": "Woenie's Barbershop",
+    "tagline": "Super exclusieve barbershop met meerdere behandelingen",
+    "description": "Deskundig knippen, scheren & verzorging voor mannen in Den Haag"
+  },
+  "contact": {
+    "address": "Papestraat 19, 2513AV Den Haag",
+    "phone": "+31 6 20 28 50 79",
+    "email": "Info@woenies.nl",
+    "booking_url": "https://woenies-barbershop-1.salonized.com/widget_bookings/new"
+  },
+  "hours": {
+    "maandag": "Gesloten",
+    "dinsdag": "10:00 - 19:00",
+    "woensdag": "10:00 - 19:00",
+    "donderdag": "10:00 - 19:00",
+    "vrijdag": "10:00 - 20:30",
+    "zaterdag": "10:00 - 19:00",
+    "zondag": "11:00 - 18:00"
+  },
+  "services": [
+    {"name": "Knippen", "price": "€25"},
+    {"name": "Knippen + Baard", "price": "€35"},
+    {"name": "Baardtrimmen", "price": "€15"},
+    {"name": "Hot Towel Scheren", "price": "€25"},
+    {"name": "Knippen + Hot Towel Scheren", "price": "€45"},
+    {"name": "Kids Knippen (t/m 12 jaar)", "price": "€18"}
+  ],
+  "directions": {
+    "public_transport": "Vanaf Den Haag Centraal of Holland Spoor: Neem tramlijn 2 richting Scheveningen Noorderstrand. Stap uit bij halte Elandstraat en neem tramlijn 9 richting Leidschendam-Voorburg. Stap uit bij halte Kneuterdijk. Vanaf hier is het ongeveer 3 minuten lopen naar Papestraat 19.",
+    "car": "Vanaf de A4 neemt u afslag 12 Den Haag Centrum en volgt u de weg naar Centrum/Scheveningen. U volgt de Prins Clausplein en gaat rechtsaf de Kneuterdijk op. Parkeren kan bij Torengarage of QPark Noordeinde (5 min lopen)."
+  },
+  "assets": {
+    "logo": "assets/Woenies-Goud.png",
+    "favicon": "assets/cropped-Woenies-Barbershop-Fav-Icon.png",
+    "hero_image": "assets/Woenies-Barbershop-Heren-Barbershop.jpg"
+  }
+}

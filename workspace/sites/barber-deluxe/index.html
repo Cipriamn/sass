@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Deluxe - Salon Frizerie București | Băneasa, Splaiul Unirii, Tudor Vladimirescu</title>
+    <meta name="description" content="Barber Deluxe - 3 locații în București (Băneasa, Splaiul Unirii, Tudor Vladimirescu). Experiență de lux pentru bărbați pretențioși. Programări: 0732 397 057">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #c9a961;
+            --dark: #1a1a1a;
+            --darker: #0f0f0f;
+            --light: #f5f5f5;
+            --gray: #666;
+            --border: rgba(201, 169, 97, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--darker);
+            border-radius: 30px;
+            padding: 8px 12px;
+            display: flex;
+            gap: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .lang-toggle button {
+            background: transparent;
+            border: 2px solid transparent;
+            color: var(--gold);
+            padding: 6px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-toggle button.active {
+            background: var(--gold);
+            color: var(--darker);
+            border-color: var(--gold);
+        }
+
+        .lang-toggle button:hover:not(.active) {
+            border-color: var(--gold);
+        }
+
+        /* Translation display */
+        [lang]:not([lang="ro"]) { display: none; }
+        body.lang-en [lang="ro"] { display: none; }
+        body.lang-en [lang="en"] { display: block !important; }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(15,15,15,0.6), rgba(15,15,15,0.6)), url('hero.webp') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .logo {
+            width: 180px;
+            margin-bottom: 30px;
+            filter: brightness(0) invert(1);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 20px;
+            color: var(--gold);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            margin-bottom: 40px;
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--darker);
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 25px rgba(201,169,97,0.4);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 35px rgba(201,169,97,0.6);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+
+        .gold-line {
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+            margin: 0 auto 50px;
+        }
+
+        /* Locations */
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .location-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+
+        .location-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .location-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .location-card .area {
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .location-card .address {
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .location-card .phone {
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Packages */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .package-card {
+            background: var(--darker);
+            color: white;
+            padding: 50px 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gold);
+        }
+
+        .package-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 40px rgba(201,169,97,0.3);
+        }
+
+        .package-card.featured {
+            background: linear-gradient(135deg, var(--darker), #2a2a2a);
+            border-color: var(--gold);
+            transform: scale(1.05);
+        }
+
+        .package-name {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 20px 0;
+            color: white;
+        }
+
+        .package-desc {
+            font-size: 0.95rem;
+            color: #aaa;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .package-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--gold);
+        }
+
+        .service-card:hover {
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            transform: translateX(5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .service-card .price {
+            color: var(--gold);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .service-card .desc {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Contact */
+        .contact-section {
+            background: var(--darker);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .contact-section .section-title {
+            color: var(--gold);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-item .icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .contact-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .contact-item a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--gold);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.3rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--darker);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            color: #999;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                padding: 80px 20px;
+            }
+
+            .logo {
+                width: 120px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .locations-grid,
+            .packages-grid,
+            .services-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .package-card.featured {
+                transform: scale(1);
+            }
+
+            .contact-info {
+                gap: 40px;
+            }
+
+            .lang-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 6px 10px;
+            }
+
+            .lang-toggle button {
+                padding: 5px 12px;
+                font-size: 13px;
+            }
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(37,211,102,0.5);
+            z-index: 999;
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37,211,102,0.7);
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="ro">RO</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="logo.png" alt="Barber Deluxe Logo" class="logo">
+            <h1 lang="ro">Barber Deluxe</h1>
+            <h1 lang="en">Barber Deluxe</h1>
+            <p lang="ro">Experiență de lux pentru bărbați pretențioși<br>3 locații în București</p>
+            <p lang="en">Luxury Experience for Discerning Men<br>3 Locations in Bucharest</p>
+            <a href="#contact" class="cta-btn" lang="ro">PROGRAMEAZĂ-TE ACUM</a>
+            <a href="#contact" class="cta-btn" lang="en">BOOK NOW</a>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations" class="locations-section">
+        <h2 class="section-title" lang="ro">Locațiile Noastre</h2>
+        <h2 class="section-title" lang="en">Our Locations</h2>
+        <div class="gold-line"></div>
+        <p class="section-subtitle" lang="ro">3 saloane premium în București</p>
+        <p class="section-subtitle" lang="en">3 Premium Salons in Bucharest</p>
+
+        <div class="locations-grid">
+            <div class="location-card">
+                <div class="location-icon">📍</div>
+                <h3>Cortina Residence</h3>
+                <div class="area" lang="ro">Băneasa - Sector 1</div>
+                <div class="area" lang="en">Băneasa - Sector 1</div>
+                <div class="address" lang="ro">Strada Amiral Vasile Urseanu, București</div>
+                <div class="address" lang="en">Amiral Vasile Urseanu Street, Bucharest</div>
+                <div class="phone">📞 0732 397 057</div>
+            </div>
+
+            <div class="location-card">
+                <div class="location-icon">📍</div>
+                <h3>Asmita Gardens</h3>
+                <div class="area" lang="ro">Splaiul Unirii - Sector 4</div>
+                <div class="area" lang="en">Splaiul Unirii - Sector 4</div>
+                <div class="address" lang="ro">Splaiul Unirii, București</div>
+                <div class="address" lang="en">Splaiul Unirii, Bucharest</div>
+                <div class="phone">📞 0732 397 057</div>
+            </div>
+
+            <div class="location-card">
+                <div class="location-icon">📍</div>
+                <h3>Tudor Vladimirescu</h3>
+                <div class="area" lang="ro">Sector 5</div>
+                <div class="area" lang="en">Sector 5</div>
+                <div class="address" lang="ro">Bulevardul Tudor Vladimirescu, București</div>
+                <div class="address" lang="en">Tudor Vladimirescu Boulevard, Bucharest</div>
+                <div class="phone">📞 0732 397 057</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages-section">
+        <h2 class="section-title" lang="ro">Pachete Premium</h2>
+        <h2 class="section-title" lang="en">Premium Packages</h2>
+        <div class="gold-line"></div>
+        <p class="section-subtitle" lang="ro">Alege experiența perfectă pentru tine</p>
+        <p class="section-subtitle" lang="en">Choose the Perfect Experience for You</p>
+
+        <div class="packages-grid">
+            <div class="package-card">
+                <div class="package-name">BASIC</div>
+                <div class="package-price">60 lei</div>
+                <p class="package-desc" lang="ro">Pachetul perfect pentru întreținere rapidă</p>
+                <p class="package-desc" lang="en">Perfect Package for Quick Maintenance</p>
+                <ul class="package-features">
+                    <li lang="ro">Tuns clasic</li>
+                    <li lang="ro">Spălat</li>
+                    <li lang="ro">Styling</li>
+                    <li lang="en">Classic Haircut</li>
+                    <li lang="en">Wash</li>
+                    <li lang="en">Styling</li>
+                </ul>
+            </div>
+
+            <div class="package-card">
+                <div class="package-name">MEDIUM</div>
+                <div class="package-price">90 lei</div>
+                <p class="package-desc" lang="ro">Combinație ideală pentru look complet</p>
+                <p class="package-desc" lang="en">Ideal Combination for Complete Look</p>
+                <ul class="package-features">
+                    <li lang="ro">Tuns clasic</li>
+                    <li lang="ro">Aranjat barbă</li>
+                    <li lang="ro">Spălat</li>
+                    <li lang="ro">Styling</li>
+                    <li lang="en">Classic Haircut</li>
+                    <li lang="en">Beard Trim</li>
+                    <li lang="en">Wash</li>
+                    <li lang="en">Styling</li>
+                </ul>
+            </div>
+
+            <div class="package-card">
+                <div class="package-name">LONG</div>
+                <div class="package-price">120 lei</div>
+                <p class="package-desc" lang="ro">Îngrijire completă cu atenție la detalii</p>
+                <p class="package-desc" lang="en">Complete Care with Attention to Detail</p>
+                <ul class="package-features">
+                    <li lang="ro">Tuns clasic</li>
+                    <li lang="ro">Barbă cu brici</li>
+                    <li lang="ro">Tratament față</li>
+                    <li lang="ro">Spălat</li>
+                    <li lang="ro">Styling</li>
+                    <li lang="en">Classic Haircut</li>
+                    <li lang="en">Razor Beard Shave</li>
+                    <li lang="en">Face Treatment</li>
+                    <li lang="en">Wash</li>
+                    <li lang="en">Styling</li>
+                </ul>
+            </div>
+
+            <div class="package-card featured">
+                <div class="package-name">DELUXE</div>
+                <div class="package-price">150 lei</div>
+                <p class="package-desc" lang="ro">Experiența premium completă</p>
+                <p class="package-desc" lang="en">Complete Premium Experience</p>
+                <ul class="package-features">
+                    <li lang="ro">Tuns premium</li>
+                    <li lang="ro">Barbă cu brici</li>
+                    <li lang="ro">Tratament facial complet</li>
+                    <li lang="ro">Masaj</li>
+                    <li lang="ro">Spălat</li>
+                    <li lang="ro">Styling premium</li>
+                    <li lang="en">Premium Haircut</li>
+                    <li lang="en">Razor Beard Shave</li>
+                    <li lang="en">Complete Facial Treatment</li>
+                    <li lang="en">Massage</li>
+                    <li lang="en">Wash</li>
+                    <li lang="en">Premium Styling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2 class="section-title" lang="ro">Servicii Individuale</h2>
+        <h2 class="section-title" lang="en">Individual Services</h2>
+        <div class="gold-line"></div>
+        <p class="section-subtitle" lang="ro">Servicii profesionale adaptate nevoilor tale</p>
+        <p class="section-subtitle" lang="en">Professional Services Tailored to Your Needs</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3 lang="ro">Tuns clasic</h3>
+                <h3 lang="en">Classic Haircut</h3>
+                <div class="price" lang="ro">de la 60 lei</div>
+                <div class="price" lang="en">from 60 lei</div>
+                <p class="desc" lang="ro">Tunsoare profesională adaptată stilului tău</p>
+                <p class="desc" lang="en">Professional haircut tailored to your style</p>
+            </div>
+
+            <div class="service-card">
+                <h3 lang="ro">Tuns + Barbă</h3>
+                <h3 lang="en">Haircut + Beard</h3>
+                <div class="price" lang="ro">de la 90 lei</div>
+                <div class="price" lang="en">from 90 lei</div>
+                <p class="desc" lang="ro">Pachet complet pentru un look perfect</p>
+                <p class="desc" lang="en">Complete package for a perfect look</p>
+            </div>
+
+            <div class="service-card">
+                <h3 lang="ro">Aranjat barbă</h3>
+                <h3 lang="en">Beard Trim</h3>
+                <div class="price" lang="ro">de la 40 lei</div>
+                <div class="price" lang="en">from 40 lei</div>
+                <p class="desc" lang="ro">Îngrijire profesională a bărbii</p>
+                <p class="desc" lang="en">Professional beard care</p>
+            </div>
+
+            <div class="service-card">
+                <h3 lang="ro">Epilat cu ceară</h3>
+                <h3 lang="en">Waxing</h3>
+                <div class="price" lang="ro">de la 30 lei</div>
+                <div class="price" lang="en">from 30 lei</div>
+                <p class="desc" lang="ro">Epilare precisă pentru un look îngrijit</p>
+                <p class="desc" lang="en">Precise waxing for a groomed look</p>
+            </div>
+
+            <div class="service-card">
+                <h3 lang="ro">Vopsit păr</h3>
+                <h3 lang="en">Hair Coloring</h3>
+                <div class="price" lang="ro">de la 80 lei</div>
+                <div class="price" lang="en">from 80 lei</div>
+                <p class="desc" lang="ro">Culoare profesională pentru păr</p>
+                <p class="desc" lang="en">Professional hair coloring</p>
+            </div>
+
+            <div class="service-card">
+                <h3 lang="ro">Vopsit barbă</h3>
+                <h3 lang="en">Beard Coloring</h3>
+                <div class="price" lang="ro">de la 50 lei</div>
+                <div class="price" lang="en">from 50 lei</div>
+                <p class="desc" lang="ro">Acoperire completă a firelor albe</p>
+                <p class="desc" lang="en">Complete gray coverage</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <h2 class="section-title" lang="ro">Galerie</h2>
+        <h2 class="section-title" lang="en">Gallery</h2>
+        <div class="gold-line"></div>
+        <p class="section-subtitle" lang="ro">Experiențe de neuitat la Barber Deluxe</p>
+        <p class="section-subtitle" lang="en">Unforgettable Experiences at Barber Deluxe</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="gallery1.jpg" alt="Barber Deluxe Interior 1">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery2.jpg" alt="Barber Deluxe Interior 2">
+            </div>
+            <div class="gallery-item">
+                <img src="hero.webp" alt="Barber Deluxe Service">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title" lang="ro">Contactează-ne</h2>
+        <h2 class="section-title" lang="en">Contact Us</h2>
+        <div class="gold-line"></div>
+        <p class="section-subtitle" lang="ro">Programează-te pentru o experiență de neuitat</p>
+        <p class="section-subtitle" lang="en">Book Your Unforgettable Experience</p>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="icon">📞</div>
+                <h3 lang="ro">Telefon</h3>
+                <h3 lang="en">Phone</h3>
+                <a href="tel:+40732397057">0732 397 057</a><br>
+                <a href="tel:+40137555101">0137 555 101</a>
+            </div>
+
+            <div class="contact-item">
+                <div class="icon">✉️</div>
+                <h3>Email</h3>
+                <a href="mailto:office@barber-deluxe.ro">office@barber-deluxe.ro</a>
+            </div>
+
+            <div class="contact-item">
+                <div class="icon">⏰</div>
+                <h3 lang="ro">Program</h3>
+                <h3 lang="en">Schedule</h3>
+                <p lang="ro">Luni - Vineri: 10:00 - 20:00<br>Sâmbătă: 10:00 - 18:00<br>Duminică: Închis</p>
+                <p lang="en">Monday - Friday: 10:00 - 20:00<br>Saturday: 10:00 - 18:00<br>Sunday: Closed</p>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/barberdeluxebucuresti" target="_blank" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/barberdeluxe.ro/" target="_blank" aria-label="Instagram">📷</a>
+            <a href="https://www.tiktok.com/@barberdeluxe.ro" target="_blank" aria-label="TikTok">♪</a>
+            <a href="https://www.youtube.com/@BarberDeluxe" target="_blank" aria-label="YouTube">▶</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p lang="ro">&copy; 2024 Barber Deluxe. Toate drepturile rezervate. | 3 locații în București: Băneasa, Splaiul Unirii, Tudor Vladimirescu</p>
+        <p lang="en">&copy; 2024 Barber Deluxe. All rights reserved. | 3 Locations in Bucharest: Băneasa, Splaiul Unirii, Tudor Vladimirescu</p>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/40732397057?text=Buna%20ziua,%20doresc%20sa%20fac%20o%20programare" class="whatsapp-float" target="_blank" aria-label="WhatsApp">💬</a>
+
+    <script>
+        // Language Toggle
+        const langButtons = document.querySelectorAll('.lang-btn');
+        const body = document.body;
+
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+
+                // Update active button
+                langButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Update body class
+                body.className = lang === 'en' ? 'lang-en' : '';
+
+                // Save preference
+                localStorage.setItem('preferredLang', lang);
+            });
+        });
+
+        // Load saved language preference
+        const savedLang = localStorage.getItem('preferredLang');
+        if (savedLang === 'en') {
+            document.querySelector('[data-lang="en"]').click();
+        }
+
+        // Scroll animations
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

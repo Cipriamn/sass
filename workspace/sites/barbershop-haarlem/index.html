@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop Haarlem - Premium Kapper in Haarlem</title>
+    <meta name="description" content="Ben je op zoek naar een kapper in Haarlem die werkt met en zonder afspraak? Dan ben je bij Barbershop Haarlem aan het juiste adres">
+    <link rel="icon" href="assets/cropped-Favicon-32x32.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #d0a37c;
+            --dark: #1a1a1a;
+            --darker: #0f0f0f;
+            --light: #afafaf;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--darker);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(208, 163, 124, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 0.5rem 5%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            height: 60px;
+            transition: height 0.3s ease;
+        }
+
+        header.scrolled .logo {
+            height: 45px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .contact-btn {
+            background: var(--gold);
+            color: var(--dark);
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(208, 163, 124, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 5% 4rem;
+            position: relative;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/9.jpg') center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: var(--light);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(208, 163, 124, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .section-title p {
+            color: var(--light);
+            font-size: 1.1rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            animation: fadeIn 1s ease;
+        }
+
+        .service-card {
+            background: var(--dark);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(208, 163, 124, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(208, 163, 124, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .service-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 1rem 0;
+        }
+
+        .service-card p {
+            color: var(--light);
+            font-size: 0.95rem;
+        }
+
+        .price-dots {
+            height: 1px;
+            background: repeating-linear-gradient(
+                to right,
+                var(--gold) 0,
+                var(--gold) 5px,
+                transparent 5px,
+                transparent 10px
+            );
+            margin: 1rem 0;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Contact & Hours */
+        .contact-hours {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            background: var(--dark);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(208, 163, 124, 0.1);
+        }
+
+        .contact-info h3, .hours-info h3 {
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item, .hours-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .contact-item:last-child, .hours-row:last-child {
+            border-bottom: none;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(208, 163, 124, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        .contact-item a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--gold);
+        }
+
+        .hours-row {
+            justify-content: space-between;
+        }
+
+        .day {
+            color: var(--light);
+        }
+
+        .time {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(208, 163, 124, 0.1);
+        }
+
+        .footer-logo {
+            height: 60px;
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(208, 163, 124, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+
+        footer p {
+            color: var(--light);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(15, 15, 15, 0.98);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                transition: left 0.3s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .hero {
+                padding: 8rem 5% 4rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .contact-hours {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <img src="assets/logo.png" alt="Barbershop Haarlem" class="logo">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Diensten</a></li>
+                <li><a href="#gallery">Galerij</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="tel:+31617170552" class="contact-btn">Bel Nu</a>
+            <button class="mobile-menu-btn" id="menuBtn">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Barbershop Haarlem</h1>
+            <p>Ben je op zoek naar een kapper in Haarlem die werkt met en zonder afspraak? Dan ben je bij Barbershop Haarlem aan het juiste adres</p>
+            <div class="cta-buttons">
+                <a href="tel:+31617170552" class="btn-primary">Afspraak Maken</a>
+                <a href="#services" class="btn-secondary">Onze Diensten</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-title fade-in">
+            <h2>Onze Diensten</h2>
+            <p>Professionele kapperdiensten voor elke stijl</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <h3>Wassen & Knippen</h3>
+                <div class="price-dots"></div>
+                <div class="service-price">€25</div>
+                <p>Wassen knippen ...</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Baard</h3>
+                <div class="price-dots"></div>
+                <div class="service-price">€20</div>
+                <p>Baard vanaf</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Haar & Baard</h3>
+                <div class="price-dots"></div>
+                <div class="service-price">€35</div>
+                <p>Haar + Baard</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Wassen</h3>
+                <div class="price-dots"></div>
+                <div class="service-price">€5</div>
+                <p>Wassen</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Baard Trimmen</h3>
+                <div class="price-dots"></div>
+                <div class="service-price">€15</div>
+                <p>Baard Trimmen</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Jongens Knippen</h3>
+                <div class="price-dots"></div>
+                <div class="service-price">€20</div>
+                <p>T/M 10 jaar</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Knippen - Baard</h3>
+                <div class="price-dots"></div>
+                <div class="service-price">€35</div>
+                <p>Knippen + Baard</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="section-title fade-in">
+            <h2>Onze Galerij</h2>
+            <p>Bekijk ons werk</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">
+                <img src="assets/IMG-20230614-WA0027.jpg" alt="Barbershop work 1">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="assets/IMG-20230614-WA0028.jpg" alt="Barbershop work 2">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="assets/IMG-20230706-WA0008.jpg" alt="Barbershop work 3">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="assets/IMG-20230721-WA0037.jpg" alt="Barbershop work 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Hours Section -->
+    <section id="contact">
+        <div class="section-title fade-in">
+            <h2>Contact & Openingstijden</h2>
+            <p>Bezoek ons vandaag nog</p>
+        </div>
+        <div class="contact-hours fade-in">
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <div class="contact-item">
+                    <div class="icon">📞</div>
+                    <a href="tel:+31617170552">+31 6 17 17 05 52</a>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">✉️</div>
+                    <a href="mailto:info@barbershophaarlem.nl">info@barbershophaarlem.nl</a>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">📍</div>
+                    <span>Amsterdamstraat 62<br>2032 PS Haarlem</span>
+                </div>
+            </div>
+            <div class="hours-info">
+                <h3>Openingstijden</h3>
+                <div class="hours-row">
+                    <span class="day">Maandag</span>
+                    <span class="time">10:00 - 18:00</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Dinsdag</span>
+                    <span class="time">10:00 - 18:00</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Woensdag</span>
+                    <span class="time">10:00 - 18:00</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Donderdag</span>
+                    <span class="time">10:00 - 18:00</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Vrijdag</span>
+                    <span class="time">10:00 - 18:00</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Zaterdag</span>
+                    <span class="time">10:00 - 18:00</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Zondag</span>
+                    <span class="time">Gesloten</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <img src="assets/footer-logo.png" alt="Barbershop Haarlem" class="footer-logo">
+        <div class="social-links">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Instagram">📷</a>
+        </div>
+        <p>&copy; 2026 Barbershop Haarlem. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuBtn.textContent = '☰';
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

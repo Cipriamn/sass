@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damoti Barbershop | București</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <meta name="description" content="Damoti Barbershop - Frizerie în Universitate, Strada Colței 38. Fade-uri curate, atmosferă relaxantă. Programează-te online.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Damoti Barbershop">
+    <meta property="og:title" content="Damoti Barbershop | București">
+    <meta property="og:description" content="Frizerie premium în Universitate, Strada Colței 38. Fade-uri curate, atmosferă relaxantă. Programează-te online.">
+    <meta property="og:url" content="https://damotibarbershop.ro/">
+    <meta property="og:image" content="https://damotibarbershop.ro/assets/logo.png">
+    <meta property="og:locale" content="ro_RO">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://damotibarbershop.ro/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Damoti Barbershop | București">
+    <meta name="twitter:description" content="Frizerie premium în Universitate, Strada Colței 38. Fade-uri curate, atmosferă relaxantă. Programează-te online.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#d4af37',
+                        goldhover: '#b5952f',
+                        dark: '#111111',
+                        darker: '#0a0a0a',
+                        card: '#1a1a1a'
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+<style>
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+    .sr-only.focus\:not-sr-only:focus { position: static; width: auto; height: auto; padding: 0; margin: 0; overflow: visible; clip: auto; white-space: normal; }
+
+    body { background-color: #0a0a0a; color: #e5e5e5; }
+
+    .hero-bg {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                    radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.08), transparent 70%),
+                    #111;
+    }
+
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up { animation: fadeUp 0.8s ease-out forwards; }
+    .delay-1 { animation-delay: 0.2s; opacity: 0; }
+    .delay-2 { animation-delay: 0.4s; opacity: 0; }
+
+    .lang-switch { cursor: pointer; transition: all 0.3s; }
+    .lang-switch:hover { transform: scale(1.1); }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  "name": "Damoti Barbershop",
+  "image": "https://damotibarbershop.ro/assets/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Colței 38",
+    "addressLocality": "București",
+    "addressRegion": "Sector 3",
+    "addressCountry": "RO"
+  },
+  "telephone": "+40768642864",
+  "email": "contact@damotibarbershop.ro",
+  "url": "https://damotibarbershop.ro/",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "12:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "12:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.instagram.com/damotibarbershop",
+    "https://www.facebook.com/damotibarbershop"
+  ]
+}
+</script>
+
+</head>
+<body class="antialiased">
+
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-gold text-dark px-4 py-2 rounded z-[9999]">Salt la conținut / Skip to content</a>
+
+    <nav class="fixed w-full z-50 bg-dark/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex-shrink-0 py-2">
+                    <img src="assets/logo.png" alt="Damoti Barbershop Logo" class="h-14 w-auto">
+                </a>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="hover:text-gold transition nav-link" data-ro="Despre Noi" data-en="About Us">Despre Noi</a>
+                    <a href="#servicii" class="hover:text-gold transition nav-link" data-ro="Servicii" data-en="Services">Servicii</a>
+                    <a href="#echipa" class="hover:text-gold transition nav-link" data-ro="Echipa" data-en="Team">Echipa</a>
+                    <a href="#contact" class="hover:text-gold transition nav-link" data-ro="Contact" data-en="Contact">Contact</a>
+                    <button onclick="toggleLang()" class="lang-switch text-sm font-bold text-gold border border-gold px-3 py-1 rounded hover:bg-gold hover:text-dark">
+                        <span id="lang-toggle">EN</span>
+                    </button>
+                    <a href="https://mero.ro/p/damoti-barbershop" target="_blank" class="bg-gold text-dark font-bold px-5 py-2 rounded hover:bg-goldhover transition cta-btn" data-ro="PROGRAMĂRI" data-en="BOOK NOW">
+                        PROGRAMĂRI
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center gap-3">
+                    <button onclick="toggleLang()" class="lang-switch text-sm font-bold text-gold border border-gold px-2 py-1 rounded">
+                        <span id="lang-toggle-mobile">EN</span>
+                    </button>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-white focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-card border-b border-gray-700">
+            <a href="#about" class="block py-3 px-4 hover:bg-gray-800 nav-link" data-ro="Despre Noi" data-en="About Us">Despre Noi</a>
+            <a href="#servicii" class="block py-3 px-4 hover:bg-gray-800 nav-link" data-ro="Servicii" data-en="Services">Servicii</a>
+            <a href="#echipa" class="block py-3 px-4 hover:bg-gray-800 nav-link" data-ro="Echipa" data-en="Team">Echipa</a>
+            <a href="#contact" class="block py-3 px-4 hover:bg-gray-800 nav-link" data-ro="Contact" data-en="Contact">Contact</a>
+            <a href="https://mero.ro/p/damoti-barbershop" target="_blank" class="block py-3 px-4 text-gold font-bold text-center border-t border-gray-700 cta-btn" data-ro="PROGRAMEAZĂ-TE ACUM" data-en="BOOK NOW">PROGRAMEAZĂ-TE ACUM</a>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <header class="hero-bg min-h-screen flex items-center justify-center text-center px-4 pt-20">
+        <div class="max-w-3xl">
+            <h1 class="font-display text-5xl md:text-7xl font-bold mb-6 text-white uppercase tracking-wide fade-up">
+                <span class="hero-title" data-ro="Stilul tău, <span class='text-gold'>semnătura noastră</span>" data-en="Your style, <span class='text-gold'>our signature</span>">
+                    Stilul tău, <span class="text-gold">semnătura noastră</span>
+                </span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 font-light fade-up delay-1 hero-desc"
+               data-ro="Frizerie premium în inima Bucureștiului. Locul în care vii pentru un tuns și pleci cu vibe-ul ridicat."
+               data-en="Premium barbershop in the heart of Bucharest. The place where you come for a haircut and leave with your vibe elevated.">
+                Frizerie premium în inima Bucureștiului. Locul în care vii pentru un tuns și pleci cu vibe-ul ridicat.
+            </p>
+            <a href="https://mero.ro/p/damoti-barbershop" target="_blank" class="bg-gold text-dark text-lg font-bold px-8 py-4 rounded hover:bg-goldhover transition transform hover:scale-105 inline-block fade-up delay-2 hero-cta" data-ro="FĂ O PROGRAMARE" data-en="BOOK APPOINTMENT">
+                FĂ O PROGRAMARE
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="py-20 bg-darker">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-display text-4xl font-bold text-gold mb-8 about-title" data-ro="Conceptul Damoti" data-en="The Damoti Concept">Conceptul Damoti</h2>
+            <p class="text-gray-400 text-lg leading-relaxed about-text"
+               data-ro="Damoti Barbershop este un concept dedicat exclusiv bărbaților care caută confort, calitate și stil. Situat pe <strong>Strada Colței 38</strong>, suntem locul unde pasiunea devine meserie. Fie că te pregătești pentru un eveniment sau îți dorești un tuns clasic, noi ne focalizăm pe fade-uri curate, aranjat barbă ca la carte și o atmosferă fără grabă."
+               data-en="Damoti Barbershop is a concept dedicated exclusively to men seeking comfort, quality, and style. Located on <strong>Strada Colței 38</strong>, we are the place where passion becomes profession. Whether you're preparing for an event or want a classic cut, we focus on clean fades, proper beard grooming, and an unhurried atmosphere.">
+                Damoti Barbershop este un concept dedicat exclusiv bărbaților care caută confort, calitate și stil.
+                Situat pe <strong>Strada Colței 38</strong>, suntem locul unde pasiunea devine meserie.
+                Fie că te pregătești pentru un eveniment sau îți dorești un tuns clasic, noi ne focalizăm pe fade-uri curate,
+                aranjat barbă ca la carte și o atmosferă fără grabă.
+            </p>
+        </div>
+    </section>
+
+    <section id="servicii" class="py-24 bg-card relative">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-darker border border-gray-800 rounded-2xl p-10 md:p-16 text-center shadow-2xl relative overflow-hidden">
+
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gold shadow-[0_0_40px_rgba(212,175,55,0.5)]"></div>
+
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 services-title" data-ro="Servicii & <span class='text-gold'>Prețuri</span>" data-en="Services & <span class='text-gold'>Prices</span>">
+                    Servicii & <span class="text-gold">Prețuri</span>
+                </h2>
+
+                <p class="text-gray-400 text-lg md:text-xl mb-12 leading-relaxed max-w-2xl mx-auto services-desc"
+                   data-ro="Transparență totală. Pentru a vedea lista completă de servicii actualizate și disponibilitatea frizerilor noștri în timp real, accesează platforma parteneră."
+                   data-en="Total transparency. To see the complete updated service list and real-time barber availability, access our partner platform.">
+                    Transparență totală. Pentru a vedea lista completă de servicii actualizate și disponibilitatea frizerilor noștri în timp real, accesează platforma parteneră.
+                </p>
+
+                <div class="flex justify-center">
+                    <a href="https://mero.ro/p/damoti-barbershop" target="_blank"
+                       class="transform transition duration-300 hover:scale-105 bg-gold text-dark font-display text-xl font-bold px-10 py-5 rounded-lg shadow-lg hover:shadow-gold/20 flex items-center services-cta"
+                       data-ro="VEZI LISTA COMPLETĂ PE MERO"
+                       data-en="VIEW FULL LIST ON MERO">
+                        VEZI LISTA COMPLETĂ PE MERO
+                        <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <p class="mt-8 text-sm text-gray-600 services-note" data-ro="*Programările se confirmă instant." data-en="*Bookings confirmed instantly.">
+                    *Programările se confirmă instant.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="echipa" class="py-20 bg-darker">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-center mb-12 team-title" data-ro="Echipa <span class='text-gold'>Noastră</span>" data-en="Our <span class='text-gold'>Team</span>">Echipa <span class="text-gold">Noastră</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="bg-gray-800 h-64 w-full mb-4 rounded overflow-hidden">
+                        <img src="assets/timmy.jpg" alt="Timmy" class="w-full h-full object-cover object-top opacity-80 hover:opacity-100 transition" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold">Timmy</h3>
+                    <p class="text-gold text-sm">Barber</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-800 h-64 w-full mb-4 rounded overflow-hidden">
+                        <img src="assets/dani.jpg" alt="Dani" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold">Dani</h3>
+                    <p class="text-gold text-sm">Barber</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-800 h-64 w-full mb-4 rounded overflow-hidden">
+                        <img src="assets/mocanita.jpg" alt="Mocanita" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold">Mocăniță</h3>
+                    <p class="text-gold text-sm">Barber</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-800 h-64 w-full mb-4 rounded overflow-hidden">
+                        <img src="assets/edi.jpg" alt="Edi" class="w-full h-full object-cover object-top opacity-80 hover:opacity-100 transition" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold">Edi</h3>
+                    <p class="text-gold text-sm">Barber</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-card">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+
+            <div>
+                <h2 class="font-display text-4xl font-bold mb-8 text-white contact-title" data-ro="Vino la <span class='text-gold'>Noi</span>" data-en="Visit <span class='text-gold'>Us</span>">Vino la <span class="text-gold">Noi</span></h2>
+
+                <div class="space-y-8">
+                    <div>
+                        <p class="flex items-center text-lg mb-2">
+                            <span class="text-gold mr-3 text-xl">📍</span> Strada Colței 38, București
+                        </p>
+                        <p class="flex items-center text-lg mb-2">
+                            <span class="text-gold mr-3 text-xl">📞</span> <a href="tel:0768642864" class="hover:text-white transition">0768 642 864</a>
+                        </p>
+                        <p class="flex items-center text-lg mb-4">
+                            <span class="text-gold mr-3 text-xl">📧</span> <a href="mailto:contact@damotibarbershop.ro" class="hover:text-white transition">contact@damotibarbershop.ro</a>
+                        </p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://www.instagram.com/damotibarbershop" target="_blank" rel="noopener" class="text-gray-400 hover:text-gold transition transform hover:scale-110" aria-label="Instagram">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/damotibarbershop" target="_blank" rel="noopener" class="text-gray-400 hover:text-gold transition transform hover:scale-110" aria-label="Facebook">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://waze.com/ul?q=Damoti%20Barbershop%20Bucuresti&navigate=yes" target="_blank"
+                           class="bg-gray-800 hover:bg-gray-700 text-white px-5 py-3 rounded flex items-center transition border border-gray-600">
+                            <img src="assets/waze-icon.svg" class="w-6 h-6 mr-2 object-contain" alt="Waze" loading="lazy">
+                            Waze
+                        </a>
+                        <a href="https://www.google.com/maps/dir//Damoti+Barbershop" target="_blank"
+                           class="bg-gray-800 hover:bg-gray-700 text-white px-5 py-3 rounded flex items-center transition border border-gray-600">
+                            <img src="assets/google-map-icon.svg" class="w-6 h-6 mr-2 object-contain" alt="Maps" loading="lazy">
+                            Google Maps
+                        </a>
+                    </div>
+
+                    <div class="bg-darker p-6 rounded-xl border border-gray-800 mt-6">
+                        <h4 class="text-gold font-bold mb-4 uppercase tracking-wider text-sm border-b border-gray-800 pb-2 hours-title" data-ro="Program de Lucru" data-en="Working Hours">Program de Lucru</h4>
+                        <div class="space-y-3 font-mono text-sm md:text-base">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400 day-label" data-ro="Luni - Vineri" data-en="Monday - Friday">Luni - Vineri</span>
+                                <span class="flex-grow mx-4 border-b border-dotted border-gray-700 relative top-[-4px]"></span>
+                                <span class="text-white font-bold">12:00 - 20:00</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400 day-label" data-ro="Sâmbătă" data-en="Saturday">Sâmbătă</span>
+                                <span class="flex-grow mx-4 border-b border-dotted border-gray-700 relative top-[-4px]"></span>
+                                <span class="text-white font-bold">12:00 - 18:00</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400 day-label" data-ro="Duminică" data-en="Sunday">Duminică</span>
+                                <span class="flex-grow mx-4 border-b border-dotted border-gray-700 relative top-[-4px]"></span>
+                                <span class="text-red-500 font-bold closed-label" data-ro="Închis" data-en="Closed">Închis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-96 w-full rounded-xl overflow-hidden shadow-2xl border border-gray-700 relative">
+                <iframe
+                    title="Harta locație Damoti Barbershop"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.868774267448!2d26.1012343!3d44.4357895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff43610931cd%3A0x6c6e3d2345e656e!2sStrada%20Col%C8%9Bei%2038%2C%20Bucure%C8%99ti!5e0!3m2!1sen!2sro!4v1700000000000!5m2!1sen!2sro"
+                    width="100%" height="100%" style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+    </main>
+
+    <footer class="bg-black py-10 border-t border-gray-900 text-center">
+        <div class="flex justify-center gap-6 mb-6">
+            <a href="https://www.instagram.com/damotibarbershop" target="_blank" rel="noopener" class="text-gray-500 hover:text-gold transition transform hover:scale-110" aria-label="Instagram">
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/damotibarbershop" target="_blank" rel="noopener" class="text-gray-500 hover:text-gold transition transform hover:scale-110" aria-label="Facebook">
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+            </a>
+        </div>
+        <p class="text-gray-500 text-sm mb-4">
+            © <span id="year"></span> Damoti Barbershop. All rights reserved.
+        </p>
+        <p class="text-gray-600 text-xs">
+            # <a href="https://dagnet.ro" target="_blank" rel="noopener" class="hover:text-gold transition">dagNet.ro</a>
+        </p>
+    </footer>
+
+    <a href="https://mero.ro/p/damoti-barbershop" target="_blank" class="md:hidden fixed bottom-4 left-4 right-4 bg-gold text-dark font-bold text-center py-3 rounded-xl shadow-lg z-40 mobile-cta" data-ro="Programare rapidă" data-en="Quick booking">
+        Programare rapidă
+    </a>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        let currentLang = 'ro';
+
+        function toggleLang() {
+            currentLang = currentLang === 'ro' ? 'en' : 'ro';
+            document.documentElement.lang = currentLang;
+
+            document.getElementById('lang-toggle').textContent = currentLang === 'ro' ? 'EN' : 'RO';
+            document.getElementById('lang-toggle-mobile').textContent = currentLang === 'ro' ? 'EN' : 'RO';
+
+            document.querySelectorAll('[data-ro][data-en]').forEach(el => {
+                if (el.classList.contains('hero-title') || el.classList.contains('about-text') ||
+                    el.classList.contains('services-title') || el.classList.contains('team-title') ||
+                    el.classList.contains('contact-title')) {
+                    el.innerHTML = el.getAttribute('data-' + currentLang);
+                } else {
+                    el.textContent = el.getAttribute('data-' + currentLang);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

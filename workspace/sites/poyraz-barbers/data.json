@@ -1,0 +1,52 @@
+{
+  "business": {
+    "name": "Poyraz Barbers",
+    "tagline": "Heren kapper van Zaandam",
+    "phone": "075-202 30 91",
+    "email": "info@poyrazbarbers.nl",
+    "address": "Czaar Peterstraat 9B",
+    "postalCode": "1506 SK",
+    "city": "Zaandam",
+    "country": "Nederland"
+  },
+  "about": {
+    "intro": "Welkom bij Poyraz Barbers. We zijn een men-only barbershop met een team gespecialiseerd in het knippen en scheren van uw kapsel of baard.",
+    "description": "Wij adviseren u ook graag vanuit ons brede assortiment haarproducten om ervoor te zorgen dat uw kapsel of baard er elke dag perfect uit ziet."
+  },
+  "services": [
+    {
+      "name": "Heren knippen",
+      "price": "€17.50"
+    },
+    {
+      "name": "Heren knippen en wassen",
+      "description": "inclusief massage",
+      "price": "€20.00"
+    },
+    {
+      "name": "Heren knippen en scheren",
+      "price": "€25.00"
+    },
+    {
+      "name": "Scheren en contouren",
+      "price": "€10.00"
+    },
+    {
+      "name": "Kinderen knippen",
+      "description": "onder de 12 jaar",
+      "price": "€15.00"
+    }
+  ],
+  "hours": {
+    "maandag": "Gesloten",
+    "dinsdag": "09:00 - 18:00",
+    "woensdag": "09:00 - 18:00",
+    "donderdag": "09:00 - 21:00",
+    "vrijdag": "09:00 - 20:00",
+    "zaterdag": "09:00 - 20:00",
+    "zondag": "11:00 - 18:00"
+  },
+  "assets": {
+    "hero": "assets/hero.jpg"
+  }
+}

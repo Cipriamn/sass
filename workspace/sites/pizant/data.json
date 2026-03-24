@@ -1,0 +1,65 @@
+{
+  "business": {
+    "name": "Barbershop Pizant",
+    "tagline": "Op en top service en aandacht. Je komt fris en energiek weer naar buiten.",
+    "phone": "+31 6 87868406",
+    "email": "",
+    "address": "Venediën 36, 1441 AK Purmerend"
+  },
+  "hours": {
+    "monday": "Gesloten",
+    "tuesday": "10:30 - 18:30",
+    "wednesday": "10:30 - 18:30",
+    "thursday": "10:30 - 19:00",
+    "friday": "10:00 - 21:30",
+    "saturday": "10:00 - 18:00",
+    "sunday": "Gesloten"
+  },
+  "booking_url": "https://www.fresha.com/lvp/barbershop-pizant-venedien-purmerend-rwKlbP",
+  "sections": [
+    {
+      "number": "01",
+      "title": "Over ons",
+      "subtitle": "beste kapsels",
+      "content": "Wij werken op afspraak, zo hoef jij niet te lang te wachten op je knip of scheerbeurt. Moet je toch nog even wachten? Dan bieden we je uiteraard een heerlijk bakje koffie aan!"
+    },
+    {
+      "number": "02",
+      "title": "Services",
+      "subtitle": "waarvoor kun je bij Pizant terecht?"
+    }
+  ],
+  "services": [
+    {
+      "name": "Knippen",
+      "price": "€28",
+      "icon": "icon-01-free-img.png"
+    },
+    {
+      "name": "Scheren",
+      "price": "€14",
+      "icon": "icon-02-free-img.png"
+    },
+    {
+      "name": "Baard trimmen",
+      "price": "€8",
+      "icon": "icon-03-free-img.png"
+    },
+    {
+      "name": "Borstel",
+      "price": "€3",
+      "icon": "icon-04-free-img.png"
+    }
+  ],
+  "team": [],
+  "images": {
+    "hero": "",
+    "gallery": [],
+    "services": [
+      "icon-01-free-img.png",
+      "icon-02-free-img.png",
+      "icon-03-free-img.png",
+      "icon-04-free-img.png"
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "businessName": "Barbershop Haarlem",
+  "tagline": "Ben je op zoek naar een kapper in Haarlem die werkt met en zonder afspraak? Dan ben je bij Barbershop Haarlem aan het juiste adres",
+  "phone": "+31617170552",
+  "email": "info@barbershophaarlem.nl",
+  "address": {
+    "street": "Amsterdamstraat 62",
+    "postal": "2032 PS",
+    "city": "Haarlem"
+  },
+  "hours": {
+    "monday": "10:00 - 18:00",
+    "tuesday": "10:00 - 18:00",
+    "wednesday": "10:00 - 18:00",
+    "thursday": "10:00 - 18:00",
+    "friday": "10:00 - 18:00",
+    "saturday": "10:00 - 18:00",
+    "sunday": "Gesloten"
+  },
+  "services": [
+    {
+      "name": "Wassen & Knippen",
+      "price": "€25",
+      "description": "Wassen knippen ..."
+    },
+    {
+      "name": "Baard",
+      "price": "€20",
+      "description": "Baard vanaf"
+    },
+    {
+      "name": "Haar & Baard",
+      "price": "€35",
+      "description": "Haar + Baard"
+    },
+    {
+      "name": "Wassen",
+      "price": "€5",
+      "description": "Wassen"
+    },
+    {
+      "name": "Baard Trimmen",
+      "price": "€15",
+      "description": "Baard Trimmen"
+    },
+    {
+      "name": "Jongens Knippen",
+      "price": "€20",
+      "description": "T/M 10 jaar"
+    },
+    {
+      "name": "Knippen - Baard",
+      "price": "€35",
+      "description": "Knippen + Baard"
+    }
+  ],
+  "images": {
+    "logo": "assets/logo.png",
+    "hero": "assets/9.jpg",
+    "gallery": [
+      "assets/IMG-20230614-WA0027.jpg",
+      "assets/IMG-20230614-WA0028.jpg",
+      "assets/IMG-20230706-WA0008.jpg",
+      "assets/IMG-20230721-WA0037.jpg"
+    ]
+  },
+  "social": {
+    "facebook": "#",
+    "twitter": "#",
+    "instagram": "#"
+  }
+}
