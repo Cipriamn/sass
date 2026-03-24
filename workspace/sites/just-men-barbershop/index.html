@@ -266,10 +266,14 @@ a{text-decoration:none;color:inherit}
   font-size:1.8rem;
   margin-bottom:var(--space-xs);
 }
-.info-strip__item h4{
+.info-strip__label{
+  display:block;
   color:var(--accent);
+  font-family:var(--font-display);
   font-size:0.7rem;
+  font-weight:600;
   letter-spacing:2px;
+  text-transform:uppercase;
   margin-bottom:var(--space-xs);
 }
 .info-strip__item p{font-size:0.95rem;opacity:0.9}
@@ -642,10 +646,14 @@ a{text-decoration:none;color:inherit}
 }
 .footer__brand span{color:var(--accent)}
 .footer__desc{font-size:0.95rem;line-height:1.7}
-.footer h4{
+.footer__title{
+  display:block;
   color:var(--white);
+  font-family:var(--font-display);
   font-size:0.8rem;
+  font-weight:600;
   letter-spacing:2px;
+  text-transform:uppercase;
   margin-bottom:var(--space-md);
 }
 .footer ul{list-style:none}
@@ -818,14 +826,14 @@ a{text-decoration:none;color:inherit}
 <a href="#main" class="skip-link">Sari la conținut</a>
 
 <!-- HEADER -->
-<header class="header" role="banner">
+<header class="header">
   <div class="container">
     <a href="#" class="header__logo" aria-label="Just Men Barbershop - Pagina principală">JUST <span>MEN</span></a>
     <button class="menu-toggle" aria-label="Meniu navigare" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
     <nav id="main-nav" aria-label="Navigare principală">
-      <ul class="header__nav" role="list">
+      <ul class="header__nav" >
         <li><a href="#despre">Despre</a></li>
         <li><a href="#servicii">Servicii</a></li>
         <li><a href="#locatii">Locații</a></li>
@@ -854,23 +862,23 @@ a{text-decoration:none;color:inherit}
   <div class="container">
     <div class="info-strip__grid">
       <div class="info-strip__item">
-        <div class="info-strip__icon">📍</div>
-        <h4>Locații</h4>
-        <p>Sebastian & Panduri</p>
+        <span class="info-strip__icon" aria-hidden="true">📍</span>
+        <span class="info-strip__label">Locații</span>
+        <p>Sebastian &amp; Panduri</p>
       </div>
       <div class="info-strip__item">
-        <div class="info-strip__icon">🕐</div>
-        <h4>Program</h4>
+        <span class="info-strip__icon" aria-hidden="true">🕐</span>
+        <span class="info-strip__label">Program</span>
         <p>Luni-Sâmbătă: 09-20<br>Duminică: 09-16</p>
       </div>
       <div class="info-strip__item">
-        <div class="info-strip__icon">📞</div>
-        <h4>Telefon</h4>
+        <span class="info-strip__icon" aria-hidden="true">📞</span>
+        <span class="info-strip__label">Telefon</span>
         <p><a href="tel:+40770771102">0770 771 102</a></p>
       </div>
       <div class="info-strip__item">
-        <div class="info-strip__icon">✨</div>
-        <h4>Servicii</h4>
+        <span class="info-strip__icon" aria-hidden="true">✨</span>
+        <span class="info-strip__label">Servicii</span>
         <p>Tuns, Barbă, Styling</p>
       </div>
     </div>
@@ -914,7 +922,7 @@ a{text-decoration:none;color:inherit}
         <p class="service-card__desc">Tuns profesional cu atenție la detalii</p>
         <ul class="service-card__includes">
           <li>Spălat păr</li>
-          <li>Tuns & Aranjat</li>
+          <li>Tuns &amp; Aranjat</li>
           <li>Styling</li>
           <li>Masaj capilar</li>
         </ul>
@@ -927,7 +935,7 @@ a{text-decoration:none;color:inherit}
           <li>Tuns barbă</li>
           <li>Șamponat</li>
           <li>Contur precis</li>
-          <li>Aftershave & Balsam</li>
+          <li>Aftershave &amp; Balsam</li>
         </ul>
       </article>
       <article class="service-card reveal">
@@ -1011,7 +1019,7 @@ a{text-decoration:none;color:inherit}
       <p>Feedback-ul vostru ne motivează</p>
     </header>
     <div class="testimonials__grid">
-      <article class="testimonial-card reveal">
+      <div class="testimonial-card reveal">
         <div class="testimonial-card__stars">★★★★★</div>
         <p class="testimonial-card__text">"Profesionalism de nota 10! Viorel știe exact ce vrea clientul și livrează de fiecare dată. Recomand cu încredere!"</p>
         <div class="testimonial-card__author">
@@ -1021,8 +1029,8 @@ a{text-decoration:none;color:inherit}
             <div class="testimonial-card__barber">Client fidel - Barber: Viorel</div>
           </div>
         </div>
-      </article>
-      <article class="testimonial-card reveal">
+      </div>
+      <div class="testimonial-card reveal">
         <div class="testimonial-card__stars">★★★★★</div>
         <p class="testimonial-card__text">"Calitate impecabilă și atenție la detalii. Eugen este un adevărat meșter în ceea ce face. Cel mai bun barbershop din zonă!"</p>
         <div class="testimonial-card__author">
@@ -1032,8 +1040,8 @@ a{text-decoration:none;color:inherit}
             <div class="testimonial-card__barber">Client fidel - Barber: Eugen</div>
           </div>
         </div>
-      </article>
-      <article class="testimonial-card reveal">
+      </div>
+      <div class="testimonial-card reveal">
         <div class="testimonial-card__stars">★★★★★</div>
         <p class="testimonial-card__text">"Echipă super profi și atmosferă relaxantă. Mă simt ca acasă de fiecare dată. Programarea online e foarte convenabilă!"</p>
         <div class="testimonial-card__author">
@@ -1043,7 +1051,7 @@ a{text-decoration:none;color:inherit}
             <div class="testimonial-card__barber">Client fidel</div>
           </div>
         </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
@@ -1089,7 +1097,7 @@ a{text-decoration:none;color:inherit}
 </main>
 
 <!-- FOOTER -->
-<footer class="footer" role="contentinfo">
+<footer class="footer">
   <div class="container">
     <div class="footer__grid">
       <div>
@@ -1101,8 +1109,8 @@ a{text-decoration:none;color:inherit}
         </div>
       </div>
       <div>
-        <h4>Link-uri Rapide</h4>
-        <ul role="list">
+        <span class="footer__title">Link-uri Rapide</span>
+        <ul>
           <li><a href="#despre">Despre Noi</a></li>
           <li><a href="#servicii">Servicii</a></li>
           <li><a href="#locatii">Locații</a></li>
@@ -1110,16 +1118,16 @@ a{text-decoration:none;color:inherit}
         </ul>
       </div>
       <div>
-        <h4>Sebastian</h4>
-        <ul role="list">
+        <span class="footer__title">Sebastian</span>
+        <ul>
           <li>Str. Mihail Sebastian 136</li>
           <li><a href="tel:+40770771102">0770 771 102</a></li>
           <li><a href="https://app.logbox.ro/344c160c3d/clientpage" target="_blank" rel="noopener">Programare</a></li>
         </ul>
       </div>
       <div>
-        <h4>Panduri</h4>
-        <ul role="list">
+        <span class="footer__title">Panduri</span>
+        <ul>
           <li>Șos. Panduri nr. 30</li>
           <li><a href="tel:+40773793674">0773 793 674</a></li>
           <li><a href="https://app.logbox.ro/cc9e468025/clientpage" target="_blank" rel="noopener">Programare</a></li>

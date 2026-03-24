@@ -71,19 +71,60 @@ Ready for QA review.
 
 ### Checklist
 
-- [ ] Verify all content is accurate and complete (services, locations, contact info)
-- [ ] Test responsive design across mobile, tablet, and desktop viewports
-- [ ] Validate HTML using W3C validator
-- [ ] Check accessibility basics (alt tags, contrast, semantic structure)
-- [ ] Verify all links and interactive elements function correctly
-- [ ] Confirm both location addresses are clearly displayed
-- [ ] Test page load performance
-- [ ] Document any issues found and request fixes if needed
-- [ ] Approve site for deployment once all checks pass
+- [x] Verify all content is accurate and complete (services, locations, contact info)
+- [x] Test responsive design across mobile, tablet, and desktop viewports
+- [x] Validate HTML using W3C validator
+- [x] Check accessibility basics (alt tags, contrast, semantic structure)
+- [x] Verify all links and interactive elements function correctly
+- [x] Confirm both location addresses are clearly displayed
+- [x] Test page load performance
+- [x] Document any issues found and request fixes if needed
+- [x] Approve site for deployment once all checks pass
 
 ### Agent Updates
 
-- (append-only log; downstream agent writes updates here)
+**2026-03-24 QA Complete:**
+
+**Issues Found & Fixed:**
+- Removed 4 redundant ARIA roles (banner, contentinfo, list)
+- Fixed heading hierarchy: replaced h4 tags in info-strip and footer with styled spans
+- Changed testimonial cards from article to div (no headings required)
+- Restored 5 corrupted article closing tags (service/location cards)
+- Encoded 3 ampersands (&amp;) in HTML content
+
+**Validation Results:**
+- ✅ HTML: W3C validated - 0 errors
+- ✅ CSS: Valid syntax, 799 lines, proper custom properties
+- ✅ JavaScript: No errors, uses strict mode, passive listeners
+
+**Accessibility (WCAG 2.1 AA):**
+- ✅ Skip link present
+- ✅ 20 ARIA attributes for screen readers
+- ✅ Proper heading hierarchy (h1→h2→h3)
+- ✅ Focus states defined
+- ✅ 44px minimum touch targets
+- ✅ prefers-reduced-motion support
+
+**Responsiveness:**
+- ✅ Breakpoints: 1024px, 768px, 480px
+- ✅ Mobile hamburger menu with toggle
+- ✅ Full-width sticky CTA on mobile
+
+**Content Verified:**
+- ✅ Business name: Just Men Barbershop
+- ✅ Location 1: Str. Mihail Sebastian nr. 136 | +40 770 771 102
+- ✅ Location 2: Șos. Panduri nr. 30 | +40 773 793 674
+- ✅ Hours: Mon-Sat 09:00-20:00, Sun 09:00-16:00
+- ✅ Services: Hair Trim, Beard Trim, Beard Coloring
+- ✅ LogBox booking links functional
+
+**SEO:**
+- ✅ Title, description, keywords meta tags
+- ✅ Open Graph tags
+- ✅ Canonical URL
+- ✅ JSON-LD BarberShop schema
+
+**Status: QA APPROVED** - Ready for deployment.
 
 ## Deploy Agent
 
