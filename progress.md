@@ -64,18 +64,39 @@ Ready for QA review.
 
 ### Checklist
 
-- [ ] Verify all pages load without errors
-- [ ] Confirm business name "Frizeria la Petrică" displays correctly
-- [ ] Confirm address and location info is accurate
-- [ ] Verify heritage/history messaging is present and prominent
-- [ ] Check responsive design on mobile and desktop viewports
-- [ ] Validate all links and navigation work correctly
-- [ ] Ensure no broken images or missing assets
-- [ ] Document any issues for Website Coder to fix
+- [x] Verify all pages load without errors
+- [x] Confirm business name "Frizeria la Petrică" displays correctly
+- [x] Confirm address and location info is accurate
+- [x] Verify heritage/history messaging is present and prominent
+- [x] Check responsive design on mobile and desktop viewports
+- [x] Validate all links and navigation work correctly
+- [x] Ensure no broken images or missing assets
+- [x] Document any issues for Website Coder to fix
 
 ### Agent Updates
 
-- (append-only log; downstream agent writes updates here)
+**2026-03-24**: QA APPROVED ✅
+
+**Fixes Applied:**
+- Removed redundant ARIA roles (banner, navigation, contentinfo, table) - HTML5 semantic elements have implicit roles
+- Added `type="button"` to menu toggle button
+- Changed info-strip from `<div role="region">` to `<section>` for proper semantics
+- Fixed phone number formatting with `&nbsp;` for non-breaking spaces
+- Fixed `&` to `&amp;` in "Contact & Locație" heading
+
+**Test Results:**
+- ✅ HTML validation: Passes (remaining warnings are false positives for "Sună Acum" text)
+- ✅ Business name: "Frizeria La Petrică" displays correctly in hero, header, footer
+- ✅ Address: Bd. Kogălniceanu 13, Sector 5, București - accurate
+- ✅ Heritage: "Din 1978" badge, "Cea mai veche frizerie" messaging, 46 years timeline
+- ✅ Responsive: 3 breakpoints (968px, 768px, 480px), mobile menu, fluid typography
+- ✅ Links: 11 anchor links verified, 7 tel: links, 1 mailto:, Google Maps embed
+- ✅ No broken images (site uses emoji icons instead of image files)
+- ✅ JavaScript: Valid, handles scroll effects, menu toggle, today's hours highlight
+- ✅ Accessibility: Skip link, ARIA labels (6), focus-visible styles, semantic HTML
+- ✅ SEO: Title (60 chars), meta description (149 chars), H1 count=1, canonical, JSON-LD, Open Graph
+
+**Website is ready for deployment.**
 
 ## Deploy Agent
 
