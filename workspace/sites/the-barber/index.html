@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Barber | Frizerie București - Titulescu, Unirii, Vitan</title>
+<meta name="description" content="The Barber - Frizerie premium în București. 3 locații: Titulescu, Unirii, Vitan. Tuns, barbierit, îngrijire barbă. Program Luni-Sâmbătă 10:00-20:00.">
+<meta name="keywords" content="frizerie bucuresti, the barber, barber shop, tuns barbati, barbierit, titulescu, unirii, vitan">
+<meta name="author" content="The Barber">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.thebarber.ro/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="The Barber | Frizerie București">
+<meta property="og:description" content="Frizerie premium în București. 3 locații convenabile. Servicii excelente, atmosferă superbă.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.thebarber.ro/">
+<meta property="og:locale" content="ro_RO">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  "name": "The Barber",
+  "description": "Frizerie premium în București cu 3 locații",
+  "url": "https://www.thebarber.ro/",
+  "telephone": "+40754634300",
+  "email": "thebarberromania@gmail.com",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Bd. Alexandru Ioan Cuza Nr. 105",
+      "addressLocality": "București",
+      "addressCountry": "RO"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Str. Foișorului Nr. 107-109A",
+      "addressLocality": "București",
+      "addressCountry": "RO"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Bd. Corneliu Coposu Nr. 35",
+      "addressLocality": "București",
+      "addressCountry": "RO"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "10:00",
+    "closes": "20:00"
+  }
+}
+</script>
+
+<style>
+/*──────────────────────────────────────────────
+  THE BARBER - Basic Clean Layout
+  Design: Simple, text-heavy, no fancy effects
+──────────────────────────────────────────────*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --primary:#1a1a1a;
+  --accent:#8b4513;
+  --dark:#111;
+  --light:#f5f5f5;
+  --text:#333;
+  --text-light:#666;
+  --white:#fff;
+  --border:#ddd;
+}
+
+body{
+  font-family: Georgia, 'Times New Roman', serif;
+  color:var(--text);
+  line-height:1.7;
+  background:var(--white);
+  font-size:16px;
+}
+
+.container{max-width:900px;margin:0 auto;padding:0 20px}
+section{padding:60px 0}
+h1,h2,h3{font-weight:400;line-height:1.3;margin-bottom:20px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Skip Link */
+.skip-link{
+  position:absolute;left:-9999px;top:0;
+  background:var(--primary);color:var(--white);
+  padding:10px 20px;z-index:1000;
+}
+.skip-link:focus{left:0}
+
+/* ─── HEADER ─── */
+.header{
+  background:var(--primary);
+  color:var(--white);
+  padding:20px 0;
+  text-align:center;
+}
+.header h1{
+  font-size:2.5rem;
+  letter-spacing:3px;
+  margin-bottom:10px;
+}
+.header p{
+  font-size:0.95rem;
+  opacity:0.8;
+}
+.header__nav{
+  margin-top:15px;
+  padding-top:15px;
+  border-top:1px solid rgba(255,255,255,0.2);
+}
+.header__nav a{
+  color:var(--white);
+  margin:0 15px;
+  font-size:0.9rem;
+}
+.header__nav a:hover{color:var(--accent)}
+
+/* ─── HERO ─── */
+.hero{
+  background:var(--light);
+  text-align:center;
+  padding:80px 20px;
+  border-bottom:1px solid var(--border);
+}
+.hero h2{
+  font-size:2rem;
+  margin-bottom:15px;
+}
+.hero p{
+  font-size:1.1rem;
+  color:var(--text-light);
+  max-width:600px;
+  margin:0 auto 25px;
+}
+.hero__phone{
+  font-size:1.5rem;
+  font-weight:600;
+  color:var(--primary);
+}
+.hero__phone a{color:var(--primary)}
+
+/* ─── ABOUT ─── */
+.about{border-bottom:1px solid var(--border)}
+.about h2{font-size:1.8rem;text-align:center}
+.about__content{
+  max-width:700px;
+  margin:0 auto;
+  text-align:center;
+}
+.about__content p{
+  margin-bottom:15px;
+  color:var(--text-light);
+}
+
+/* ─── SERVICES ─── */
+.services{background:var(--light);border-bottom:1px solid var(--border)}
+.services h2{font-size:1.8rem;text-align:center;margin-bottom:40px}
+
+.service-list{list-style:none;max-width:700px;margin:0 auto}
+.service-item{
+  background:var(--white);
+  border:1px solid var(--border);
+  margin-bottom:15px;
+  padding:25px 30px;
+}
+.service-item h3{
+  font-size:1.2rem;
+  margin-bottom:10px;
+  color:var(--primary);
+}
+.service-item p{
+  color:var(--text-light);
+  font-size:0.95rem;
+  line-height:1.6;
+}
+
+/* ─── LOCATIONS ─── */
+.locations{border-bottom:1px solid var(--border)}
+.locations h2{font-size:1.8rem;text-align:center;margin-bottom:40px}
+
+.location-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  max-width:900px;
+  margin:0 auto;
+}
+.location-card{
+  background:var(--light);
+  border:1px solid var(--border);
+  padding:30px;
+  text-align:center;
+}
+.location-card h3{
+  font-size:1.1rem;
+  margin-bottom:15px;
+  color:var(--primary);
+}
+.location-card p{
+  color:var(--text-light);
+  font-size:0.9rem;
+  margin-bottom:10px;
+}
+.location-card .btn-book{
+  display:inline-block;
+  background:var(--primary);
+  color:var(--white);
+  padding:10px 25px;
+  margin-top:15px;
+  font-size:0.9rem;
+  text-decoration:none;
+}
+.location-card .btn-book:hover{
+  background:var(--accent);
+  text-decoration:none;
+}
+
+/* ─── HOURS ─── */
+.hours{background:var(--light);border-bottom:1px solid var(--border)}
+.hours h2{font-size:1.8rem;text-align:center;margin-bottom:30px}
+.hours__content{
+  max-width:400px;
+  margin:0 auto;
+  text-align:center;
+}
+.hours__content p{
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+.hours__content .closed{color:var(--accent)}
+
+/* ─── CONTACT ─── */
+.contact{border-bottom:1px solid var(--border)}
+.contact h2{font-size:1.8rem;text-align:center;margin-bottom:30px}
+.contact__content{
+  max-width:500px;
+  margin:0 auto;
+  text-align:center;
+}
+.contact__item{
+  margin-bottom:20px;
+}
+.contact__item h3{
+  font-size:1rem;
+  color:var(--text-light);
+  margin-bottom:5px;
+  font-weight:400;
+}
+.contact__item p{
+  font-size:1.1rem;
+}
+.contact__item a{
+  color:var(--primary);
+  font-size:1.1rem;
+}
+
+/* ─── CTA ─── */
+.cta{
+  background:var(--primary);
+  color:var(--white);
+  text-align:center;
+  padding:60px 20px;
+}
+.cta h2{
+  font-size:1.8rem;
+  margin-bottom:15px;
+}
+.cta p{
+  font-size:1rem;
+  opacity:0.8;
+  margin-bottom:25px;
+}
+.cta .btn-cta{
+  display:inline-block;
+  background:var(--white);
+  color:var(--primary);
+  padding:15px 40px;
+  font-size:1rem;
+  text-decoration:none;
+}
+.cta .btn-cta:hover{
+  background:var(--accent);
+  color:var(--white);
+  text-decoration:none;
+}
+
+/* ─── FOOTER ─── */
+.footer{
+  background:var(--dark);
+  color:rgba(255,255,255,0.7);
+  padding:40px 20px;
+  text-align:center;
+}
+.footer p{font-size:0.9rem;margin-bottom:10px}
+.footer a{color:rgba(255,255,255,0.9)}
+.footer__copy{
+  margin-top:30px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  font-size:0.8rem;
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:600px){
+  .header h1{font-size:1.8rem}
+  .header__nav a{display:block;margin:10px 0}
+  .hero{padding:50px 20px}
+  .hero h2{font-size:1.5rem}
+  section{padding:40px 0}
+  .location-grid{grid-template-columns:1fr}
+}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *{transition:none !important}
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Salt la conținut</a>
+
+<header class="header">
+  <div class="container">
+    <h1>THE BARBER</h1>
+    <p>Barber Shop & Frizerie - București</p>
+    <nav class="header__nav" aria-label="Navigare principală">
+      <a href="#servicii">Servicii</a>
+      <a href="#locatii">Locații</a>
+      <a href="#program">Program</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="container">
+    <h2>Servicii Excelente, Atmosferă Superbă</h2>
+    <p>Trei locații convenabile în București pentru nevoile tale de îngrijire. Tunsori clasice, barbierit tradițional și îngrijirea bărbii de către profesioniști cu experiență.</p>
+    <div class="hero__phone">
+      <a href="tel:+40754634300">0754 634 300</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="despre">
+  <div class="container">
+    <h2>Despre Noi</h2>
+    <div class="about__content">
+      <p>The Barber este o frizerie dedicată excelenței în arta barbieritului tradițional. Cu trei locații în București, oferim servicii de tuns, barbierit și îngrijirea bărbii la cele mai înalte standarde.</p>
+      <p>Echipa noastră de barberi profesioniști combină tehnicile clasice cu tendințele moderne pentru a oferi fiecărui client o experiență personalizată și de calitate.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="servicii">
+  <div class="container">
+    <h2>Serviciile Noastre</h2>
+    <ul class="service-list">
+      <li class="service-item">
+        <h3>Tuns The Barber</h3>
+        <p>Tunsoarea noastră de bază include tăiere cu foarfeca și mașina de tuns, finisare precisă și styling. Perfectă pentru un look curat și îngrijit.</p>
+      </li>
+      <li class="service-item">
+        <h3>Executive Haircut</h3>
+        <p>Serviciul nostru premium include opțiuni de skin fade, spălare, masaj al scalpului și gâtului, și styling profesional. Experiența completă pentru gentlemeni.</p>
+      </li>
+      <li class="service-item">
+        <h3>Executive Shave</h3>
+        <p>Barbierit tradițional cu aplicare de prosop cald, ras cu brici, prosop rece pentru închiderea porilor și produse aftershave de calitate. O experiență relaxantă și revigorantă.</p>
+      </li>
+      <li class="service-item">
+        <h3>Beard Trim</h3>
+        <p>Aranjare și modelare a bărbii cu tehnica prosopului cald pentru a preveni iritația. Include conturare precisă pentru un look definit și îngrijit.</p>
+      </li>
+      <li class="service-item">
+        <h3>Tuns și Aranjat Barbă</h3>
+        <p>Serviciu complet de tuns și îngrijire a bărbii. Include tunsoare, trimming, conturare și aplicare de produse de hidratare pentru un aspect impecabil.</p>
+      </li>
+      <li class="service-item">
+        <h3>Gentleman's Package</h3>
+        <p>Pachetul complet care combină tunsoarea de bază cu aranjarea bărbii. Ideal pentru cei care doresc îngrijire completă într-o singură vizită.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="locations" id="locatii">
+  <div class="container">
+    <h2>Locațiile Noastre</h2>
+    <div class="location-grid">
+      <div class="location-card">
+        <h3>Titulescu</h3>
+        <p>Bd. Alexandru Ioan Cuza Nr. 105</p>
+        <p>București, Sector 1</p>
+        <a href="https://www.setmore.com" target="_blank" rel="noopener noreferrer" class="btn-book">Rezervă Online</a>
+      </div>
+      <div class="location-card">
+        <h3>Vitan</h3>
+        <p>Str. Foișorului Nr. 107-109A</p>
+        <p>București</p>
+        <a href="https://www.mero.ro" target="_blank" rel="noopener noreferrer" class="btn-book">Rezervă Online</a>
+      </div>
+      <div class="location-card">
+        <h3>Unirii</h3>
+        <p>Bd. Corneliu Coposu Nr. 35</p>
+        <p>București</p>
+        <a href="tel:+40754634300" class="btn-book">Sună Acum</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hours" id="program">
+  <div class="container">
+    <h2>Program de Lucru</h2>
+    <div class="hours__content">
+      <p><strong>Luni - Sâmbătă:</strong> 10:00 - 20:00</p>
+      <p class="closed"><strong>Duminică:</strong> Închis</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <div class="contact__content">
+      <div class="contact__item">
+        <h3>Telefon (toate locațiile)</h3>
+        <p><a href="tel:+40754634300">0754 634 300</a></p>
+      </div>
+      <div class="contact__item">
+        <h3>Email</h3>
+        <p><a href="mailto:thebarberromania@gmail.com">thebarberromania@gmail.com</a></p>
+      </div>
+      <div class="contact__item">
+        <h3>Facebook</h3>
+        <p><a href="https://www.facebook.com/thebarberromania" target="_blank" rel="noopener noreferrer">The Barber Romania</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Pregătit pentru o Tunsoare?</h2>
+    <p>Sună-ne sau vizitează una din locațiile noastre pentru o experiență de barbering de calitate.</p>
+    <a href="tel:+40754634300" class="btn-cta">Sună: 0754 634 300</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p><strong>The Barber</strong> - Barber Shop & Frizerie</p>
+    <p>Titulescu | Vitan | Unirii</p>
+    <p><a href="tel:+40754634300">0754 634 300</a> | <a href="mailto:thebarberromania@gmail.com">thebarberromania@gmail.com</a></p>
+    <div class="footer__copy">
+      <p>&copy; 2026 The Barber. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
