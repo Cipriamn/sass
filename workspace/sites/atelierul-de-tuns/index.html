@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atelierul de Tuns | Frizerie Clasică pentru Bărbați în București</title>
+<meta name="description" content="Atelierul de Tuns - frizerie clasică pentru bărbați în București. Programări online 24/7. 3 locații: Ernest Broșteanu, Aleea Alexandru, Gina Patrichi.">
+<meta name="keywords" content="frizerie bucurești, barbershop, tuns bărbați, tuns barba, atelierul de tuns">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Atelierul de Tuns">
+<link rel="canonical" href="https://www.atelieruldetuns.ro/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Atelierul de Tuns | Frizerie Clasică București">
+<meta property="og:description" content="Programări online 24/7 pentru tuns și îngrijire barbă. 3 locații în centrul Bucureștiului.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.atelieruldetuns.ro/">
+<meta property="og:locale" content="ro_RO">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  "name": "Atelierul de Tuns",
+  "image": "https://www.atelieruldetuns.ro/logo.png",
+  "url": "https://www.atelieruldetuns.ro/",
+  "email": "contact@atelieruldetuns.ro",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Ernest Broșteanu 17",
+      "addressLocality": "București",
+      "addressRegion": "Sector 1",
+      "addressCountry": "RO"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Aleea Alexandru 9",
+      "addressLocality": "București",
+      "addressRegion": "Sector 1",
+      "addressCountry": "RO"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Gina Patrichi 1",
+      "addressLocality": "București",
+      "addressRegion": "Sector 1",
+      "addressCountry": "RO"
+    }
+  ],
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.instagram.com/atelieruldetunsro",
+    "https://www.facebook.com/atelieruldetunsro"
+  ]
+}
+</script>
+
+<style>
+/*──────────────────────────────────────────────
+  ATELIERUL DE TUNS - Minimal Booking-Focused
+  Based on Skeleton 04: Minimal Clean
+──────────────────────────────────────────────*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --primary:#1a1a1a;
+  --highlight:#c43030;
+  --highlight-dark:#a72929;
+  --gold:#d4af37;
+  --dark:#111;
+  --light:#fafafa;
+  --text:#333;
+  --text-light:#777;
+  --white:#fff;
+  --space-xs:.5rem;--space-sm:1rem;--space-md:2rem;--space-lg:4rem;--space-xl:6rem;--space-2xl:8rem;
+  --radius-sm:4px;--radius-md:8px;--radius-pill:999px;
+  --font-display:'Bebas Neue',Impact,sans-serif;
+  --font-body:'Space Grotesk',sans-serif;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);line-height:1.6;background:var(--white)}
+.container{max-width:1100px;margin:0 auto;padding:0 var(--space-md)}
+section{padding:var(--space-xl) 0}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1;text-transform:uppercase}
+a{text-decoration:none;color:inherit}
+
+/* Skip Link */
+.skip-link{position:absolute;top:-40px;left:0;background:var(--highlight);color:var(--white);padding:.5rem 1rem;z-index:1000;transition:top .3s}
+.skip-link:focus{top:0}
+
+/* ─── HEADER ─── */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:var(--space-sm) 0;
+  background:rgba(26,26,26,0.95);
+  backdrop-filter:blur(10px);
+}
+.header .container{display:flex;justify-content:space-between;align-items:center}
+.header__logo{font-family:var(--font-display);font-size:1.5rem;color:var(--white);letter-spacing:2px}
+.header__logo span{color:var(--highlight)}
+.header__nav{display:flex;gap:var(--space-md);list-style:none}
+.header__nav a{color:rgba(255,255,255,0.8);font-size:0.85rem;letter-spacing:1px;transition:color .3s}
+.header__nav a:hover{color:var(--highlight)}
+.header__book{
+  background:var(--highlight);color:var(--white);
+  padding:.6rem 1.5rem;border-radius:var(--radius-pill);
+  font-size:0.85rem;font-weight:500;letter-spacing:1px;
+  transition:all .3s;
+}
+.header__book:hover{background:var(--highlight-dark);transform:translateY(-2px)}
+
+/* Mobile Menu */
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem}
+.menu-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:all .3s}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  position:relative;overflow:hidden;
+  padding-top:80px;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);
+}
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c43030' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero__content{position:relative;z-index:2;max-width:800px;padding:var(--space-md)}
+.hero h1{
+  font-size:clamp(3rem,10vw,7rem);
+  color:var(--white);
+  letter-spacing:4px;
+  margin-bottom:var(--space-sm);
+}
+.hero h1 span{color:var(--highlight)}
+.hero__subtitle{
+  font-size:1.1rem;
+  color:rgba(255,255,255,0.7);
+  margin-bottom:var(--space-lg);
+  max-width:500px;
+  margin-left:auto;margin-right:auto;
+}
+.hero__cta{
+  display:inline-block;
+  background:var(--highlight);color:var(--white);
+  padding:1.2rem 3rem;
+  font-size:1rem;font-weight:600;letter-spacing:2px;
+  text-transform:uppercase;
+  border-radius:var(--radius-pill);
+  transition:all .3s;
+  box-shadow:0 4px 20px rgba(196,48,48,0.4);
+}
+.hero__cta:hover{
+  background:var(--white);color:var(--highlight);
+  transform:translateY(-3px);
+  box-shadow:0 8px 30px rgba(196,48,48,0.5);
+}
+.hero__scroll{
+  position:absolute;bottom:var(--space-md);left:50%;transform:translateX(-50%);
+  font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;
+  color:rgba(255,255,255,0.4);
+  animation:bounce 2s infinite;
+}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* ─── LOCATIONS ─── */
+.locations{background:var(--dark);color:var(--white);padding:var(--space-xl) 0}
+.locations h2{font-size:2.5rem;text-align:center;margin-bottom:var(--space-lg);letter-spacing:3px}
+.locations h2 span{color:var(--highlight)}
+.locations__grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:var(--space-md);
+}
+.location-card{
+  background:rgba(255,255,255,0.05);
+  padding:var(--space-lg);
+  border-radius:var(--radius-md);
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:all .3s;
+}
+.location-card:hover{
+  background:rgba(255,255,255,0.08);
+  border-color:var(--highlight);
+  transform:translateY(-5px);
+}
+.location-card__icon{font-size:2rem;margin-bottom:var(--space-sm)}
+.location-card h3{font-size:1.3rem;margin-bottom:var(--space-xs);letter-spacing:1px}
+.location-card__address{color:rgba(255,255,255,0.7);font-size:0.9rem;margin-bottom:var(--space-sm)}
+.location-card__landmark{color:var(--gold);font-size:0.8rem;font-style:italic}
+.location-card__book{
+  display:inline-block;margin-top:var(--space-sm);
+  background:var(--highlight);color:var(--white);
+  padding:.6rem 1.5rem;border-radius:var(--radius-pill);
+  font-size:0.8rem;font-weight:500;letter-spacing:1px;
+  transition:all .3s;
+}
+.location-card__book:hover{background:var(--highlight-dark)}
+
+/* ─── SERVICES ─── */
+.services{padding:var(--space-xl) 0}
+.services h2{font-size:2.5rem;margin-bottom:var(--space-xs);letter-spacing:3px}
+.services__subtitle{color:var(--text-light);margin-bottom:var(--space-lg)}
+.accordion{max-width:700px}
+.accordion__item{border-bottom:1px solid rgba(0,0,0,0.1)}
+.accordion__header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:var(--space-md) 0;
+  cursor:pointer;
+}
+.accordion__title{font-family:var(--font-display);font-size:1.4rem;letter-spacing:1px;text-transform:uppercase}
+.accordion__icon{
+  width:30px;height:30px;
+  border:2px solid var(--text-light);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;color:var(--text-light);
+  transition:all .3s;
+}
+.accordion__item.open .accordion__icon{transform:rotate(45deg);border-color:var(--highlight);color:var(--highlight)}
+.accordion__body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.accordion__item.open .accordion__body{max-height:150px}
+.accordion__body p{padding-bottom:var(--space-md);color:var(--text-light);font-size:0.95rem;line-height:1.7}
+
+/* ─── FAQ ─── */
+.faq{background:var(--light);padding:var(--space-xl) 0}
+.faq h2{font-size:2.5rem;margin-bottom:var(--space-lg);letter-spacing:3px}
+.faq h2 span{color:var(--highlight)}
+.faq__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-md)}
+.faq-item{background:var(--white);padding:var(--space-md);border-radius:var(--radius-md);box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.faq-item h3{font-size:1rem;margin-bottom:var(--space-xs);color:var(--highlight);letter-spacing:1px}
+.faq-item p{color:var(--text-light);font-size:0.9rem;line-height:1.6}
+
+/* ─── CTA SECTION ─── */
+.cta{
+  background:linear-gradient(135deg,var(--highlight) 0%,var(--highlight-dark) 100%);
+  color:var(--white);text-align:center;
+  padding:var(--space-2xl) var(--space-md);
+}
+.cta h2{font-size:clamp(2.5rem,6vw,4.5rem);margin-bottom:var(--space-sm);letter-spacing:4px}
+.cta p{font-size:1.1rem;opacity:0.9;margin-bottom:var(--space-lg);max-width:500px;margin-left:auto;margin-right:auto}
+.btn-cta{
+  display:inline-block;
+  background:var(--white);color:var(--highlight);
+  padding:1rem 3rem;font-size:0.9rem;font-weight:600;letter-spacing:2px;
+  text-transform:uppercase;
+  border-radius:var(--radius-pill);
+  transition:all .3s;
+}
+.btn-cta:hover{background:var(--dark);color:var(--white);transform:translateY(-3px)}
+
+/* ─── FOOTER ─── */
+.footer{background:var(--dark);color:rgba(255,255,255,0.7);padding:var(--space-lg) 0 var(--space-md)}
+.footer__grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--space-lg);margin-bottom:var(--space-lg)}
+.footer__brand{font-family:var(--font-display);font-size:1.8rem;color:var(--white);letter-spacing:2px;margin-bottom:var(--space-sm)}
+.footer__brand span{color:var(--highlight)}
+.footer__tagline{font-size:0.9rem}
+.footer h4{font-family:var(--font-display);font-size:1rem;color:var(--white);letter-spacing:2px;margin-bottom:var(--space-sm)}
+.footer ul{list-style:none}
+.footer ul li{margin-bottom:var(--space-xs);font-size:0.9rem}
+.footer a{color:rgba(255,255,255,0.7);transition:color .3s}
+.footer a:hover{color:var(--highlight)}
+.footer__social{display:flex;gap:var(--space-sm)}
+.footer__social a{
+  width:40px;height:40px;
+  border:1px solid rgba(255,255,255,0.2);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;
+  transition:all .3s;
+}
+.footer__social a:hover{border-color:var(--highlight);color:var(--highlight)}
+.footer__bottom{
+  border-top:1px solid rgba(255,255,255,0.1);
+  padding-top:var(--space-md);
+  display:flex;justify-content:space-between;
+  font-size:0.8rem;
+}
+
+/* ─── STICKY BOOK BUTTON ─── */
+.sticky-book{
+  position:fixed;bottom:var(--space-md);right:var(--space-md);z-index:99;
+  background:var(--highlight);color:var(--white);
+  padding:1rem 2rem;border-radius:var(--radius-pill);
+  font-weight:600;font-size:0.9rem;letter-spacing:1px;
+  box-shadow:0 4px 20px rgba(196,48,48,0.4);
+  opacity:0;transform:translateY(20px);
+  transition:all .4s;
+}
+.sticky-book.visible{opacity:1;transform:translateY(0)}
+.sticky-book:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(196,48,48,0.6)}
+
+/* ─── ANIMATIONS ─── */
+.reveal{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(0.16,1,0.3,1)}
+.reveal.active{opacity:1;transform:translateY(0)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .locations__grid{grid-template-columns:1fr}
+  .faq__grid{grid-template-columns:1fr}
+  .footer__grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .header__nav{display:none}
+  .menu-toggle{display:block}
+  .hero h1{font-size:clamp(2.5rem,12vw,4rem)}
+  .footer__grid{grid-template-columns:1fr}
+  .footer__bottom{flex-direction:column;gap:var(--space-xs);text-align:center}
+  .sticky-book{bottom:var(--space-sm);right:var(--space-sm);left:var(--space-sm);text-align:center}
+}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:0.01ms!important}
+}
+
+/* Focus styles */
+a:focus,button:focus{outline:2px solid var(--highlight);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Sari la conținut</a>
+
+<!-- HEADER -->
+<header class="header" role="banner">
+  <div class="container">
+    <a href="#" class="header__logo" aria-label="Atelierul de Tuns - Acasă">ATELIERUL<span>.</span></a>
+    <nav aria-label="Navigație principală">
+      <ul class="header__nav">
+        <li><a href="#locatii">Locații</a></li>
+        <li><a href="#servicii">Servicii</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a href="https://www.atelieruldetuns.ro/#formularpro" class="header__book" target="_blank" rel="noopener">Programează-te</a>
+    <button class="menu-toggle" aria-label="Meniu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero__content">
+    <h1>TUNS<span>.</span><br>STILAT<span>.</span><br>REPETAT<span>.</span></h1>
+    <p class="hero__subtitle">Frizerie clasică pentru bărbați în centrul Bucureștiului. Programări online disponibile 24/7.</p>
+    <a href="https://www.atelieruldetuns.ro/#formularpro" class="hero__cta" target="_blank" rel="noopener">Programare Online</a>
+  </div>
+  <span class="hero__scroll" aria-hidden="true">Scroll ↓</span>
+</section>
+
+<main id="main">
+
+<!-- LOCATIONS -->
+<section class="locations" id="locatii" aria-labelledby="locations-title">
+  <div class="container">
+    <h2 id="locations-title" class="reveal">3 <span>LOCAȚII</span> ÎN BUCUREȘTI</h2>
+    <div class="locations__grid">
+      <article class="location-card reveal">
+        <div class="location-card__icon" aria-hidden="true">📍</div>
+        <h3>Ernest Broșteanu</h3>
+        <p class="location-card__address">Str. Ernest Broșteanu 17, Sector 1</p>
+        <p class="location-card__landmark">Zona ASE Cibernetică</p>
+        <a href="https://www.atelieruldetuns.ro/#formularpro" class="location-card__book" target="_blank" rel="noopener">Programează</a>
+      </article>
+      <article class="location-card reveal">
+        <div class="location-card__icon" aria-hidden="true">📍</div>
+        <h3>Aleea Alexandru</h3>
+        <p class="location-card__address">Aleea Alexandru 9, Sector 1</p>
+        <p class="location-card__landmark">Lângă Palatul Guvernului</p>
+        <a href="https://www.atelieruldetuns.ro/#formularpro" class="location-card__book" target="_blank" rel="noopener">Programează</a>
+      </article>
+      <article class="location-card reveal">
+        <div class="location-card__icon" aria-hidden="true">📍</div>
+        <h3>Gina Patrichi</h3>
+        <p class="location-card__address">Str. Gina Patrichi 1, Sector 1</p>
+        <p class="location-card__landmark">Colț cu Calea Victoriei</p>
+        <a href="https://www.atelieruldetuns.ro/#formularpro" class="location-card__book" target="_blank" rel="noopener">Programează</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicii" aria-labelledby="services-title">
+  <div class="container">
+    <h2 id="services-title" class="reveal">SERVICII</h2>
+    <p class="services__subtitle reveal">Selectează serviciul dorit la programare</p>
+    <div class="accordion reveal">
+      <div class="accordion__item">
+        <div class="accordion__header" role="button" tabindex="0" aria-expanded="false">
+          <span class="accordion__title">Tuns</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </div>
+        <div class="accordion__body">
+          <p>Tunsoare clasică sau modernă, adaptată stilului tău. Include spălat și styling.</p>
+        </div>
+      </div>
+      <div class="accordion__item">
+        <div class="accordion__header" role="button" tabindex="0" aria-expanded="false">
+          <span class="accordion__title">Tuns + Shaver</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </div>
+        <div class="accordion__body">
+          <p>Pachet complet: tunsoare și finisare cu mașina de ras pentru un look impecabil.</p>
+        </div>
+      </div>
+      <div class="accordion__item">
+        <div class="accordion__header" role="button" tabindex="0" aria-expanded="false">
+          <span class="accordion__title">Tuns Barbă</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </div>
+        <div class="accordion__body">
+          <p>Aranjat și conturare barbă. Definim liniile și aducem forma perfectă bărbii tale.</p>
+        </div>
+      </div>
+      <div class="accordion__item">
+        <div class="accordion__header" role="button" tabindex="0" aria-expanded="false">
+          <span class="accordion__title">Abonament 4 Ședințe</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </div>
+        <div class="accordion__body">
+          <p>Pachet economic cu 4 ședințe de tuns. Valabil 3 luni de la achiziție.</p>
+        </div>
+      </div>
+      <div class="accordion__item">
+        <div class="accordion__header" role="button" tabindex="0" aria-expanded="false">
+          <span class="accordion__title">Mască Puncte Negre</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </div>
+        <div class="accordion__body">
+          <p>Tratament facial cu mască pentru curățarea tenului și eliminarea punctelor negre.</p>
+        </div>
+      </div>
+      <div class="accordion__item">
+        <div class="accordion__header" role="button" tabindex="0" aria-expanded="false">
+          <span class="accordion__title">Masaj Capilar</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </div>
+        <div class="accordion__body">
+          <p>Masaj relaxant al scalpului care stimulează circulația și sănătatea părului.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <h2 id="faq-title" class="reveal">ÎNTREBĂRI <span>FRECVENTE</span></h2>
+    <div class="faq__grid">
+      <article class="faq-item reveal">
+        <h3>CUM MĂ PROGRAMEZ?</h3>
+        <p>Exclusiv online, 24/7. Selectezi serviciul, locația, data și frizerul preferat direct pe site.</p>
+      </article>
+      <article class="faq-item reveal">
+        <h3>CU CÂT TIMP ÎNAINTE AJUNG?</h3>
+        <p>Te rugăm să ajungi cu aproximativ 10 minute înainte de ora programată.</p>
+      </article>
+      <article class="faq-item reveal">
+        <h3>CÂTE PROGRAMĂRI POT FACE?</h3>
+        <p>Maximum două programări pe zi, per client.</p>
+      </article>
+      <article class="faq-item reveal">
+        <h3>POT MODIFICA PROGRAMAREA?</h3>
+        <p>Da, modificările se pot face direct la locație, în timpul programării.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">PROGRAMEAZĂ<br>ACUM</h2>
+  <p>Fără apeluri telefonice, fără așteptare. Rezervă-ți locul online în câteva secunde.</p>
+  <a href="https://www.atelieruldetuns.ro/#formularpro" class="btn-cta" target="_blank" rel="noopener">Programare Online</a>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">ATELIERUL<span>.</span></div>
+        <p class="footer__tagline">Frizerie clasică pentru bărbați în București.</p>
+      </div>
+      <div>
+        <h4>LOCAȚII</h4>
+        <ul>
+          <li>Ernest Broșteanu 17</li>
+          <li>Aleea Alexandru 9</li>
+          <li>Gina Patrichi 1</li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <ul>
+          <li><a href="mailto:contact@atelieruldetuns.ro">contact@atelieruldetuns.ro</a></li>
+          <li>București, Sector 1</li>
+        </ul>
+      </div>
+      <div>
+        <h4>SOCIAL</h4>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/atelieruldetunsro" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://www.facebook.com/atelieruldetunsro" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Atelierul de Tuns. Toate drepturile rezervate.</span>
+      <span>Programări online 24/7</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY BOOK -->
+<a href="https://www.atelieruldetuns.ro/#formularpro" class="sticky-book" target="_blank" rel="noopener">Programează-te</a>
+
+<script>
+// Reveal on scroll
+const reveals=document.querySelectorAll('.reveal');
+const revealOnScroll=()=>{
+  reveals.forEach(el=>{
+    const top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-80)el.classList.add('active');
+  });
+};
+window.addEventListener('scroll',revealOnScroll);
+revealOnScroll();
+
+// Sticky book button
+const stickyBook=document.querySelector('.sticky-book');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>500)stickyBook.classList.add('visible');
+  else stickyBook.classList.remove('visible');
+});
+
+// Accordion
+document.querySelectorAll('.accordion__header').forEach(header=>{
+  header.addEventListener('click',()=>{
+    const item=header.parentElement;
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.accordion__item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen)item.classList.add('open');
+    header.setAttribute('aria-expanded',!isOpen);
+  });
+  header.addEventListener('keydown',e=>{
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();header.click();}
+  });
+});
+
+// Mobile menu toggle
+const menuToggle=document.querySelector('.menu-toggle');
+const nav=document.querySelector('.header__nav');
+menuToggle?.addEventListener('click',()=>{
+  const expanded=menuToggle.getAttribute('aria-expanded')==='true';
+  menuToggle.setAttribute('aria-expanded',!expanded);
+  nav.style.display=expanded?'none':'flex';
+});
+</script>
+
+</body>
+</html>
