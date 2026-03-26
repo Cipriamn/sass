@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Classic | Frizerie Ștefan cel Mare București</title>
+<meta name="description" content="Studio Classic Barber Shop - frizerie în zona Ștefan cel Mare, Sector 2, București. Tuns clasic, bărbierit, abonamente. Programări: 0770 418 511.">
+<meta name="keywords" content="frizerie, barber shop, tuns, bărbierit, Ștefan cel Mare, Sector 2, București, abonament frizerie">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studio-classic.ro/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Studio Classic | Frizerie Ștefan cel Mare București">
+<meta property="og:description" content="Frizerie în zona Ștefan cel Mare, Sector 2. Tuns clasic, bărbierit, abonamente lunare. Programări online.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+/*──────────────────────────────────────────────
+  STUDIO CLASSIC - Simple Text-Heavy Design
+  Colors: Dark gray, gold accent, white
+──────────────────────────────────────────────*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --primary: #1a1a1a;
+  --primary-light: #2a2a2a;
+  --accent: #ca9b5c;
+  --accent-dark: #b08748;
+  --light: #f8f8f8;
+  --light-gray: #e5e5e5;
+  --white: #fff;
+  --text: #333;
+  --text-light: #666;
+  --text-muted: #888;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+
+  --radius: 6px;
+  --shadow: 0 2px 10px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.1);
+
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--text);background:var(--white)}
+.container{max-width:1100px;margin:0 auto;padding:0 var(--space-md)}
+section{padding:var(--space-xl) 0}
+h1,h2,h3,h4{font-family:var(--font-heading);font-weight:600;line-height:1.3;color:var(--primary)}
+a{color:var(--accent);text-decoration:none;transition:color 0.3s}
+a:hover{color:var(--accent-dark)}
+img{max-width:100%;display:block}
+
+/* Skip link */
+.skip-link{position:absolute;top:-100px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--white);padding:var(--space-sm) var(--space-md);z-index:9999;border-radius:var(--radius);font-weight:600}
+.skip-link:focus{top:10px;color:var(--white)}
+
+/* ─── HEADER ─── */
+.header{
+  background:var(--primary);
+  color:var(--white);
+  padding:var(--space-sm) 0;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.header .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-sm)}
+.header__logo{
+  font-family:var(--font-heading);
+  font-size:1.4rem;
+  color:var(--white);
+  font-weight:600;
+}
+.header__logo span{color:var(--accent)}
+.header__nav{display:flex;gap:var(--space-md);list-style:none;flex-wrap:wrap}
+.header__nav a{
+  color:rgba(255,255,255,0.85);
+  font-size:0.9rem;
+  font-weight:500;
+  padding:var(--space-xs) 0;
+}
+.header__nav a:hover,.header__nav a:focus{color:var(--accent)}
+.header__phone{
+  background:var(--accent);
+  color:var(--white);
+  padding:var(--space-xs) var(--space-sm);
+  border-radius:var(--radius);
+  font-weight:600;
+  font-size:0.9rem;
+}
+.header__phone:hover{background:var(--accent-dark);color:var(--white)}
+
+/* Mobile menu */
+.menu-toggle{
+  display:none;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:var(--space-xs);
+}
+.menu-toggle span{
+  display:block;
+  width:24px;
+  height:2px;
+  background:var(--white);
+  margin:5px 0;
+  transition:all 0.3s;
+}
+
+/* ─── HERO ─── */
+.hero{
+  background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);
+  color:var(--white);
+  padding:var(--space-xl) 0;
+  text-align:center;
+}
+.hero h1{
+  font-size:clamp(2rem,5vw,3.5rem);
+  color:var(--white);
+  margin-bottom:var(--space-xs);
+}
+.hero h1 span{color:var(--accent)}
+.hero__subtitle{
+  font-size:1.1rem;
+  opacity:0.8;
+  margin-bottom:var(--space-md);
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.hero__info{
+  display:flex;
+  justify-content:center;
+  gap:var(--space-lg);
+  flex-wrap:wrap;
+  margin-bottom:var(--space-md);
+  font-size:0.95rem;
+}
+.hero__info-item{
+  display:flex;
+  align-items:center;
+  gap:var(--space-xs);
+}
+.hero__info-item strong{color:var(--accent)}
+.hero__cta{
+  display:inline-block;
+  background:var(--accent);
+  color:var(--white);
+  padding:var(--space-sm) var(--space-lg);
+  border-radius:var(--radius);
+  font-weight:600;
+  font-size:1rem;
+  transition:all 0.3s;
+}
+.hero__cta:hover{background:var(--accent-dark);color:var(--white);transform:translateY(-2px)}
+
+/* ─── SERVICES ─── */
+.services{background:var(--light)}
+.section-title{
+  text-align:center;
+  margin-bottom:var(--space-lg);
+}
+.section-title h2{
+  font-size:clamp(1.8rem,4vw,2.5rem);
+  margin-bottom:var(--space-xs);
+}
+.section-title h2 span{color:var(--accent)}
+.section-title p{
+  color:var(--text-light);
+  font-size:1rem;
+  max-width:500px;
+  margin:0 auto;
+}
+
+/* Services Table */
+.services-table{
+  width:100%;
+  background:var(--white);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.services-table table{
+  width:100%;
+  border-collapse:collapse;
+}
+.services-table th,.services-table td{
+  padding:var(--space-sm) var(--space-md);
+  text-align:left;
+  border-bottom:1px solid var(--light-gray);
+}
+.services-table th{
+  background:var(--primary);
+  color:var(--white);
+  font-weight:600;
+  font-size:0.85rem;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+.services-table tr:last-child td{border-bottom:none}
+.services-table tr:hover td{background:var(--light)}
+.services-table .service-name{
+  font-weight:600;
+  color:var(--primary);
+}
+.services-table .service-name small{
+  display:block;
+  font-weight:400;
+  color:var(--text-muted);
+  font-size:0.85rem;
+  margin-top:2px;
+}
+.services-table .service-price{
+  font-weight:700;
+  color:var(--accent);
+  white-space:nowrap;
+}
+.services-table .service-duration{
+  color:var(--text-light);
+  white-space:nowrap;
+}
+
+/* ─── SUBSCRIPTIONS ─── */
+.subscriptions{background:var(--white)}
+.subscriptions-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:var(--space-md);
+}
+.sub-card{
+  background:var(--light);
+  border-radius:var(--radius);
+  padding:var(--space-md);
+  text-align:center;
+  transition:all 0.3s;
+  border:2px solid transparent;
+}
+.sub-card:hover{
+  border-color:var(--accent);
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-md);
+}
+.sub-card--featured{
+  background:var(--primary);
+  color:var(--white);
+}
+.sub-card--featured h3,.sub-card--featured .sub-card__price{color:var(--white)}
+.sub-card--featured .sub-card__note{color:rgba(255,255,255,0.7)}
+.sub-card__badge{
+  display:inline-block;
+  background:var(--accent);
+  color:var(--white);
+  font-size:0.75rem;
+  font-weight:700;
+  padding:4px 12px;
+  border-radius:20px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:var(--space-sm);
+}
+.sub-card h3{
+  font-size:1.3rem;
+  margin-bottom:var(--space-xs);
+}
+.sub-card__desc{
+  font-size:0.9rem;
+  color:var(--text-light);
+  margin-bottom:var(--space-sm);
+}
+.sub-card--featured .sub-card__desc{color:rgba(255,255,255,0.8)}
+.sub-card__price{
+  font-size:2rem;
+  font-weight:700;
+  color:var(--primary);
+  margin-bottom:var(--space-xs);
+}
+.sub-card__price span{
+  font-size:1rem;
+  font-weight:400;
+  color:var(--text-muted);
+}
+.sub-card--featured .sub-card__price span{color:rgba(255,255,255,0.6)}
+.sub-card__note{
+  font-size:0.8rem;
+  color:var(--text-muted);
+}
+
+.sub-table{
+  margin-top:var(--space-lg);
+  overflow-x:auto;
+}
+.sub-table table{
+  width:100%;
+  border-collapse:collapse;
+  background:var(--white);
+  box-shadow:var(--shadow);
+  border-radius:var(--radius);
+  overflow:hidden;
+  min-width:600px;
+}
+.sub-table th,.sub-table td{
+  padding:var(--space-sm);
+  text-align:center;
+  border-bottom:1px solid var(--light-gray);
+}
+.sub-table th{
+  background:var(--primary);
+  color:var(--white);
+  font-weight:600;
+  font-size:0.85rem;
+}
+.sub-table th:first-child,.sub-table td:first-child{text-align:left}
+.sub-table tr:last-child td{border-bottom:none}
+.sub-table tr:hover td{background:var(--light)}
+.sub-table .tier-name{font-weight:600;color:var(--primary)}
+.sub-table .price-cell{font-weight:600;color:var(--accent)}
+
+/* ─── ABOUT ─── */
+.about{background:var(--light)}
+.about__content{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--space-lg);
+  align-items:center;
+}
+.about__text h2{
+  font-size:clamp(1.8rem,4vw,2.5rem);
+  margin-bottom:var(--space-sm);
+}
+.about__text h2 span{color:var(--accent)}
+.about__text p{
+  color:var(--text-light);
+  margin-bottom:var(--space-sm);
+}
+.about__features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--space-sm);
+  margin-top:var(--space-md);
+}
+.about__feature{
+  display:flex;
+  align-items:center;
+  gap:var(--space-xs);
+  font-size:0.95rem;
+  font-weight:500;
+}
+.about__feature::before{
+  content:'✓';
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:24px;
+  height:24px;
+  background:var(--accent);
+  color:var(--white);
+  border-radius:50%;
+  font-size:0.75rem;
+  flex-shrink:0;
+}
+.about__visual{
+  background:var(--primary);
+  height:400px;
+  border-radius:var(--radius);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.about__icon{
+  font-size:6rem;
+  color:var(--accent);
+  opacity:0.3;
+}
+
+/* ─── LOCATION ─── */
+.location{background:var(--white)}
+.location__grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--space-lg);
+}
+.location__info h2{
+  font-size:clamp(1.8rem,4vw,2.5rem);
+  margin-bottom:var(--space-md);
+}
+.location__info h2 span{color:var(--accent)}
+.location__detail{
+  display:flex;
+  gap:var(--space-sm);
+  margin-bottom:var(--space-md);
+  padding-bottom:var(--space-md);
+  border-bottom:1px solid var(--light-gray);
+}
+.location__detail:last-of-type{border-bottom:none}
+.location__icon{
+  width:45px;
+  height:45px;
+  background:var(--accent);
+  color:var(--white);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  font-size:1.1rem;
+}
+.location__text h4{
+  font-size:0.8rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--text-muted);
+  margin-bottom:4px;
+}
+.location__text p{
+  font-size:1rem;
+  font-weight:500;
+  color:var(--primary);
+}
+.location__text a{color:var(--primary)}
+.location__text a:hover{color:var(--accent)}
+.location__map{
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  height:100%;
+  min-height:350px;
+}
+.location__map iframe{width:100%;height:100%;border:0}
+
+/* ─── HOURS ─── */
+.hours{background:var(--primary);color:var(--white)}
+.hours .section-title h2{color:var(--white)}
+.hours .section-title p{color:rgba(255,255,255,0.7)}
+.hours__grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:var(--space-sm);
+  max-width:700px;
+  margin:0 auto;
+}
+.hours__day{
+  display:flex;
+  justify-content:space-between;
+  padding:var(--space-sm) var(--space-md);
+  background:var(--primary-light);
+  border-radius:var(--radius);
+}
+.hours__day-name{font-weight:500}
+.hours__day-time{color:var(--accent);font-weight:600}
+
+/* ─── CTA ─── */
+.cta{
+  background:var(--accent);
+  color:var(--white);
+  text-align:center;
+  padding:var(--space-lg) 0;
+}
+.cta h2{
+  font-size:clamp(1.5rem,4vw,2.2rem);
+  color:var(--white);
+  margin-bottom:var(--space-sm);
+}
+.cta p{
+  font-size:1rem;
+  opacity:0.9;
+  margin-bottom:var(--space-md);
+}
+.cta__btn{
+  display:inline-block;
+  background:var(--primary);
+  color:var(--white);
+  padding:var(--space-sm) var(--space-lg);
+  border-radius:var(--radius);
+  font-weight:600;
+  transition:all 0.3s;
+}
+.cta__btn:hover{background:var(--primary-light);color:var(--white);transform:translateY(-2px)}
+
+/* ─── FOOTER ─── */
+.footer{
+  background:var(--primary);
+  color:rgba(255,255,255,0.7);
+  padding:var(--space-lg) 0 var(--space-md);
+}
+.footer__grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:var(--space-lg);
+  margin-bottom:var(--space-lg);
+}
+.footer__brand h3{
+  font-family:var(--font-heading);
+  font-size:1.4rem;
+  color:var(--white);
+  margin-bottom:var(--space-sm);
+}
+.footer__brand h3 span{color:var(--accent)}
+.footer__brand p{
+  font-size:0.9rem;
+  line-height:1.7;
+  max-width:280px;
+}
+.footer__links h4,.footer__contact h4{
+  font-size:0.8rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  color:var(--accent);
+  margin-bottom:var(--space-sm);
+}
+.footer__links ul{list-style:none}
+.footer__links li{margin-bottom:var(--space-xs)}
+.footer__links a{
+  font-size:0.9rem;
+  color:rgba(255,255,255,0.7);
+}
+.footer__links a:hover{color:var(--accent)}
+.footer__contact p{
+  font-size:0.9rem;
+  margin-bottom:var(--space-xs);
+}
+.footer__contact a{color:rgba(255,255,255,0.7)}
+.footer__contact a:hover{color:var(--accent)}
+.footer__bottom{
+  text-align:center;
+  padding-top:var(--space-md);
+  border-top:1px solid rgba(255,255,255,0.1);
+  font-size:0.85rem;
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .about__content,.location__grid{grid-template-columns:1fr}
+  .about__visual{height:300px;margin-top:var(--space-md)}
+  .location__map{min-height:300px}
+  .footer__grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .menu-toggle{display:block}
+  .header__nav{
+    position:fixed;
+    top:60px;
+    left:0;
+    right:0;
+    background:var(--primary);
+    flex-direction:column;
+    padding:var(--space-md);
+    gap:var(--space-sm);
+    transform:translateY(-100%);
+    opacity:0;
+    transition:all 0.3s;
+    pointer-events:none;
+  }
+  .header__nav.active{
+    transform:translateY(0);
+    opacity:1;
+    pointer-events:auto;
+  }
+  .header__phone{display:none}
+  .hero__info{flex-direction:column;gap:var(--space-sm)}
+  .services-table th,.services-table td{padding:var(--space-sm)}
+  .about__features{grid-template-columns:1fr}
+  .footer__grid{grid-template-columns:1fr;text-align:center}
+  .footer__brand p{margin:0 auto var(--space-md)}
+}
+@media(max-width:500px){
+  .services-table{overflow-x:auto}
+  .services-table table{min-width:500px}
+  .subscriptions-grid{grid-template-columns:1fr}
+}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms!important;
+    transition-duration:0.01ms!important;
+  }
+  html{scroll-behavior:auto}
+}
+</style>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  "name": "Studio Classic Barber Shop",
+  "alternateName": "Frizerie Stefan Cel Mare",
+  "description": "Studio Classic - frizerie profesională în zona Ștefan cel Mare, Sector 2, București. Tuns clasic, executive, bărbierit tradițional și abonamente.",
+  "url": "https://studio-classic.ro/",
+  "telephone": "+40770418511",
+  "email": "contact@studio-classic.ro",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Barbu Mumuleanu 52",
+    "addressLocality": "București",
+    "addressRegion": "Sector 2",
+    "postalCode": "020544",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 44.4505,
+    "longitude": 26.1095
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:30",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday", "Sunday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "15-80 RON",
+  "image": "https://studio-classic.ro/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/studioclassic",
+    "https://www.instagram.com/studioclassic"
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Salt la conținut</a>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <a href="#" class="header__logo">Studio <span>Classic</span></a>
+    <button type="button" class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" class="header__nav" aria-label="Navigare principală">
+      <a href="#services">Servicii</a>
+      <a href="#subscriptions">Abonamente</a>
+      <a href="#about">Despre noi</a>
+      <a href="#location">Locație</a>
+      <a href="#hours">Program</a>
+    </nav>
+    <a href="tel:+40770418511" class="header__phone">0770 418 511</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <h1 id="hero-title">Studio <span>Classic</span></h1>
+      <p class="hero__subtitle">Frizerie profesională în zona Ștefan cel Mare, Sector 2, București. Tuns clasic, executive și abonamente lunare.</p>
+      <div class="hero__info">
+        <div class="hero__info-item">
+          <span>📍</span>
+          <span>Str. Barbu Văcărescu 52</span>
+        </div>
+        <div class="hero__info-item">
+          <span>📞</span>
+          <strong>0770 418 511</strong>
+        </div>
+        <div class="hero__info-item">
+          <span>⏰</span>
+          <span>Luni-Vineri 09:30-21:00</span>
+        </div>
+      </div>
+      <a href="tel:+40770418511" class="hero__cta">Sună pentru programare</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services" aria-labelledby="services-title">
+    <div class="container">
+      <header class="section-title">
+        <h2 id="services-title">Servicii și <span>Prețuri</span></h2>
+        <p>Lista completă a serviciilor noastre cu durate și tarife</p>
+      </header>
+      <div class="services-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Serviciu</th>
+              <th>Durată</th>
+              <th>Preț</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="service-name">
+                Executive Cut
+                <small>Tuns premium cu styling complet</small>
+              </td>
+              <td class="service-duration">40 min</td>
+              <td class="service-price">80 RON</td>
+            </tr>
+            <tr>
+              <td class="service-name">
+                Classic Cut
+                <small>Tuns clasic cu finisare</small>
+              </td>
+              <td class="service-duration">30 min</td>
+              <td class="service-price">70 RON</td>
+            </tr>
+            <tr>
+              <td class="service-name">
+                Tuns Copii
+                <small>Pentru copii sub 13 ani</small>
+              </td>
+              <td class="service-duration">30 min</td>
+              <td class="service-price">60 RON</td>
+            </tr>
+            <tr>
+              <td class="service-name">
+                Aranjat Barbă
+                <small>Conturare și styling barbă</small>
+              </td>
+              <td class="service-duration">20 min</td>
+              <td class="service-price">50 RON</td>
+            </tr>
+            <tr>
+              <td class="service-name">
+                Bărbierit Tradițional
+                <small>Cu prosop cald și brici</small>
+              </td>
+              <td class="service-duration">40 min</td>
+              <td class="service-price">60 RON</td>
+            </tr>
+            <tr>
+              <td class="service-name">
+                Spălat și Styling
+                <small>Spălare păr + aranjare</small>
+              </td>
+              <td class="service-duration">20 min</td>
+              <td class="service-price">40 RON</td>
+            </tr>
+            <tr>
+              <td class="service-name">
+                Masaj Scalp (aparat)
+                <small>Relaxare cu aparat specializat</small>
+              </td>
+              <td class="service-duration">10 min</td>
+              <td class="service-price">20 RON</td>
+            </tr>
+            <tr>
+              <td class="service-name">
+                Fricțiune Scalp (manual)
+                <small>Masaj manual revigorant</small>
+              </td>
+              <td class="service-duration">10 min</td>
+              <td class="service-price">15 RON</td>
+            </tr>
+            <tr>
+              <td class="service-name">
+                Epilare Nas/Urechi
+                <small>Îndepărtare fire nedorite</small>
+              </td>
+              <td class="service-duration">10 min</td>
+              <td class="service-price">15 RON</td>
+            </tr>
+            <tr>
+              <td class="service-name">
+                Vopsit Barbă
+                <small>Colorare uniformă barbă</small>
+              </td>
+              <td class="service-duration">30 min</td>
+              <td class="service-price">50 RON</td>
+            </tr>
+            <tr>
+              <td class="service-name">
+                Contur Barbă
+                <small>Definire linii barbă</small>
+              </td>
+              <td class="service-duration">10 min</td>
+              <td class="service-price">25 RON</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscriptions -->
+  <section id="subscriptions" class="subscriptions" aria-labelledby="subs-title">
+    <div class="container">
+      <header class="section-title">
+        <h2 id="subs-title"><span>Abonamente</span> Lunare</h2>
+        <p>Vizite nelimitate cu abonament. Cafea Nespresso și apă incluse.</p>
+      </header>
+      <div class="subscriptions-grid">
+        <div class="sub-card">
+          <h3>Classic</h3>
+          <p class="sub-card__desc">Tuns clasic nelimitat</p>
+          <div class="sub-card__price">200 <span>RON/lună</span></div>
+          <p class="sub-card__note">Abonament 1 lună</p>
+        </div>
+        <div class="sub-card sub-card--featured">
+          <span class="sub-card__badge">Popular</span>
+          <h3>Executive</h3>
+          <p class="sub-card__desc">Tuns executive nelimitat</p>
+          <div class="sub-card__price">330 <span>RON/lună</span></div>
+          <p class="sub-card__note">Abonament 1 lună</p>
+        </div>
+        <div class="sub-card">
+          <h3>Classic 6 Luni</h3>
+          <p class="sub-card__desc">Economisești 20%</p>
+          <div class="sub-card__price">960 <span>RON</span></div>
+          <p class="sub-card__note">160 RON/lună efectiv</p>
+        </div>
+      </div>
+
+      <div class="sub-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Tip Abonament</th>
+              <th>1 Lună</th>
+              <th>2 Luni</th>
+              <th>3 Luni</th>
+              <th>6 Luni</th>
+              <th>12 Luni</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tier-name">Classic (Tuns clasic)</td>
+              <td class="price-cell">200 RON</td>
+              <td class="price-cell">380 RON</td>
+              <td class="price-cell">540 RON</td>
+              <td class="price-cell">960 RON</td>
+              <td class="price-cell">1800 RON</td>
+            </tr>
+            <tr>
+              <td class="tier-name">Executive (Tuns executive)</td>
+              <td class="price-cell">330 RON</td>
+              <td class="price-cell">620 RON</td>
+              <td class="price-cell">900 RON</td>
+              <td class="price-cell">1600 RON</td>
+              <td class="price-cell">2800 RON</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about__content">
+        <div class="about__text">
+          <h2 id="about-title">Despre <span>Studio Classic</span></h2>
+          <p>
+            Studio Classic este o frizerie profesională situată în zona Ștefan cel Mare,
+            Sector 2, București. Oferim servicii de calitate într-un mediu relaxant și profesionist.
+          </p>
+          <p>
+            De la tunsuri clasice la tratamente executive, echipa noastră de frizeri cu experiență
+            este dedicată să îți ofere cea mai bună experiență de grooming.
+          </p>
+          <div class="about__features">
+            <div class="about__feature">Produse profesionale</div>
+            <div class="about__feature">Programări online</div>
+            <div class="about__feature">Cafea gratuită</div>
+            <div class="about__feature">Abonamente flexibile</div>
+          </div>
+        </div>
+        <div class="about__visual">
+          <div class="about__icon" aria-hidden="true">✂</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="location" aria-labelledby="location-title">
+    <div class="container">
+      <div class="location__grid">
+        <div class="location__info">
+          <h2 id="location-title">Unde ne <span>găsești</span></h2>
+          <div class="location__detail">
+            <div class="location__icon" aria-hidden="true">📍</div>
+            <div class="location__text">
+              <h4>Adresă</h4>
+              <p>Strada Barbu Văcărescu 52<br>Sector 2, București 020544</p>
+            </div>
+          </div>
+          <div class="location__detail">
+            <div class="location__icon" aria-hidden="true">📞</div>
+            <div class="location__text">
+              <h4>Telefon</h4>
+              <p><a href="tel:+40770418511">0770 418 511</a></p>
+            </div>
+          </div>
+          <div class="location__detail">
+            <div class="location__icon" aria-hidden="true">✉</div>
+            <div class="location__text">
+              <h4>Email</h4>
+              <p><a href="mailto:contact@studio-classic.ro">contact@studio-classic.ro</a></p>
+            </div>
+          </div>
+          <div class="location__detail">
+            <div class="location__icon" aria-hidden="true">🌐</div>
+            <div class="location__text">
+              <h4>Website</h4>
+              <p><a href="https://studio-classic.ro/" target="_blank" rel="noopener">studio-classic.ro</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="location__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.5!2d26.1095!3d44.4505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zU3RyYWRhIEJhcmJ1IE11bXVsZWFudSA1Mg!5e0!3m2!1sro!2sro!4v1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Locația Studio Classic">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours -->
+  <section id="hours" class="hours" aria-labelledby="hours-title">
+    <div class="container">
+      <header class="section-title">
+        <h2 id="hours-title">Program de <span>Lucru</span></h2>
+        <p>Suntem deschis 7 zile pe săptămână</p>
+      </header>
+      <div class="hours__grid">
+        <div class="hours__day">
+          <span class="hours__day-name">Luni</span>
+          <span class="hours__day-time">09:30 - 21:00</span>
+        </div>
+        <div class="hours__day">
+          <span class="hours__day-name">Marți</span>
+          <span class="hours__day-time">09:30 - 21:00</span>
+        </div>
+        <div class="hours__day">
+          <span class="hours__day-name">Miercuri</span>
+          <span class="hours__day-time">09:30 - 21:00</span>
+        </div>
+        <div class="hours__day">
+          <span class="hours__day-name">Joi</span>
+          <span class="hours__day-time">09:30 - 21:00</span>
+        </div>
+        <div class="hours__day">
+          <span class="hours__day-name">Vineri</span>
+          <span class="hours__day-time">09:30 - 21:00</span>
+        </div>
+        <div class="hours__day">
+          <span class="hours__day-name">Sâmbătă</span>
+          <span class="hours__day-time">09:00 - 18:00</span>
+        </div>
+        <div class="hours__day">
+          <span class="hours__day-name">Duminică</span>
+          <span class="hours__day-time">09:00 - 18:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title">Programează-te acum</h2>
+      <p>Sună-ne sau trimite un email pentru a rezerva o vizită.</p>
+      <a href="tel:+40770418511" class="cta__btn">0770 418 511</a>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <h3>Studio <span>Classic</span></h3>
+        <p>Frizerie profesională în zona Ștefan cel Mare, Sector 2, București. Servicii de calitate și abonamente flexibile.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Link-uri rapide</h4>
+        <ul>
+          <li><a href="#services">Servicii</a></li>
+          <li><a href="#subscriptions">Abonamente</a></li>
+          <li><a href="#about">Despre noi</a></li>
+          <li><a href="#location">Locație</a></li>
+          <li><a href="#hours">Program</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contact</h4>
+        <p>Str. Barbu Văcărescu 52</p>
+        <p>Sector 2, București</p>
+        <p><a href="tel:+40770418511">0770 418 511</a></p>
+        <p><a href="mailto:contact@studio-classic.ro">contact@studio-classic.ro</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 Studio Classic. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.header__nav');
+
+menuToggle.addEventListener('click', () => {
+  const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+  menuToggle.setAttribute('aria-expanded', !isOpen);
+  nav.classList.toggle('active');
+});
+
+// Close menu on link click
+document.querySelectorAll('.header__nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('active');
+  });
+});
+
+// Close menu on escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && nav.classList.contains('active')) {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('active');
+    menuToggle.focus();
+  }
+});
+</script>
+</body>
+</html>

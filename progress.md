@@ -1,31 +1,28 @@
 # DAG Progress
 
-**Run ID**: 1a90eea8-c9e8-4120-b92a-2fe0bd24c4c0
-**Created**: 2026-03-26 14:38 UTC
+**Run ID**: 6c76be94-a698-42f2-a62a-d70fc074eb3f
+**Created**: 2026-03-26 14:44 UTC
 
 ---
 
 # Quick Summary
 
-- Rebuild Cervus Barbershop website to replace messy WordPress with clean, professional design
-- Fix mixed RO/EN text issues and broken formatting throughout the site
-- Create bilingual barbershop website with proper language separation
-- Ensure old-school barbershop aesthetic appropriate for business opened in 2022
-- Deploy functional, well-tested replacement site
+- Scrape and analyze Studio Classic website (https://studio-classic.ro/) to understand structure, services, pricing, and subscription system
+- Build a simple WordPress-style website with text-heavy service listings, times, and basic subscription functionality
+- Implement plain layout without fancy visuals, matching the original site's design approach
+- QA test the implementation for functionality, content accuracy, and subscription system
+- Deploy the completed website
 
 # Plan
 
-- Website Coder analyzes existing site structure and content from cervusbarbershop.ro
-- Website Coder builds clean replacement with proper RO/EN language handling
-- Website Coder ensures all menu/service data is properly formatted (not raw)
-- QA Engineer tests functionality, language switching, responsive design, and content accuracy
-- QA Engineer verifies all formatting issues from original site are resolved
-- Deploy Agent publishes validated site
+- Website Coder analyzes the source site and implements the static/WordPress-style pages with service lists, times, and subscription system
+- QA Engineer validates functionality, content accuracy, subscription flow, and cross-browser compatibility
+- Deploy Agent publishes the tested website to production
 
 # Global Notes
 
-- **Constraints**: Must serve Sector 2 (Carol I / Calea Moșilor intersection) area; bilingual RO/EN support required; barbershop business context
-- **Verified from source**: Address: Calea Mosilor nr 127, Sector 2; Phone: 0723.69.23.23; Email: cervusbarbershop@gmail.com; Hours: Mon-Fri 9-20, Sat 9-18, Sun closed
+- **Constraints**: Simple WordPress-style design, text-heavy layout, no fancy visuals, must include service list with times and basic subscription system
+- **Verified from source**: Address: Strada Barbu Mumuleanu 52, București 020544; Phone: +40 770 418 511; Email: contact@studio-classic.ro; Hours: Mon-Fri 09:30-21:00, Sat-Sun 09:00-18:00
 
 # Agent Checklists
 
@@ -33,50 +30,56 @@
 
 ### Checklist
 
-- [x] Fetch and analyze current cervusbarbershop.ro/en_us/ content structure
-- [x] Extract all services, pricing, and business information from existing site
-- [x] Create clean HTML/CSS with proper bilingual (RO/EN) separation
-- [x] Fix all raw menu data display issues with proper formatting
-- [x] Implement old-school barbershop aesthetic appropriate for the brand
-- [x] Include location info for Sector 2 (Carol I / Calea Moșilor area)
-- [x] Ensure responsive design for mobile and desktop
-- [x] Document any missing content or assets that could not be retrieved
+- [x] Fetch and analyze https://studio-classic.ro/ to extract site structure, services, pricing, and times
+- [x] Create plain, text-heavy layout matching the simple WordPress aesthetic
+- [x] Implement service list page(s) with all services and their corresponding times
+- [x] Build basic subscription system functionality
+- [x] Ensure no fancy visuals—keep design minimal and functional
+- [x] Tag issue 37a2c9f5-6cce-4ba4-8c2f-ea3aab99e4c8 in commit/handoff
 
 ### Agent Updates
 
-**2026-03-26 14:45 UTC**: Website complete at `workspace/sites/cervus-barbershop/`
+**2026-03-26 15:00 UTC**: Website complete at `workspace/sites/studio-classic/`
 
-**Data extracted from cervusbarbershop.ro:**
-- Business name: Cervus Barbershop (Est. 2022)
-- Address: Calea Mosilor nr 127, Sector 2, Bucharest
-- Phone: 0723.69.23.23
-- Email: cervusbarbershop@gmail.com
-- Hours: Mon-Fri 09:00-20:00, Sat 09:00-18:00, Sun closed
-- Booking: mero.ro/p/cervus-barbershop
-- Team: Vicentiu Niga (Master Barber)
-- Social: Facebook, Instagram, YouTube
+**Data extracted from studio-classic.ro:**
+- Business name: Studio Classic Barber Shop (Frizerie Stefan Cel Mare)
+- Address: Strada Barbu Mumuleanu 52, București 020544, Sector 2
+- Phone: +40 770 418 511
+- Email: contact@studio-classic.ro
+- Hours: Mon-Fri 09:30-21:00, Sat-Sun 09:00-18:00
+- Area: Ștefan cel Mare, Sector 2
 
-**Services (6):**
-1. Classic Cut - 70 LEI (haircut + styling)
-2. Complex Cut - 100 LEI (long hair/skin fade, wash, massage, styling)
-3. Beard Trim - 50 LEI
-4. Cut + Beard - 100 LEI
-5. Complex + Beard - 130 LEI
-6. Traditional Shave - 80 LEI (hot towel treatment)
+**Services (11) with durations:**
+1. Executive Cut - 80 RON / 40 min
+2. Classic Cut - 70 RON / 30 min
+3. Children's Cut (<13) - 60 RON / 30 min
+4. Beard Grooming - 50 RON / 20 min
+5. Hot Towel Shave - 60 RON / 40 min
+6. Wash & Style - 40 RON / 20 min
+7. Scalp Massage (machine) - 20 RON / 10 min
+8. Scalp Friction (manual) - 15 RON / 10 min
+9. Nose/Ear Hair Removal - 15 RON / 10 min
+10. Beard Coloring - 50 RON / 30 min
+11. Beard Outline - 25 RON / 10 min
+
+**Subscription Plans (2 tiers, 5 durations each):**
+- Classic: 200 RON (1mo), 380 RON (2mo), 540 RON (3mo), 960 RON (6mo), 1800 RON (12mo)
+- Executive: 330 RON (1mo), 620 RON (2mo), 900 RON (3mo), 1600 RON (6mo), 2800 RON (12mo)
+- All include complimentary Nespresso coffee and water
 
 **Design implemented:**
-- **Color scheme**: Dark charcoal (#292b2b), gold accent (#efba6c), cream (#f8f5f0)
-- **Typography**: Oswald (headings), Lora (serif accents), Inter (body)
-- **Layout**: Old school classic barbershop aesthetic with modern responsiveness
-- **Sections**: Hero, Info Strip, About, Services (6 cards), Team, Location (with map), Hours, CTA, Footer
+- **Color scheme**: Dark gray (#1a1a1a), gold accent (#ca9b5c), light gray (#f8f8f8)
+- **Typography**: Playfair Display (headings), Inter (body) - simple and readable
+- **Layout**: Text-heavy with services table and subscription comparison table
+- **Sections**: Hero, Services (table with 11 items), Subscriptions (cards + full table), About, Location (map), Hours, CTA, Footer
 - **Accessibility**: Skip link, ARIA labels, semantic HTML, reduced motion support
-- **Mobile**: Full responsive design with hamburger menu
-- **SEO**: Meta tags, Open Graph, JSON-LD BarberShop schema
+- **Mobile**: Responsive with hamburger menu
+- **SEO**: Meta tags (Romanian), Open Graph, JSON-LD BarberShop schema
 
 **Files created:**
-- `workspace/sites/cervus-barbershop/index.html` (full website)
-- `workspace/sites/cervus-barbershop/outgoing_email.txt` (plain text email)
-- `workspace/sites/cervus-barbershop/outgoing_email.html` (HTML email)
+- `workspace/sites/studio-classic/index.html` (full website in Romanian)
+- `workspace/sites/studio-classic/outgoing_email.txt` (plain text email)
+- `workspace/sites/studio-classic/outgoing_email.html` (HTML email)
 
 Ready for QA review.
 
@@ -84,29 +87,27 @@ Ready for QA review.
 
 ### Checklist
 
-- [ ] Verify all pages render without broken formatting
-- [ ] Test language switching between RO and EN versions
-- [ ] Confirm no mixed RO/EN text on same page sections
-- [ ] Validate all service/menu data displays correctly (not raw)
-- [ ] Test responsive design across device sizes
-- [ ] Verify contact and location information accuracy
-- [ ] Check all links and navigation function properly
-- [ ] Document any issues for Website Coder to address
+- [ ] Verify all services and times match source site content
+- [ ] Test subscription system end-to-end (signup, confirmation, any validation)
+- [ ] Validate responsive behavior on mobile and desktop
+- [ ] Check cross-browser compatibility (Chrome, Firefox, Safari minimum)
+- [ ] Confirm plain layout with no broken styles or visual regressions
+- [ ] Document any defects for Website Coder to fix before deployment
 
 ### Agent Updates
 
-- (append-only log; QA Engineer writes updates here)
+- (append-only log; downstream agent writes updates here)
 
 ## Deploy Agent
 
 ### Checklist
 
-- [ ] Confirm QA Engineer has approved the build
+- [ ] Confirm QA sign-off before proceeding
 - [ ] Deploy website to production environment
-- [ ] Verify live site matches QA-approved version
-- [ ] Confirm site is accessible at expected URL
-- [ ] Document deployment completion with timestamp
+- [ ] Verify production site is accessible and functional post-deploy
+- [ ] Confirm subscription system works in production
+- [ ] Close issue 37a2c9f5-6cce-4ba4-8c2f-ea3aab99e4c8 upon successful deployment
 
 ### Agent Updates
 
-- (append-only log; Deploy Agent writes updates here)
+- (append-only log; downstream agent writes updates here)
