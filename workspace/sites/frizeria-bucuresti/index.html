@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frizeria București | Frizeria cu un Singur Scaun</title>
+<meta name="description" content="Frizeria București - frizeria cu un singur scaun. Club privat pentru bărbați. Întregul salon îți aparține. Programare: 0733 393 199. Zilnic 9-20.">
+<meta name="keywords" content="frizerie, barbershop, tuns, București, club privat, frizeria cu un singur scaun, programare">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.frizeriabucuresti.ro/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Frizeria București | Frizeria cu un Singur Scaun">
+<meta property="og:description" content="Club privat pentru bărbați. Întregul salon îți aparține pe perioada programării. Garanție: punctualitate la secundă sau tuns gratuit.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/*──────────────────────────────────────────────
+  FRIZERIA BUCUREȘTI - Minimal Elegant Design
+  "Frizeria cu un singur scaun"
+──────────────────────────────────────────────*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --black: #111;
+  --dark: #222;
+  --gray: #666;
+  --light: #999;
+  --cream: #faf9f7;
+  --white: #fff;
+  --accent: #8b7355;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Karla', -apple-system, sans-serif;
+}
+
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.8;
+  color:var(--black);
+  background:var(--white);
+}
+.container{
+  max-width:680px;
+  margin:0 auto;
+  padding:0 var(--space-md);
+}
+
+/* Skip link */
+.skip-link{position:absolute;top:-100px;left:50%;transform:translateX(-50%);background:var(--black);color:var(--white);padding:var(--space-sm) var(--space-md);z-index:9999;font-weight:500}
+.skip-link:focus{top:10px}
+
+/* ─── HEADER ─── */
+.header{
+  padding:var(--space-lg) 0;
+  text-align:center;
+  border-bottom:1px solid #eee;
+}
+.header__logo{
+  font-family:var(--font-serif);
+  font-size:2rem;
+  font-weight:500;
+  letter-spacing:0.1em;
+  color:var(--black);
+  text-transform:uppercase;
+  text-decoration:none;
+  display:block;
+  margin-bottom:var(--space-xs);
+}
+.header__tagline{
+  font-family:var(--font-serif);
+  font-style:italic;
+  font-size:1rem;
+  color:var(--gray);
+  letter-spacing:0.05em;
+}
+
+/* ─── MAIN ─── */
+main{padding:var(--space-xl) 0}
+
+/* ─── HERO/INTRO ─── */
+.intro{
+  text-align:center;
+  margin-bottom:var(--space-xl);
+}
+.intro__headline{
+  font-family:var(--font-serif);
+  font-size:clamp(1.5rem,4vw,2rem);
+  font-weight:400;
+  line-height:1.4;
+  margin-bottom:var(--space-md);
+  color:var(--black);
+}
+.intro__headline em{font-style:italic}
+.intro__text{
+  font-size:1rem;
+  color:var(--gray);
+  max-width:500px;
+  margin:0 auto;
+}
+
+/* ─── CONCEPT ─── */
+.concept{
+  margin-bottom:var(--space-xl);
+  padding:var(--space-lg) 0;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+}
+.concept h2{
+  font-family:var(--font-serif);
+  font-size:1.3rem;
+  font-weight:500;
+  text-align:center;
+  margin-bottom:var(--space-md);
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+}
+.concept__features{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:var(--space-md);
+}
+.concept__feature{text-align:center}
+.concept__feature h3{
+  font-family:var(--font-serif);
+  font-size:1.1rem;
+  font-weight:500;
+  margin-bottom:var(--space-xs);
+  color:var(--black);
+}
+.concept__feature p{
+  font-size:0.95rem;
+  color:var(--gray);
+  line-height:1.7;
+}
+
+/* ─── GUARANTEE ─── */
+.guarantee{
+  background:var(--cream);
+  padding:var(--space-lg);
+  text-align:center;
+  margin-bottom:var(--space-xl);
+}
+.guarantee__badge{
+  font-family:var(--font-serif);
+  font-size:0.8rem;
+  font-weight:500;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:var(--space-sm);
+}
+.guarantee h2{
+  font-family:var(--font-serif);
+  font-size:1.5rem;
+  font-weight:400;
+  margin-bottom:var(--space-sm);
+  color:var(--black);
+}
+.guarantee p{
+  font-size:0.95rem;
+  color:var(--gray);
+  max-width:450px;
+  margin:0 auto;
+}
+
+/* ─── SERVICES ─── */
+.services{margin-bottom:var(--space-xl)}
+.services h2{
+  font-family:var(--font-serif);
+  font-size:1.3rem;
+  font-weight:500;
+  text-align:center;
+  margin-bottom:var(--space-lg);
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+}
+.services__list{
+  list-style:none;
+  border-top:1px solid #eee;
+}
+.services__item{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  padding:var(--space-sm) 0;
+  border-bottom:1px solid #eee;
+  gap:var(--space-sm);
+}
+.services__name{
+  font-size:1rem;
+  color:var(--black);
+}
+.services__name small{
+  display:block;
+  font-size:0.85rem;
+  color:var(--light);
+  margin-top:2px;
+}
+.services__price{
+  font-family:var(--font-serif);
+  font-size:1.1rem;
+  color:var(--black);
+  white-space:nowrap;
+}
+.services__note{
+  text-align:center;
+  font-size:0.85rem;
+  color:var(--light);
+  margin-top:var(--space-md);
+  font-style:italic;
+}
+
+/* ─── HOURS ─── */
+.hours{
+  text-align:center;
+  margin-bottom:var(--space-xl);
+  padding:var(--space-lg) 0;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+}
+.hours h2{
+  font-family:var(--font-serif);
+  font-size:1.1rem;
+  font-weight:500;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin-bottom:var(--space-sm);
+  color:var(--black);
+}
+.hours__time{
+  font-family:var(--font-serif);
+  font-size:1.8rem;
+  color:var(--black);
+  margin-bottom:var(--space-xs);
+}
+.hours__days{
+  font-size:0.9rem;
+  color:var(--gray);
+}
+
+/* ─── CONTACT ─── */
+.contact{
+  text-align:center;
+  margin-bottom:var(--space-xl);
+}
+.contact h2{
+  font-family:var(--font-serif);
+  font-size:1.1rem;
+  font-weight:500;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin-bottom:var(--space-md);
+  color:var(--black);
+}
+.contact__phone{
+  font-family:var(--font-serif);
+  font-size:2rem;
+  color:var(--black);
+  text-decoration:none;
+  display:block;
+  margin-bottom:var(--space-sm);
+  transition:color 0.3s;
+}
+.contact__phone:hover{color:var(--accent)}
+.contact__note{
+  font-size:0.9rem;
+  color:var(--gray);
+  margin-bottom:var(--space-md);
+}
+.contact__cta{
+  display:inline-block;
+  background:var(--black);
+  color:var(--white);
+  padding:var(--space-sm) var(--space-lg);
+  font-size:0.8rem;
+  font-weight:500;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:all 0.3s;
+}
+.contact__cta:hover{background:var(--dark)}
+
+/* ─── LOCATIONS ─── */
+.locations{
+  margin-bottom:var(--space-xl);
+  text-align:center;
+}
+.locations h2{
+  font-family:var(--font-serif);
+  font-size:1.1rem;
+  font-weight:500;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin-bottom:var(--space-md);
+  color:var(--black);
+}
+.locations__text{
+  font-size:0.95rem;
+  color:var(--gray);
+  line-height:1.9;
+}
+
+/* ─── FOOTER ─── */
+.footer{
+  padding:var(--space-lg) 0;
+  text-align:center;
+  border-top:1px solid #eee;
+}
+.footer__brand{
+  font-family:var(--font-serif);
+  font-size:1.2rem;
+  font-weight:500;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--black);
+  margin-bottom:var(--space-sm);
+}
+.footer__tagline{
+  font-family:var(--font-serif);
+  font-style:italic;
+  font-size:0.9rem;
+  color:var(--gray);
+  margin-bottom:var(--space-md);
+}
+.footer__social{
+  display:flex;
+  justify-content:center;
+  gap:var(--space-md);
+  margin-bottom:var(--space-md);
+}
+.footer__social a{
+  font-size:0.8rem;
+  color:var(--gray);
+  text-decoration:none;
+  letter-spacing:0.05em;
+  transition:color 0.3s;
+}
+.footer__social a:hover{color:var(--black)}
+.footer__copy{
+  font-size:0.8rem;
+  color:var(--light);
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:600px){
+  .header{padding:var(--space-md) 0}
+  main{padding:var(--space-lg) 0}
+  .intro__headline{font-size:1.4rem}
+  .guarantee{padding:var(--space-md)}
+  .hours__time{font-size:1.5rem}
+  .contact__phone{font-size:1.6rem}
+}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms!important;
+    transition-duration:0.01ms!important;
+  }
+  html{scroll-behavior:auto}
+}
+</style>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  "name": "Frizeria București",
+  "alternateName": "Frizeria cu un Singur Scaun",
+  "description": "Club privat pentru bărbați. Frizeria cu un singur scaun - întregul salon îți aparține pe perioada programării. Garanție de punctualitate.",
+  "url": "https://www.frizeriabucuresti.ro/",
+  "telephone": "+40733393199",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "București",
+    "addressCountry": "RO"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "09:00",
+    "closes": "20:00"
+  },
+  "priceRange": "62-102 lei",
+  "sameAs": [
+    "https://www.facebook.com/FrizeriaBucuresti",
+    "https://www.instagram.com/frizeriabucuresti.ro/"
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Salt la conținut</a>
+
+<!-- Header -->
+<header class="header">
+  <a href="#" class="header__logo">Frizeria București</a>
+  <p class="header__tagline">Frizeria cu un singur scaun</p>
+</header>
+
+<main id="main">
+  <div class="container">
+    <!-- Intro -->
+    <section class="intro" aria-labelledby="intro-title">
+      <h1 id="intro-title" class="intro__headline">
+        Un club privat pentru bărbații<br>
+        <em>care știu ce vor</em>
+      </h1>
+      <p class="intro__text">
+        Pe perioada programării, întregul salon îți aparține.
+        Fără priviri indiscrete. Fără așteptare. Doar tu și frizerul tău.
+      </p>
+    </section>
+
+    <!-- Concept -->
+    <section class="concept" aria-labelledby="concept-title">
+      <h2 id="concept-title">De ce suntem diferiți</h2>
+      <div class="concept__features">
+        <div class="concept__feature">
+          <h3>Un singur scaun</h3>
+          <p>Întregul salon îți aparține pe perioada programării. Intimitate totală.</p>
+        </div>
+        <div class="concept__feature">
+          <h3>Fără așteptare</h3>
+          <p>Funcționăm exclusiv pe bază de programare. Am eliminat complet timpii de așteptare.</p>
+        </div>
+        <div class="concept__feature">
+          <h3>Experiență de relaxare</h3>
+          <p>Am transformat vizita la frizerie dintr-o corvoadă într-o experiență de relaxare.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="guarantee" aria-labelledby="guarantee-title">
+      <p class="guarantee__badge">Garanție</p>
+      <h2 id="guarantee-title">Punctualitate la secundă</h2>
+      <p>
+        Dacă întârziem mai mult de 30 de secunde de la ora programării tale,
+        tunsoarea este gratuită. Timp garantat.
+      </p>
+    </section>
+
+    <!-- Services -->
+    <section class="services" aria-labelledby="services-title">
+      <h2 id="services-title">Servicii</h2>
+      <ul class="services__list">
+        <li class="services__item">
+          <span class="services__name">
+            Tuns / Spălat / Masaj / Styling
+          </span>
+          <span class="services__price">92 lei</span>
+        </li>
+        <li class="services__item">
+          <span class="services__name">
+            Aranjat Barbă
+          </span>
+          <span class="services__price">35 lei</span>
+        </li>
+        <li class="services__item">
+          <span class="services__name">
+            Tuns / Spălat / Styling + Barbă
+            <small>Economie 18%</small>
+          </span>
+          <span class="services__price">102 lei</span>
+        </li>
+        <li class="services__item">
+          <span class="services__name">
+            Acoperire Fire Albe
+          </span>
+          <span class="services__price">83 lei</span>
+        </li>
+        <li class="services__item">
+          <span class="services__name">
+            Tuns la Zero
+          </span>
+          <span class="services__price">62 lei</span>
+        </li>
+        <li class="services__item">
+          <span class="services__name">
+            Tuns Copii
+          </span>
+          <span class="services__price">82 lei</span>
+        </li>
+      </ul>
+      <p class="services__note">Prețuri valabile la toate locațiile</p>
+    </section>
+
+    <!-- Hours -->
+    <section class="hours" aria-labelledby="hours-title">
+      <h2 id="hours-title">Program</h2>
+      <p class="hours__time">09:00 — 20:00</p>
+      <p class="hours__days">Zilnic, Luni — Duminică</p>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Programare</h2>
+      <a href="tel:+40733393199" class="contact__phone">0733 393 199</a>
+      <p class="contact__note">Exclusiv pe bază de programare</p>
+      <a href="tel:+40733393199" class="contact__cta">Sună acum</a>
+    </section>
+
+    <!-- Locations -->
+    <section class="locations" aria-labelledby="locations-title">
+      <h2 id="locations-title">Locații</h2>
+      <p class="locations__text">
+        2 locații de lux în București<br>
+        Detalii la programare
+      </p>
+    </section>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p class="footer__brand">Frizeria București</p>
+    <p class="footer__tagline">Frizeria cu un singur scaun</p>
+    <div class="footer__social">
+      <a href="https://www.facebook.com/FrizeriaBucuresti" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/frizeriabucuresti.ro/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="footer__copy">&copy; 2024 Frizeria București</p>
+  </div>
+</footer>
+</body>
+</html>
