@@ -86,7 +86,11 @@ img{max-width:100%;display:block}
   font-size:1.8rem;
   color:var(--white);
   letter-spacing:2px;
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
 }
+.header__logo img{max-height:45px;width:auto}
 .header__logo span{color:var(--accent)}
 .header__nav{display:flex;gap:var(--space-md);list-style:none;flex-wrap:wrap}
 .header__nav a{
@@ -140,7 +144,7 @@ img{max-width:100%;display:block}
 
 /* ─── HERO ─── */
 .hero{
-  background:linear-gradient(135deg,var(--secondary) 0%,var(--primary-dark) 100%);
+  background:linear-gradient(rgba(139,38,53,0.9),rgba(46,25,27,0.95)),url('assets/team-marian.jpg') center/cover no-repeat;
   color:var(--white);
   padding:var(--space-xl) 0;
   text-align:center;
@@ -706,7 +710,7 @@ img{max-width:100%;display:block}
 <!-- Header -->
 <header class="header">
   <div class="container">
-    <a href="#" class="header__logo">RETRO <span>BARBERSHOP</span></a>
+    <a href="#" class="header__logo"><img src="assets/logo.png" alt="Retro Barbershop Logo">RETRO <span>BARBERSHOP</span></a>
     <button type="button" class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>

@@ -78,9 +78,13 @@ body{
   color:var(--black);
   text-transform:uppercase;
   text-decoration:none;
-  display:block;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:var(--space-sm);
   margin-bottom:var(--space-xs);
 }
+.header__logo img{max-width:150px;height:auto}
 .header__tagline{
   font-family:var(--font-serif);
   font-style:italic;
@@ -176,6 +180,48 @@ main{padding:var(--space-xl) 0}
   color:var(--gray);
   max-width:450px;
   margin:0 auto;
+}
+
+/* ─── GALLERY ─── */
+.gallery{margin-bottom:var(--space-xl)}
+.gallery h2{
+  font-family:var(--font-serif);
+  font-size:1.3rem;
+  font-weight:500;
+  text-align:center;
+  margin-bottom:var(--space-md);
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+}
+.gallery__grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:var(--space-sm);
+}
+.gallery__item{
+  aspect-ratio:1;
+  overflow:hidden;
+}
+.gallery__item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:grayscale(20%);
+  transition:all 0.4s ease;
+}
+.gallery__item:hover img{
+  filter:grayscale(0%);
+  transform:scale(1.05);
+}
+
+/* ─── ABOUT IMAGE ─── */
+.about-image{
+  margin-bottom:var(--space-lg);
+  text-align:center;
+}
+.about-image img{
+  max-width:100%;
+  height:auto;
 }
 
 /* ─── SERVICES ─── */
@@ -411,7 +457,10 @@ main{padding:var(--space-xl) 0}
 
 <!-- Header -->
 <header class="header">
-  <a href="#" class="header__logo">Frizeria București</a>
+  <a href="#" class="header__logo">
+    <img src="assets/logo.png" alt="Frizeria București Logo">
+    Frizeria București
+  </a>
   <p class="header__tagline">Frizeria cu un singur scaun</p>
 </header>
 
@@ -456,6 +505,22 @@ main{padding:var(--space-xl) 0}
         Dacă întârziem mai mult de 30 de secunde de la ora programării tale,
         tunsoarea este gratuită. Timp garantat.
       </p>
+    </section>
+
+    <!-- About Image -->
+    <div class="about-image">
+      <img src="assets/about.jpg" alt="Frizeria București interior" loading="lazy">
+    </div>
+
+    <!-- Gallery -->
+    <section class="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Galerie</h2>
+      <div class="gallery__grid">
+        <div class="gallery__item"><img src="assets/gallery-1.jpg" alt="Interior frizerie" loading="lazy"></div>
+        <div class="gallery__item"><img src="assets/gallery-2.jpg" alt="Tunsoare profesională" loading="lazy"></div>
+        <div class="gallery__item"><img src="assets/gallery-3.jpg" alt="Scaun barbier" loading="lazy"></div>
+        <div class="gallery__item"><img src="assets/gallery-4.jpg" alt="Detalii salon" loading="lazy"></div>
+      </div>
     </section>
 
     <!-- Services -->

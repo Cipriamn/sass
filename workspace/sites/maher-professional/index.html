@@ -88,7 +88,11 @@ img{max-width:100%;display:block}
   color:var(--white);
   font-weight:700;
   letter-spacing:2px;
+  display:flex;
+  align-items:center;
+  gap:0.75rem;
 }
+.header__logo img{max-height:45px;width:auto}
 .header__logo span{color:var(--gold)}
 .header__nav{display:flex;gap:var(--space-md);list-style:none}
 .header__nav a{
@@ -161,7 +165,8 @@ img{max-width:100%;display:block}
   inset:0;
   background:
     radial-gradient(ellipse at center, rgba(201,169,98,0.1) 0%, transparent 60%),
-    linear-gradient(180deg, var(--black) 0%, var(--black-light) 100%);
+    linear-gradient(rgba(10,10,10,0.85),rgba(15,15,15,0.9)),
+    url('assets/about-1.jpg') center/cover no-repeat;
 }
 .hero::after{
   content:'';
@@ -280,7 +285,7 @@ img{max-width:100%;display:block}
 .about__visual{
   position:relative;
   height:500px;
-  background:var(--black-lighter);
+  background:url('assets/about-2.jpg') center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -320,6 +325,8 @@ img{max-width:100%;display:block}
   background:var(--black-lighter);
   border-radius:50%;
   margin:0 auto var(--space-md);
+  background-size:cover;
+  background-position:center;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -349,6 +356,36 @@ img{max-width:100%;display:block}
 }
 .team-card__phone a{color:var(--text-light)}
 .team-card__phone a:hover{color:var(--gold)}
+
+/* ─── GALLERY ─── */
+.gallery{background:var(--black);padding:var(--space-xl) 0}
+.gallery__grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:var(--space-sm);
+}
+.gallery__item{
+  aspect-ratio:1;
+  overflow:hidden;
+  position:relative;
+}
+.gallery__item::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,0.5),transparent);
+  z-index:1;
+  opacity:0;
+  transition:opacity 0.3s;
+}
+.gallery__item:hover::before{opacity:1}
+.gallery__item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 0.5s ease;
+}
+.gallery__item:hover img{transform:scale(1.1)}
 
 /* ─── SERVICES ─── */
 .services{background:var(--black-light)}
@@ -748,7 +785,7 @@ img{max-width:100%;display:block}
 <!-- Header -->
 <header class="header">
   <div class="container">
-    <a href="#" class="header__logo">MAHER <span>PROFESIONAL</span></a>
+    <a href="#" class="header__logo"><img src="assets/logo.png" alt="Maher Profesional Logo">MAHER <span>PROFESIONAL</span></a>
     <button type="button" class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
@@ -791,7 +828,6 @@ img{max-width:100%;display:block}
           </p>
         </div>
         <div class="about__visual">
-          <div class="about__icon" aria-hidden="true">✂</div>
         </div>
       </div>
     </div>
@@ -807,21 +843,40 @@ img{max-width:100%;display:block}
       </header>
       <div class="team__grid">
         <article class="team-card">
-          <div class="team-card__image">
-            <div class="team-card__icon" aria-hidden="true">👤</div>
+          <div class="team-card__image" style="background-image:url('assets/team-1.png')">
           </div>
           <h3>MAHER</h3>
           <p class="team-card__role">Expert Stilist</p>
           <p class="team-card__phone"><a href="tel:+40734297274">0734 297 274</a></p>
         </article>
         <article class="team-card">
-          <div class="team-card__image">
-            <div class="team-card__icon" aria-hidden="true">👤</div>
+          <div class="team-card__image" style="background-image:url('assets/team-2.png')">
           </div>
           <h3>OSAMA</h3>
           <p class="team-card__role">Expert Stilist</p>
           <p class="team-card__phone"><a href="tel:+40733763372">0733 763 372</a></p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery" aria-labelledby="gallery-title">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-header__label">Galeria Noastră</p>
+        <h2 id="gallery-title">Stil & Profesionalism</h2>
+        <div class="section-divider" role="presentation"></div>
+      </header>
+      <div class="gallery__grid">
+        <div class="gallery__item"><img src="assets/gallery-1.jpg" alt="Tunsoare profesională" loading="lazy"></div>
+        <div class="gallery__item"><img src="assets/gallery-2.jpg" alt="Barbă aranjată" loading="lazy"></div>
+        <div class="gallery__item"><img src="assets/gallery-3.jpg" alt="Styling modern" loading="lazy"></div>
+        <div class="gallery__item"><img src="assets/gallery-4.jpg" alt="Frizerie premium" loading="lazy"></div>
+        <div class="gallery__item"><img src="assets/gallery-5.jpg" alt="Servicii de calitate" loading="lazy"></div>
+        <div class="gallery__item"><img src="assets/gallery-6.jpg" alt="Interior salon" loading="lazy"></div>
+        <div class="gallery__item"><img src="assets/gallery-7.jpg" alt="Produse profesionale" loading="lazy"></div>
+        <div class="gallery__item"><img src="assets/gallery-8.jpg" alt="Rezultate excepționale" loading="lazy"></div>
       </div>
     </div>
   </section>

@@ -80,6 +80,13 @@ img{max-width:100%;display:block}
   font-family:var(--font-heading);
   font-size:1.4rem;
   color:var(--white);
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+}
+.header__logo img{
+  max-height:40px;
+  width:auto;
   font-weight:600;
 }
 .header__logo span{color:var(--accent)}
@@ -120,7 +127,7 @@ img{max-width:100%;display:block}
 
 /* ─── HERO ─── */
 .hero{
-  background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);
+  background:linear-gradient(rgba(26,26,26,0.85),rgba(26,26,26,0.9)),url('assets/hero-bg.jpg') center/cover no-repeat;
   color:var(--white);
   padding:var(--space-xl) 0;
   text-align:center;
@@ -370,7 +377,7 @@ img{max-width:100%;display:block}
   flex-shrink:0;
 }
 .about__visual{
-  background:var(--primary);
+  background:url('assets/studio.jpg') center/cover no-repeat;
   height:400px;
   border-radius:var(--radius);
   display:flex;
@@ -378,10 +385,37 @@ img{max-width:100%;display:block}
   justify-content:center;
 }
 .about__icon{
+  display:none;
+}
+.about__icon-hidden{
   font-size:6rem;
   color:var(--accent);
   opacity:0.3;
 }
+
+/* ─── GALLERY ─── */
+.gallery{background:var(--light);padding:var(--space-xl) 0}
+.gallery__header{text-align:center;margin-bottom:var(--space-lg)}
+.gallery__header h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:var(--space-xs)}
+.gallery__header h2 span{color:var(--accent)}
+.gallery__grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:var(--space-sm);
+}
+.gallery__item{
+  aspect-ratio:4/3;
+  overflow:hidden;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.gallery__item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 0.4s ease;
+}
+.gallery__item:hover img{transform:scale(1.06)}
 
 /* ─── LOCATION ─── */
 .location{background:var(--white)}
@@ -644,7 +678,7 @@ img{max-width:100%;display:block}
 <!-- Header -->
 <header class="header">
   <div class="container">
-    <a href="#" class="header__logo">Studio <span>Classic</span></a>
+    <a href="#" class="header__logo"><img src="assets/logo.png" alt="Studio Classic Logo">Studio <span>Classic</span></a>
     <button type="button" class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
@@ -668,7 +702,7 @@ img{max-width:100%;display:block}
       <div class="hero__info">
         <div class="hero__info-item">
           <span>📍</span>
-          <span>Str. Barbu Văcărescu 52</span>
+          <span>Str. Barbu Mumuleanu 52</span>
         </div>
         <div class="hero__info-item">
           <span>📞</span>
@@ -886,6 +920,19 @@ img{max-width:100%;display:block}
     </div>
   </section>
 
+  <!-- Gallery -->
+  <section class="gallery" aria-labelledby="gallery-title">
+    <div class="container">
+      <header class="gallery__header">
+        <h2 id="gallery-title">Galeria <span>Noastră</span></h2>
+      </header>
+      <div class="gallery__grid">
+        <div class="gallery__item"><img src="assets/studio.jpg" alt="Studio Classic interior" loading="lazy"></div>
+        <div class="gallery__item"><img src="assets/shop.jpg" alt="Barbershop Ștefan cel Mare" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Location -->
   <section id="location" class="location" aria-labelledby="location-title">
     <div class="container">
@@ -896,7 +943,7 @@ img{max-width:100%;display:block}
             <div class="location__icon" aria-hidden="true">📍</div>
             <div class="location__text">
               <h4>Adresă</h4>
-              <p>Strada Barbu Văcărescu 52<br>Sector 2, București 020544</p>
+              <p>Strada Barbu Mumuleanu 52<br>Sector 2, București 020544</p>
             </div>
           </div>
           <div class="location__detail">
@@ -1004,7 +1051,7 @@ img{max-width:100%;display:block}
       </div>
       <div class="footer__contact">
         <h4>Contact</h4>
-        <p>Str. Barbu Văcărescu 52</p>
+        <p>Str. Barbu Mumuleanu 52</p>
         <p>Sector 2, București</p>
         <p><a href="tel:+40770418511">0770 418 511</a></p>
         <p><a href="mailto:contact@studio-classic.ro">contact@studio-classic.ro</a></p>
