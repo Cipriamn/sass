@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cervus Barbershop | Classic Barbershop Bucharest Sector 2</title>
+<meta name="description" content="Cervus Barbershop - old school barbershop in Bucharest, Sector 2. Classic cuts, beard trims, traditional shaves. Calea Mosilor 127. Book online now.">
+<meta name="keywords" content="barbershop, classic cut, beard trim, traditional shave, Bucharest, Sector 2, Calea Mosilor, frizerie">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.cervusbarbershop.ro/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Cervus Barbershop | Classic Barbershop Bucharest">
+<meta property="og:description" content="Old school barbershop in Sector 2, Bucharest. Classic cuts, beard trims, traditional shaves. Book your appointment today.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/*──────────────────────────────────────────────
+  CERVUS BARBERSHOP - Old School Classic Design
+  Colors: Dark charcoal, gold, cream
+──────────────────────────────────────────────*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --primary: #292b2b;
+  --primary-light: #3a3c3c;
+  --accent: #efba6c;
+  --accent-dark: #d9a458;
+  --cream: #f8f5f0;
+  --cream-dark: #ebe6dc;
+  --dark: #1a1a1a;
+  --text: #333;
+  --text-light: #666;
+  --white: #fff;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  --shadow-sm: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-md: 0 8px 30px rgba(0,0,0,0.15);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.25);
+
+  --font-display: 'Oswald', sans-serif;
+  --font-serif: 'Lora', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);line-height:1.7;background:var(--cream)}
+.container{max-width:1200px;margin:0 auto;padding:0 var(--space-md)}
+section{padding:var(--space-xl) 0}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.2;text-transform:uppercase;letter-spacing:2px}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* Skip link */
+.skip-link{position:absolute;top:-100px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--dark);padding:var(--space-sm) var(--space-md);z-index:9999;border-radius:var(--radius-sm);font-weight:600}
+.skip-link:focus{top:10px}
+
+/* ─── HEADER ─── */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:var(--space-sm) 0;
+  background:transparent;
+  transition:all 0.4s ease;
+}
+.header.scrolled{
+  background:rgba(41,43,43,0.98);
+  backdrop-filter:blur(12px);
+  box-shadow:var(--shadow-md);
+}
+.header .container{display:flex;justify-content:space-between;align-items:center}
+.header__logo{
+  font-family:var(--font-display);
+  font-size:1.6rem;
+  color:var(--white);
+  letter-spacing:3px;
+  font-weight:700;
+}
+.header__logo span{color:var(--accent)}
+.header__nav{display:flex;gap:var(--space-md);list-style:none}
+.header__nav a{
+  color:rgba(255,255,255,0.85);
+  font-size:0.75rem;
+  font-weight:500;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  padding:var(--space-xs) 0;
+  position:relative;
+  transition:color 0.3s;
+}
+.header__nav a::after{
+  content:'';
+  position:absolute;
+  bottom:-2px;left:0;right:0;
+  height:2px;
+  background:var(--accent);
+  transform:scaleX(0);
+  transition:transform 0.3s;
+}
+.header__nav a:hover,.header__nav a:focus{color:var(--accent)}
+.header__nav a:hover::after,.header__nav a:focus::after{transform:scaleX(1)}
+
+/* Mobile menu */
+.menu-toggle{
+  display:none;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:var(--space-xs);
+  z-index:101;
+}
+.menu-toggle span{
+  display:block;
+  width:28px;
+  height:2px;
+  background:var(--white);
+  margin:6px 0;
+  transition:all 0.3s;
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:rotate(-45deg) translate(7px,-6px)}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:var(--white);
+  position:relative;
+  overflow:hidden;
+  background:var(--primary);
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 40px,
+      rgba(239,186,108,0.02) 40px,
+      rgba(239,186,108,0.02) 41px
+    ),
+    linear-gradient(180deg,var(--dark) 0%,var(--primary) 50%,var(--primary-light) 100%);
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  top:50%;left:50%;
+  width:700px;height:700px;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(239,186,108,0.1) 0%,transparent 60%);
+  pointer-events:none;
+}
+.hero__content{position:relative;z-index:2;max-width:900px;padding:var(--space-md)}
+.hero__badge{
+  display:inline-block;
+  font-family:var(--font-body);
+  font-size:0.75rem;
+  font-weight:600;
+  color:var(--accent);
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:var(--space-sm);
+  padding:var(--space-xs) var(--space-sm);
+  border:1px solid var(--accent);
+  border-radius:var(--radius-sm);
+}
+.hero h1{
+  font-size:clamp(3rem,12vw,7rem);
+  margin-bottom:var(--space-xs);
+  letter-spacing:6px;
+}
+.hero h1 span{color:var(--accent)}
+.hero__subtitle{
+  font-family:var(--font-serif);
+  font-style:italic;
+  font-size:clamp(1.1rem,2.5vw,1.5rem);
+  opacity:0.7;
+  margin-bottom:var(--space-lg);
+  font-weight:400;
+}
+.hero__divider{
+  width:100px;
+  height:2px;
+  background:var(--accent);
+  margin:0 auto var(--space-lg);
+}
+.hero__desc{
+  font-size:1rem;
+  opacity:0.75;
+  max-width:550px;
+  margin:0 auto var(--space-lg);
+  line-height:1.9;
+  font-weight:300;
+}
+.hero__buttons{
+  display:flex;
+  gap:var(--space-sm);
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* ─── BUTTONS ─── */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:var(--space-xs);
+  padding:1rem 2.2rem;
+  font-family:var(--font-body);
+  font-size:0.8rem;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  transition:all 0.4s ease;
+  cursor:pointer;
+  border:2px solid transparent;
+  border-radius:var(--radius-sm);
+  min-height:50px;
+}
+.btn-primary{
+  background:var(--accent);
+  color:var(--dark);
+  border-color:var(--accent);
+}
+.btn-primary:hover,.btn-primary:focus{
+  background:transparent;
+  color:var(--accent);
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(239,186,108,0.3);
+}
+.btn-outline{
+  background:transparent;
+  color:var(--white);
+  border-color:rgba(255,255,255,0.4);
+}
+.btn-outline:hover,.btn-outline:focus{
+  border-color:var(--accent);
+  color:var(--accent);
+  transform:translateY(-3px);
+}
+.btn-dark{
+  background:var(--primary);
+  color:var(--white);
+  border-color:var(--primary);
+}
+.btn-dark:hover,.btn-dark:focus{
+  background:var(--primary-light);
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-md);
+}
+
+/* ─── INFO STRIP ─── */
+.info-strip{
+  background:var(--accent);
+  color:var(--dark);
+  padding:var(--space-sm) 0;
+  overflow:hidden;
+}
+.info-strip__content{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:var(--space-lg);
+  font-family:var(--font-display);
+  font-size:0.85rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.info-strip__item{
+  display:flex;
+  align-items:center;
+  gap:var(--space-xs);
+}
+.info-strip__dot{
+  width:5px;
+  height:5px;
+  background:var(--dark);
+  border-radius:50%;
+}
+
+/* ─── ABOUT ─── */
+.about{background:var(--cream)}
+.about__grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--space-lg);
+  align-items:center;
+}
+.about__visual{
+  position:relative;
+  height:500px;
+  background:var(--primary);
+  border-radius:var(--radius-md);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.about__icon{
+  font-size:8rem;
+  opacity:0.3;
+  color:var(--accent);
+}
+.about__visual::before{
+  content:'';
+  position:absolute;
+  inset:20px;
+  border:1px solid rgba(239,186,108,0.2);
+  border-radius:var(--radius-sm);
+}
+.about__content h2{
+  font-size:clamp(2rem,4vw,3rem);
+  margin-bottom:var(--space-sm);
+  color:var(--dark);
+}
+.about__content h2 span{color:var(--accent)}
+.about__subtitle{
+  font-family:var(--font-serif);
+  font-style:italic;
+  font-size:1.1rem;
+  color:var(--accent-dark);
+  margin-bottom:var(--space-md);
+}
+.about__text{
+  font-size:1rem;
+  color:var(--text-light);
+  margin-bottom:var(--space-md);
+  line-height:1.9;
+}
+.about__features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--space-sm);
+  margin-bottom:var(--space-md);
+}
+.about__feature{
+  display:flex;
+  align-items:center;
+  gap:var(--space-xs);
+  font-size:0.9rem;
+  font-weight:500;
+}
+.about__feature::before{
+  content:'';
+  width:8px;
+  height:8px;
+  background:var(--accent);
+  border-radius:50%;
+  flex-shrink:0;
+}
+
+/* ─── SERVICES ─── */
+.services{background:var(--primary);color:var(--white)}
+.section-header{text-align:center;margin-bottom:var(--space-lg)}
+.section-header h2{font-size:clamp(2rem,5vw,3.5rem);margin-bottom:var(--space-xs)}
+.section-header h2 span{color:var(--accent)}
+.section-header p{
+  font-family:var(--font-serif);
+  font-style:italic;
+  font-size:1.1rem;
+  opacity:0.7;
+  max-width:500px;
+  margin:var(--space-sm) auto 0;
+}
+.section-divider{
+  width:60px;
+  height:2px;
+  background:var(--accent);
+  margin:var(--space-sm) auto 0;
+}
+.services__grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:var(--space-md);
+}
+.service-card{
+  background:var(--primary-light);
+  border-radius:var(--radius-md);
+  padding:var(--space-md);
+  transition:all 0.4s ease;
+  border:1px solid transparent;
+  position:relative;
+  overflow:hidden;
+}
+.service-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;
+  width:4px;
+  height:100%;
+  background:var(--accent);
+  transform:scaleY(0);
+  transition:transform 0.4s;
+}
+.service-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(239,186,108,0.2);
+  box-shadow:var(--shadow-md);
+}
+.service-card:hover::before{transform:scaleY(1)}
+.service-card__header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:var(--space-sm);
+}
+.service-card h3{
+  font-size:1.2rem;
+  letter-spacing:1px;
+}
+.service-card__price{
+  font-family:var(--font-display);
+  font-size:1.4rem;
+  color:var(--accent);
+  white-space:nowrap;
+}
+.service-card p{
+  font-size:0.9rem;
+  opacity:0.7;
+  line-height:1.7;
+}
+
+/* ─── BARBERS ─── */
+.barbers{background:var(--cream-dark)}
+.barbers__grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:var(--space-md);
+  max-width:600px;
+  margin:0 auto;
+}
+.barber-card{
+  background:var(--white);
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  transition:all 0.4s ease;
+  text-align:center;
+}
+.barber-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow-lg);
+}
+.barber-card__image{
+  height:280px;
+  background:var(--primary);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.barber-card__icon{
+  font-size:5rem;
+  opacity:0.3;
+  color:var(--accent);
+}
+.barber-card__content{padding:var(--space-md)}
+.barber-card h3{
+  font-size:1.3rem;
+  margin-bottom:var(--space-xs);
+  color:var(--dark);
+}
+.barber-card__role{
+  font-family:var(--font-serif);
+  font-style:italic;
+  color:var(--accent-dark);
+  font-size:0.95rem;
+}
+
+/* ─── LOCATION ─── */
+.location{background:var(--cream)}
+.location__grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--space-lg);
+  align-items:start;
+}
+.location__map{
+  height:450px;
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  box-shadow:var(--shadow-md);
+}
+.location__map iframe{width:100%;height:100%;border:0}
+.location__info h2{
+  font-size:clamp(1.8rem,4vw,2.8rem);
+  margin-bottom:var(--space-md);
+  color:var(--dark);
+}
+.location__info h2 span{color:var(--accent)}
+.location__detail{
+  display:flex;
+  gap:var(--space-sm);
+  margin-bottom:var(--space-md);
+  padding-bottom:var(--space-md);
+  border-bottom:1px solid rgba(0,0,0,0.1);
+}
+.location__detail:last-of-type{border-bottom:none}
+.location__icon{
+  width:50px;
+  height:50px;
+  background:var(--accent);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  font-size:1.2rem;
+}
+.location__text h4{
+  font-size:0.85rem;
+  letter-spacing:2px;
+  margin-bottom:var(--space-xs);
+  color:var(--text-light);
+}
+.location__text p{
+  font-size:1.05rem;
+  font-weight:500;
+  color:var(--dark);
+}
+.location__text a{color:var(--dark);transition:color 0.3s}
+.location__text a:hover{color:var(--accent)}
+
+/* ─── HOURS ─── */
+.hours{background:var(--primary);color:var(--white)}
+.hours__content{
+  max-width:700px;
+  margin:0 auto;
+  text-align:center;
+}
+.hours__grid{
+  display:grid;
+  gap:var(--space-xs);
+  margin-bottom:var(--space-md);
+}
+.hours__row{
+  display:flex;
+  justify-content:space-between;
+  padding:var(--space-sm) var(--space-md);
+  background:var(--primary-light);
+  border-radius:var(--radius-sm);
+  transition:background 0.3s;
+}
+.hours__row:hover{background:rgba(239,186,108,0.1)}
+.hours__day{font-weight:500}
+.hours__time{color:var(--accent);font-weight:600}
+.hours__closed{opacity:0.5}
+
+/* ─── CTA ─── */
+.cta{
+  background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%);
+  color:var(--dark);
+  text-align:center;
+  padding:var(--space-xl) 0;
+}
+.cta h2{
+  font-size:clamp(2rem,5vw,3.5rem);
+  margin-bottom:var(--space-sm);
+}
+.cta p{
+  font-size:1.1rem;
+  opacity:0.85;
+  max-width:500px;
+  margin:0 auto var(--space-md);
+}
+.cta .btn-dark{
+  background:var(--dark);
+  border-color:var(--dark);
+}
+.cta .btn-dark:hover{
+  background:var(--primary);
+  border-color:var(--primary);
+}
+
+/* ─── FOOTER ─── */
+.footer{
+  background:var(--dark);
+  color:rgba(255,255,255,0.7);
+  padding:var(--space-lg) 0 var(--space-md);
+}
+.footer__grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:var(--space-lg);
+  margin-bottom:var(--space-lg);
+}
+.footer__brand h3{
+  font-family:var(--font-display);
+  font-size:1.5rem;
+  color:var(--white);
+  letter-spacing:2px;
+  margin-bottom:var(--space-sm);
+}
+.footer__brand h3 span{color:var(--accent)}
+.footer__brand p{
+  font-size:0.9rem;
+  line-height:1.8;
+  max-width:300px;
+}
+.footer__links h4,.footer__contact h4{
+  font-size:0.8rem;
+  letter-spacing:3px;
+  color:var(--accent);
+  margin-bottom:var(--space-sm);
+}
+.footer__links ul{list-style:none}
+.footer__links li{margin-bottom:var(--space-xs)}
+.footer__links a{
+  font-size:0.9rem;
+  transition:color 0.3s;
+}
+.footer__links a:hover{color:var(--accent)}
+.footer__contact p{
+  font-size:0.9rem;
+  margin-bottom:var(--space-xs);
+}
+.footer__social{
+  display:flex;
+  gap:var(--space-sm);
+  margin-top:var(--space-sm);
+}
+.footer__social a{
+  width:40px;
+  height:40px;
+  background:var(--primary);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:0.9rem;
+  transition:all 0.3s;
+}
+.footer__social a:hover{
+  background:var(--accent);
+  color:var(--dark);
+  transform:translateY(-3px);
+}
+.footer__bottom{
+  text-align:center;
+  padding-top:var(--space-md);
+  border-top:1px solid rgba(255,255,255,0.1);
+  font-size:0.85rem;
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:992px){
+  .about__grid,.location__grid{grid-template-columns:1fr}
+  .about__visual{height:350px;margin-bottom:var(--space-md)}
+  .location__map{height:350px;order:2}
+  .footer__grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .menu-toggle{display:block}
+  .header__nav{
+    position:fixed;
+    top:0;right:-100%;
+    width:280px;
+    height:100vh;
+    background:var(--primary);
+    flex-direction:column;
+    justify-content:center;
+    padding:var(--space-lg);
+    gap:var(--space-md);
+    transition:right 0.4s ease;
+    box-shadow:var(--shadow-lg);
+  }
+  .header__nav.active{right:0}
+  .header__nav a{font-size:1rem}
+  .info-strip__content{
+    flex-direction:column;
+    gap:var(--space-sm);
+    text-align:center;
+  }
+  .info-strip__dot{display:none}
+  .about__features{grid-template-columns:1fr}
+  .footer__grid{grid-template-columns:1fr;text-align:center}
+  .footer__brand p{margin:0 auto var(--space-md)}
+  .footer__social{justify-content:center}
+}
+@media(max-width:480px){
+  section{padding:var(--space-lg) 0}
+  .hero h1{letter-spacing:3px}
+  .services__grid{grid-template-columns:1fr}
+  .hours__row{flex-direction:column;text-align:center;gap:var(--space-xs)}
+}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:0.01ms!important;
+  }
+  html{scroll-behavior:auto}
+}
+</style>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  "name": "Cervus Barbershop",
+  "description": "Old school classic barbershop in Bucharest, Sector 2. Classic cuts, beard trims, traditional shaves since 2022.",
+  "url": "https://www.cervusbarbershop.ro/",
+  "telephone": "+40723692323",
+  "email": "cervusbarbershop@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calea Mosilor nr 127",
+    "addressLocality": "Bucharest",
+    "addressRegion": "Sector 2",
+    "postalCode": "020884",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 44.4348,
+    "longitude": 26.1150
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "70-130 LEI",
+  "image": "https://www.cervusbarbershop.ro/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/cervusbarbershop",
+    "https://www.instagram.com/cervusbarbershop.ro/"
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- Header -->
+<header class="header" role="banner">
+  <div class="container">
+    <a href="#" class="header__logo" aria-label="Cervus Barbershop Home">CERVUS <span>BARBERSHOP</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" class="header__nav" role="navigation" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#team">Team</a>
+      <a href="#location">Location</a>
+      <a href="#hours">Hours</a>
+      <a href="https://mero.ro/p/cervus-barbershop" target="_blank" rel="noopener">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__content">
+      <span class="hero__badge">Est. 2022</span>
+      <h1 id="hero-title">CERVUS <span>BARBERSHOP</span></h1>
+      <p class="hero__subtitle">Old School Classic Haircuts</p>
+      <div class="hero__divider" role="presentation"></div>
+      <p class="hero__desc">
+        A classic barbershop in the heart of Bucharest. We specialize in traditional cuts,
+        beard trims, and hot towel shaves with attention to detail and craftsmanship.
+      </p>
+      <div class="hero__buttons">
+        <a href="https://mero.ro/p/cervus-barbershop" target="_blank" rel="noopener" class="btn btn-primary">Book Appointment</a>
+        <a href="#services" class="btn btn-outline">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Strip -->
+  <div class="info-strip" role="complementary">
+    <div class="container">
+      <div class="info-strip__content">
+        <div class="info-strip__item">
+          <span class="info-strip__dot"></span>
+          <span>Classic Cuts</span>
+        </div>
+        <div class="info-strip__item">
+          <span class="info-strip__dot"></span>
+          <span>Beard Styling</span>
+        </div>
+        <div class="info-strip__item">
+          <span class="info-strip__dot"></span>
+          <span>Hot Towel Shaves</span>
+        </div>
+        <div class="info-strip__item">
+          <span class="info-strip__dot"></span>
+          <span>Sector 2 Bucharest</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__visual">
+          <div class="about__icon" aria-hidden="true">&#9986;</div>
+        </div>
+        <div class="about__content">
+          <h2 id="about-title">THE <span>CLASSIC</span> EXPERIENCE</h2>
+          <p class="about__subtitle">Craftsmanship meets tradition</p>
+          <p class="about__text">
+            Cervus Barbershop brings the art of traditional barbering to Sector 2, Bucharest.
+            Located at the Carol I / Calea Mosilor intersection, we've been serving the community
+            since 2022 with precision cuts and authentic grooming services.
+          </p>
+          <p class="about__text">
+            Our old school approach means attention to detail, quality products, and a relaxed
+            atmosphere where you can unwind. Every service includes styling and personal consultation.
+          </p>
+          <div class="about__features">
+            <div class="about__feature">Classic techniques</div>
+            <div class="about__feature">Premium products</div>
+            <div class="about__feature">Relaxed atmosphere</div>
+            <div class="about__feature">Online booking</div>
+          </div>
+          <a href="https://mero.ro/p/cervus-barbershop" target="_blank" rel="noopener" class="btn btn-dark">Book Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services" aria-labelledby="services-title">
+    <div class="container">
+      <header class="section-header">
+        <h2 id="services-title">OUR <span>SERVICES</span></h2>
+        <p>Traditional barbering at its finest</p>
+        <div class="section-divider" role="presentation"></div>
+      </header>
+      <div class="services__grid">
+        <article class="service-card">
+          <div class="service-card__header">
+            <h3>CLASSIC CUT</h3>
+            <span class="service-card__price">70 LEI</span>
+          </div>
+          <p>Haircut and styling. Clean, precise cut tailored to your face shape and preferences.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-card__header">
+            <h3>COMPLEX CUT</h3>
+            <span class="service-card__price">100 LEI</span>
+          </div>
+          <p>Long hair or skin fade. Includes wash, massage, and professional styling.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-card__header">
+            <h3>BEARD TRIM</h3>
+            <span class="service-card__price">50 LEI</span>
+          </div>
+          <p>Professional beard shaping and trimming. Keep your beard looking sharp and well-groomed.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-card__header">
+            <h3>CUT + BEARD</h3>
+            <span class="service-card__price">100 LEI</span>
+          </div>
+          <p>Complete grooming package. Classic haircut combined with beard trim for the full look.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-card__header">
+            <h3>COMPLEX + BEARD</h3>
+            <span class="service-card__price">130 LEI</span>
+          </div>
+          <p>Premium package with complex cut (skin fade or long hair), wash, massage, and beard styling.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-card__header">
+            <h3>TRADITIONAL SHAVE</h3>
+            <span class="service-card__price">80 LEI</span>
+          </div>
+          <p>Full razor shave with hot towel treatment. The ultimate old school grooming experience.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="barbers" aria-labelledby="team-title">
+    <div class="container">
+      <header class="section-header">
+        <h2 id="team-title">MEET THE <span>BARBER</span></h2>
+        <p>Skilled hands, classic style</p>
+        <div class="section-divider" role="presentation"></div>
+      </header>
+      <div class="barbers__grid">
+        <article class="barber-card">
+          <div class="barber-card__image">
+            <div class="barber-card__icon" aria-hidden="true">&#128100;</div>
+          </div>
+          <div class="barber-card__content">
+            <h3>VICENTIU NIGA</h3>
+            <p class="barber-card__role">Master Barber</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="location" aria-labelledby="location-title">
+    <div class="container">
+      <div class="location__grid">
+        <div class="location__info">
+          <h2 id="location-title">FIND <span>US</span></h2>
+          <div class="location__detail">
+            <div class="location__icon" aria-hidden="true">&#128205;</div>
+            <div class="location__text">
+              <h4>ADDRESS</h4>
+              <p>Calea Mosilor nr 127<br>Sector 2, Bucharest</p>
+            </div>
+          </div>
+          <div class="location__detail">
+            <div class="location__icon" aria-hidden="true">&#128222;</div>
+            <div class="location__text">
+              <h4>PHONE</h4>
+              <p><a href="tel:+40723692323">0723.69.23.23</a></p>
+            </div>
+          </div>
+          <div class="location__detail">
+            <div class="location__icon" aria-hidden="true">&#9993;</div>
+            <div class="location__text">
+              <h4>EMAIL</h4>
+              <p><a href="mailto:cervusbarbershop@gmail.com">cervusbarbershop@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="location__detail">
+            <div class="location__icon" aria-hidden="true">&#127760;</div>
+            <div class="location__text">
+              <h4>BOOK ONLINE</h4>
+              <p><a href="https://mero.ro/p/cervus-barbershop" target="_blank" rel="noopener">mero.ro/p/cervus-barbershop</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="location__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.8!2d26.115!3d44.4348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zQ2FsZWEgTW9zaWxvciAxMjcsIEJ1Y2hhcmVzdA!5e0!3m2!1sen!2sro!4v1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Cervus Barbershop Location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours -->
+  <section id="hours" class="hours" aria-labelledby="hours-title">
+    <div class="container">
+      <header class="section-header">
+        <h2 id="hours-title">OPENING <span>HOURS</span></h2>
+        <p>We're ready when you are</p>
+        <div class="section-divider" role="presentation"></div>
+      </header>
+      <div class="hours__content">
+        <div class="hours__grid">
+          <div class="hours__row">
+            <span class="hours__day">Monday</span>
+            <span class="hours__time">09:00 - 20:00</span>
+          </div>
+          <div class="hours__row">
+            <span class="hours__day">Tuesday</span>
+            <span class="hours__time">09:00 - 20:00</span>
+          </div>
+          <div class="hours__row">
+            <span class="hours__day">Wednesday</span>
+            <span class="hours__time">09:00 - 20:00</span>
+          </div>
+          <div class="hours__row">
+            <span class="hours__day">Thursday</span>
+            <span class="hours__time">09:00 - 20:00</span>
+          </div>
+          <div class="hours__row">
+            <span class="hours__day">Friday</span>
+            <span class="hours__time">09:00 - 20:00</span>
+          </div>
+          <div class="hours__row">
+            <span class="hours__day">Saturday</span>
+            <span class="hours__time">09:00 - 18:00</span>
+          </div>
+          <div class="hours__row hours__closed">
+            <span class="hours__day">Sunday</span>
+            <span class="hours__time">Closed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title">READY FOR A FRESH CUT?</h2>
+      <p>Book your appointment online and experience classic barbering at Cervus.</p>
+      <a href="https://mero.ro/p/cervus-barbershop" target="_blank" rel="noopener" class="btn btn-dark">Book Now</a>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <h3>CERVUS <span>BARBERSHOP</span></h3>
+        <p>Old school classic barbershop in Sector 2, Bucharest. Traditional cuts, beard styling, and hot towel shaves since 2022.</p>
+      </div>
+      <div class="footer__links">
+        <h4>QUICK LINKS</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#hours">Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>CONTACT</h4>
+        <p>Calea Mosilor nr 127</p>
+        <p>Sector 2, Bucharest</p>
+        <p><a href="tel:+40723692323">0723.69.23.23</a></p>
+        <p><a href="mailto:cervusbarbershop@gmail.com">cervusbarbershop@gmail.com</a></p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/cervusbarbershop" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          <a href="https://www.instagram.com/cervusbarbershop.ro/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.youtube.com/channel/UC_wzgrKHkSHDN_w_PEo7lqA" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 Cervus Barbershop. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header scroll effect
+const header = document.querySelector('.header');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  header.classList.toggle('scrolled', currentScroll > 50);
+  lastScroll = currentScroll;
+}, { passive: true });
+
+// Mobile menu
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.header__nav');
+menuToggle.addEventListener('click', () => {
+  const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+  menuToggle.setAttribute('aria-expanded', !isOpen);
+  nav.classList.toggle('active');
+});
+
+// Close menu on link click
+document.querySelectorAll('.header__nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('active');
+  });
+});
+
+// Close menu on escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && nav.classList.contains('active')) {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('active');
+    menuToggle.focus();
+  }
+});
+</script>
+</body>
+</html>

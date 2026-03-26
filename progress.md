@@ -1,29 +1,31 @@
 # DAG Progress
 
-**Run ID**: bc5320f2-913c-4051-976a-b0e3b54980fc
-**Created**: 2026-03-24 20:07 UTC
+**Run ID**: 1a90eea8-c9e8-4120-b92a-2fe0bd24c4c0
+**Created**: 2026-03-26 14:38 UTC
 
 ---
 
 # Quick Summary
 
-- Build a single-page website for "The Barber" barbershop located in Titulescu, Sector 1
-- Design should reflect basic, text-heavy style with simple layout matching the original WordPress theme
-- No fancy animations or modern design elements - keep it straightforward and functional
-- Content to be extracted from https://www.thebarber.ro/
-- QA validation followed by deployment
+- Rebuild Cervus Barbershop website to replace messy WordPress with clean, professional design
+- Fix mixed RO/EN text issues and broken formatting throughout the site
+- Create bilingual barbershop website with proper language separation
+- Ensure old-school barbershop aesthetic appropriate for business opened in 2022
+- Deploy functional, well-tested replacement site
 
 # Plan
 
-- Website Coder scrapes content from https://www.thebarber.ro/ and builds a clean, basic single-page HTML site
-- Website Coder creates simple CSS with no animations, focusing on readability and text-heavy layout
-- QA Engineer validates HTML, checks responsiveness, verifies all content is accurate
-- Deploy Agent publishes the completed site
+- Website Coder analyzes existing site structure and content from cervusbarbershop.ro
+- Website Coder builds clean replacement with proper RO/EN language handling
+- Website Coder ensures all menu/service data is properly formatted (not raw)
+- QA Engineer tests functionality, language switching, responsive design, and content accuracy
+- QA Engineer verifies all formatting issues from original site are resolved
+- Deploy Agent publishes validated site
 
 # Global Notes
 
-- **Constraints**: Basic WordPress theme style, text-heavy service descriptions, simple layout, no fancy animations or modern design elements
-- **Verified from source**: 3 locations (Titulescu, Vitan, Unirii), phone 0754-634-300, email thebarberromania@gmail.com, hours Mon-Sat 10-20
+- **Constraints**: Must serve Sector 2 (Carol I / Calea Moșilor intersection) area; bilingual RO/EN support required; barbershop business context
+- **Verified from source**: Address: Calea Mosilor nr 127, Sector 2; Phone: 0723.69.23.23; Email: cervusbarbershop@gmail.com; Hours: Mon-Fri 9-20, Sat 9-18, Sun closed
 
 # Agent Checklists
 
@@ -31,51 +33,50 @@
 
 ### Checklist
 
-- [x] Fetch and analyze content from https://www.thebarber.ro/
-- [x] Extract business name, services, prices, contact info, address, hours
-- [x] Create index.html with basic, clean structure
-- [x] Implement simple CSS - no animations, no fancy effects
-- [x] Use text-heavy layout with clear service descriptions
-- [x] Include all contact information and location details
-- [x] Ensure mobile responsiveness with simple media queries
-- [x] Add appropriate meta tags and page title
+- [x] Fetch and analyze current cervusbarbershop.ro/en_us/ content structure
+- [x] Extract all services, pricing, and business information from existing site
+- [x] Create clean HTML/CSS with proper bilingual (RO/EN) separation
+- [x] Fix all raw menu data display issues with proper formatting
+- [x] Implement old-school barbershop aesthetic appropriate for the brand
+- [x] Include location info for Sector 2 (Carol I / Calea Moșilor area)
+- [x] Ensure responsive design for mobile and desktop
+- [x] Document any missing content or assets that could not be retrieved
 
 ### Agent Updates
 
-**2026-03-24 20:10 UTC**: Website complete at `workspace/sites/the-barber/index.html`
+**2026-03-26 14:45 UTC**: Website complete at `workspace/sites/cervus-barbershop/`
 
-**Data extracted from thebarber.ro:**
-- Business name: The Barber
-- Phone: 0754-634-300 (all locations)
-- Email: thebarberromania@gmail.com
-- Hours: Mon-Sat 10:00-20:00, Sun closed
-- Locations:
-  1. Titulescu: Bd. Alexandru Ioan Cuza Nr. 105 (Setmore booking)
-  2. Vitan: Str. Foișorului Nr. 107-109A (Mero.ro booking)
-  3. Unirii: Bd. Corneliu Coposu Nr. 35
+**Data extracted from cervusbarbershop.ro:**
+- Business name: Cervus Barbershop (Est. 2022)
+- Address: Calea Mosilor nr 127, Sector 2, Bucharest
+- Phone: 0723.69.23.23
+- Email: cervusbarbershop@gmail.com
+- Hours: Mon-Fri 09:00-20:00, Sat 09:00-18:00, Sun closed
+- Booking: mero.ro/p/cervus-barbershop
+- Team: Vicentiu Niga (Master Barber)
+- Social: Facebook, Instagram, YouTube
 
 **Services (6):**
-1. Tuns The Barber - basic haircut with scissors/clipper + styling
-2. Executive Haircut - premium with skin fade, wash, scalp massage
-3. Executive Shave - traditional barbering, warm towel, straight razor
-4. Beard Trim - shaping with warm towel technique
-5. Tuns și Aranjat Barbă - full beard cutting and grooming
-6. Gentleman's Package - combo haircut + beard trim
+1. Classic Cut - 70 LEI (haircut + styling)
+2. Complex Cut - 100 LEI (long hair/skin fade, wash, massage, styling)
+3. Beard Trim - 50 LEI
+4. Cut + Beard - 100 LEI
+5. Complex + Beard - 130 LEI
+6. Traditional Shave - 80 LEI (hot towel treatment)
 
 **Design implemented:**
-- **Color scheme**: Black (#1a1a1a), brown accent (#8b4513), light gray (#f5f5f5)
-- **Typography**: Georgia serif - classic, text-heavy feel as requested
-- **Layout**: Basic WordPress-style with bordered sections, centered content
-- **Sections**: Header, Hero (phone CTA), About, Services (text-heavy list), Locations (3 cards), Hours, Contact, CTA, Footer
-- **No animations**: As specified, simple hover states only
-- **Accessibility**: Skip link, semantic HTML, ARIA labels
-- **Mobile**: Simple responsive breakpoints at 600px
+- **Color scheme**: Dark charcoal (#292b2b), gold accent (#efba6c), cream (#f8f5f0)
+- **Typography**: Oswald (headings), Lora (serif accents), Inter (body)
+- **Layout**: Old school classic barbershop aesthetic with modern responsiveness
+- **Sections**: Hero, Info Strip, About, Services (6 cards), Team, Location (with map), Hours, CTA, Footer
+- **Accessibility**: Skip link, ARIA labels, semantic HTML, reduced motion support
+- **Mobile**: Full responsive design with hamburger menu
 - **SEO**: Meta tags, Open Graph, JSON-LD BarberShop schema
 
 **Files created:**
-- `workspace/sites/the-barber/index.html` (full website)
-- `workspace/sites/the-barber/outgoing_email.txt` (plain text email)
-- `workspace/sites/the-barber/outgoing_email.html` (HTML email)
+- `workspace/sites/cervus-barbershop/index.html` (full website)
+- `workspace/sites/cervus-barbershop/outgoing_email.txt` (plain text email)
+- `workspace/sites/cervus-barbershop/outgoing_email.html` (HTML email)
 
 Ready for QA review.
 
@@ -83,12 +84,14 @@ Ready for QA review.
 
 ### Checklist
 
-- [ ] Validate HTML passes W3C validation
-- [ ] Verify all content matches source website
-- [ ] Test responsive layout on mobile/tablet/desktop viewports
-- [ ] Check all links and contact information are correct
-- [ ] Confirm design is basic and text-focused as specified
-- [ ] Verify no unnecessary animations or complex effects present
+- [ ] Verify all pages render without broken formatting
+- [ ] Test language switching between RO and EN versions
+- [ ] Confirm no mixed RO/EN text on same page sections
+- [ ] Validate all service/menu data displays correctly (not raw)
+- [ ] Test responsive design across device sizes
+- [ ] Verify contact and location information accuracy
+- [ ] Check all links and navigation function properly
+- [ ] Document any issues for Website Coder to address
 
 ### Agent Updates
 
@@ -98,10 +101,11 @@ Ready for QA review.
 
 ### Checklist
 
-- [ ] Verify QA Engineer has approved the site
-- [ ] Deploy site to workspace/sites/the-barber/
-- [ ] Confirm all files are in place
-- [ ] Update main progress.md with completion status
+- [ ] Confirm QA Engineer has approved the build
+- [ ] Deploy website to production environment
+- [ ] Verify live site matches QA-approved version
+- [ ] Confirm site is accessible at expected URL
+- [ ] Document deployment completion with timestamp
 
 ### Agent Updates
 
