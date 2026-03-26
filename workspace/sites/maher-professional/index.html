@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maher Profesional | Salon pentru Bărbați București Sector 2</title>
+<meta name="description" content="Maher Profesional - salon pentru bărbați în București, Sector 2. Tuns, bărbierit, tratamente faciale. Echipă de profesioniști cu experiență. Șos. Ștefan cel Mare 35.">
+<meta name="keywords" content="frizerie, salon barbati, tuns, bărbierit, București, Sector 2, Ștefan cel Mare, Maher, grooming">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.maher.ro/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Maher Profesional | Salon pentru Bărbați București">
+<meta property="og:description" content="Salon profesional pentru bărbați în București. Tuns, bărbierit, tratamente. Programări: 0734 297 274.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/*──────────────────────────────────────────────
+  MAHER PROFESIONAL - Premium Black & Gold Design
+  Colors: Black, gold, white
+──────────────────────────────────────────────*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --black: #0a0a0a;
+  --black-light: #1a1a1a;
+  --black-lighter: #252525;
+  --gold: #c9a962;
+  --gold-light: #d9be7d;
+  --gold-dark: #b08d45;
+  --white: #ffffff;
+  --cream: #f8f6f2;
+  --text-light: rgba(255,255,255,0.85);
+  --text-muted: rgba(255,255,255,0.6);
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+
+  --radius: 4px;
+  --radius-lg: 8px;
+  --shadow: 0 10px 40px rgba(0,0,0,0.3);
+  --shadow-gold: 0 10px 40px rgba(201,169,98,0.2);
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Montserrat', -apple-system, sans-serif;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--white);background:var(--black)}
+.container{max-width:1200px;margin:0 auto;padding:0 var(--space-md)}
+section{padding:var(--space-xl) 0}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.2}
+h4,h5,h6{font-family:var(--font-body);font-weight:600}
+a{color:var(--gold);text-decoration:none;transition:color 0.3s}
+a:hover{color:var(--gold-light)}
+img{max-width:100%;display:block}
+
+/* Skip link */
+.skip-link{position:absolute;top:-100px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--black);padding:var(--space-sm) var(--space-md);z-index:9999;border-radius:var(--radius);font-weight:600}
+.skip-link:focus{top:10px;color:var(--black)}
+
+/* ─── HEADER ─── */
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:100;
+  padding:var(--space-sm) 0;
+  background:transparent;
+  transition:all 0.4s;
+}
+.header.scrolled{
+  background:rgba(10,10,10,0.95);
+  backdrop-filter:blur(10px);
+}
+.header .container{display:flex;justify-content:space-between;align-items:center}
+.header__logo{
+  font-family:var(--font-display);
+  font-size:1.6rem;
+  color:var(--white);
+  font-weight:700;
+  letter-spacing:2px;
+}
+.header__logo span{color:var(--gold)}
+.header__nav{display:flex;gap:var(--space-md);list-style:none}
+.header__nav a{
+  color:var(--text-light);
+  font-size:0.8rem;
+  font-weight:500;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  padding:var(--space-xs) 0;
+  position:relative;
+}
+.header__nav a::after{
+  content:'';
+  position:absolute;
+  bottom:-2px;left:0;right:0;
+  height:1px;
+  background:var(--gold);
+  transform:scaleX(0);
+  transition:transform 0.3s;
+}
+.header__nav a:hover,.header__nav a:focus{color:var(--gold)}
+.header__nav a:hover::after,.header__nav a:focus::after{transform:scaleX(1)}
+.header__cta{
+  background:transparent;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  padding:var(--space-xs) var(--space-md);
+  font-size:0.75rem;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  transition:all 0.3s;
+}
+.header__cta:hover{background:var(--gold);color:var(--black)}
+
+/* Mobile menu */
+.menu-toggle{
+  display:none;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:var(--space-xs);
+}
+.menu-toggle span{
+  display:block;
+  width:26px;
+  height:1px;
+  background:var(--white);
+  margin:7px 0;
+  transition:all 0.3s;
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:rotate(-45deg) translate(7px,-6px)}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  padding-top:80px;
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse at center, rgba(201,169,98,0.1) 0%, transparent 60%),
+    linear-gradient(180deg, var(--black) 0%, var(--black-light) 100%);
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  top:20%;left:50%;
+  width:1px;height:100px;
+  background:linear-gradient(to bottom, transparent, var(--gold), transparent);
+  opacity:0.3;
+}
+.hero__content{position:relative;z-index:2;max-width:800px;padding:var(--space-md)}
+.hero__subtitle{
+  font-size:0.75rem;
+  font-weight:500;
+  letter-spacing:6px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:var(--space-md);
+}
+.hero h1{
+  font-size:clamp(3rem,10vw,6rem);
+  color:var(--white);
+  margin-bottom:var(--space-xs);
+  letter-spacing:4px;
+}
+.hero h1 span{
+  display:block;
+  font-size:clamp(1.5rem,4vw,2.5rem);
+  color:var(--gold);
+  font-weight:500;
+  letter-spacing:8px;
+  margin-top:var(--space-xs);
+}
+.hero__tagline{
+  font-family:var(--font-display);
+  font-size:1.3rem;
+  font-style:italic;
+  color:var(--text-muted);
+  margin:var(--space-md) 0 var(--space-lg);
+}
+.hero__cta{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--black);
+  padding:var(--space-sm) var(--space-lg);
+  font-size:0.8rem;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  transition:all 0.4s;
+}
+.hero__cta:hover{
+  background:var(--gold-light);
+  color:var(--black);
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-gold);
+}
+
+/* ─── SECTION STYLING ─── */
+.section-header{
+  text-align:center;
+  margin-bottom:var(--space-lg);
+}
+.section-header__label{
+  font-size:0.7rem;
+  font-weight:500;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:var(--space-sm);
+}
+.section-header h2{
+  font-size:clamp(2rem,5vw,3.5rem);
+  color:var(--white);
+  letter-spacing:2px;
+}
+.section-header p{
+  color:var(--text-muted);
+  font-size:1rem;
+  max-width:500px;
+  margin:var(--space-sm) auto 0;
+}
+.section-divider{
+  width:60px;
+  height:1px;
+  background:var(--gold);
+  margin:var(--space-sm) auto 0;
+}
+
+/* ─── ABOUT ─── */
+.about{background:var(--black-light)}
+.about__grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--space-lg);
+  align-items:center;
+}
+.about__content{padding-right:var(--space-md)}
+.about__label{
+  font-size:0.7rem;
+  font-weight:500;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:var(--space-sm);
+}
+.about__content h2{
+  font-size:clamp(2rem,4vw,3rem);
+  margin-bottom:var(--space-md);
+  letter-spacing:1px;
+}
+.about__text{
+  color:var(--text-muted);
+  margin-bottom:var(--space-sm);
+  line-height:1.9;
+}
+.about__visual{
+  position:relative;
+  height:500px;
+  background:var(--black-lighter);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.about__visual::before{
+  content:'';
+  position:absolute;
+  inset:20px;
+  border:1px solid var(--gold);
+  opacity:0.3;
+}
+.about__icon{
+  font-size:8rem;
+  color:var(--gold);
+  opacity:0.15;
+}
+
+/* ─── TEAM ─── */
+.team{background:var(--black)}
+.team__grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:var(--space-lg);
+  max-width:800px;
+  margin:0 auto;
+}
+.team-card{
+  text-align:center;
+  padding:var(--space-lg);
+  background:var(--black-light);
+  transition:all 0.4s;
+}
+.team-card:hover{transform:translateY(-10px);box-shadow:var(--shadow)}
+.team-card__image{
+  width:150px;
+  height:150px;
+  background:var(--black-lighter);
+  border-radius:50%;
+  margin:0 auto var(--space-md);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:2px solid var(--gold);
+}
+.team-card__icon{
+  font-size:3rem;
+  color:var(--gold);
+  opacity:0.4;
+}
+.team-card h3{
+  font-size:1.5rem;
+  margin-bottom:var(--space-xs);
+  letter-spacing:2px;
+}
+.team-card__role{
+  font-size:0.75rem;
+  font-weight:500;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:var(--space-sm);
+}
+.team-card__phone{
+  font-size:1rem;
+  color:var(--text-light);
+}
+.team-card__phone a{color:var(--text-light)}
+.team-card__phone a:hover{color:var(--gold)}
+
+/* ─── SERVICES ─── */
+.services{background:var(--black-light)}
+.services__grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:var(--space-md);
+}
+.service-card{
+  background:var(--black);
+  padding:var(--space-md);
+  transition:all 0.4s;
+  border-left:2px solid transparent;
+  position:relative;
+}
+.service-card:hover{
+  border-left-color:var(--gold);
+  transform:translateX(10px);
+}
+.service-card__header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:var(--space-sm);
+}
+.service-card h3{
+  font-family:var(--font-body);
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:1px;
+}
+.service-card__price{
+  font-family:var(--font-display);
+  font-size:1.5rem;
+  color:var(--gold);
+  white-space:nowrap;
+}
+.service-card__price span{
+  font-size:0.8rem;
+  color:var(--text-muted);
+}
+.service-card p{
+  font-size:0.9rem;
+  color:var(--text-muted);
+  line-height:1.6;
+}
+
+/* Premium Package */
+.premium-package{
+  background:linear-gradient(135deg,var(--black-lighter) 0%,var(--black) 100%);
+  padding:var(--space-lg);
+  text-align:center;
+  margin-top:var(--space-lg);
+  position:relative;
+  border:1px solid rgba(201,169,98,0.2);
+}
+.premium-package::before{
+  content:'PREMIUM';
+  position:absolute;
+  top:0;left:50%;
+  transform:translate(-50%,-50%);
+  background:var(--gold);
+  color:var(--black);
+  font-size:0.65rem;
+  font-weight:700;
+  letter-spacing:3px;
+  padding:var(--space-xs) var(--space-sm);
+}
+.premium-package h3{
+  font-size:1.8rem;
+  margin-bottom:var(--space-sm);
+  letter-spacing:3px;
+}
+.premium-package__price{
+  font-family:var(--font-display);
+  font-size:3rem;
+  color:var(--gold);
+  margin-bottom:var(--space-sm);
+}
+.premium-package__price span{
+  font-size:1rem;
+  color:var(--text-muted);
+}
+.premium-package p{
+  color:var(--text-muted);
+  max-width:500px;
+  margin:0 auto;
+}
+
+/* Products Section */
+.products{
+  margin-top:var(--space-lg);
+  padding-top:var(--space-lg);
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+.products h3{
+  text-align:center;
+  font-size:1.3rem;
+  margin-bottom:var(--space-md);
+  letter-spacing:2px;
+}
+.products__list{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:var(--space-md);
+}
+.product-tag{
+  background:var(--black);
+  padding:var(--space-sm) var(--space-md);
+  font-size:0.85rem;
+  color:var(--text-light);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:all 0.3s;
+}
+.product-tag:hover{border-color:var(--gold);color:var(--gold)}
+.product-tag span{color:var(--gold);margin-left:var(--space-xs)}
+
+/* ─── LOCATION ─── */
+.location{background:var(--black)}
+.location__grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--space-lg);
+  align-items:center;
+}
+.location__info h2{
+  font-size:clamp(2rem,4vw,3rem);
+  margin-bottom:var(--space-md);
+  letter-spacing:1px;
+}
+.location__detail{
+  display:flex;
+  gap:var(--space-sm);
+  margin-bottom:var(--space-md);
+  padding-bottom:var(--space-md);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.location__detail:last-of-type{border-bottom:none}
+.location__icon{
+  width:50px;
+  height:50px;
+  background:var(--gold);
+  color:var(--black);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  font-size:1.2rem;
+}
+.location__text h4{
+  font-size:0.7rem;
+  font-weight:500;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:var(--space-xs);
+}
+.location__text p{
+  font-size:1rem;
+  color:var(--text-light);
+}
+.location__text a{color:var(--text-light)}
+.location__text a:hover{color:var(--gold)}
+.location__map{
+  height:450px;
+  background:var(--black-light);
+  overflow:hidden;
+}
+.location__map iframe{width:100%;height:100%;border:0;filter:grayscale(100%) invert(90%)}
+
+/* ─── HOURS ─── */
+.hours{
+  background:var(--black-light);
+  padding:var(--space-lg) 0;
+}
+.hours .container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:var(--space-md);
+}
+.hours__text h3{
+  font-size:1.5rem;
+  margin-bottom:var(--space-xs);
+  letter-spacing:2px;
+}
+.hours__text p{color:var(--text-muted)}
+.hours__schedule{
+  display:flex;
+  gap:var(--space-lg);
+}
+.hours__day{text-align:center}
+.hours__day-label{
+  font-size:0.7rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:var(--space-xs);
+}
+.hours__day-time{
+  font-family:var(--font-display);
+  font-size:1.3rem;
+  color:var(--gold);
+}
+.hours__closed{color:var(--text-muted);opacity:0.5}
+
+/* ─── CTA ─── */
+.cta{
+  background:linear-gradient(135deg,var(--gold-dark) 0%,var(--gold) 100%);
+  color:var(--black);
+  text-align:center;
+  padding:var(--space-xl) 0;
+}
+.cta h2{
+  font-size:clamp(2rem,5vw,3rem);
+  color:var(--black);
+  margin-bottom:var(--space-sm);
+  letter-spacing:2px;
+}
+.cta p{
+  font-size:1rem;
+  opacity:0.8;
+  margin-bottom:var(--space-md);
+}
+.cta__btn{
+  display:inline-block;
+  background:var(--black);
+  color:var(--gold);
+  padding:var(--space-sm) var(--space-lg);
+  font-size:0.8rem;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  transition:all 0.4s;
+}
+.cta__btn:hover{
+  background:var(--black-light);
+  color:var(--gold);
+  transform:translateY(-3px);
+}
+
+/* ─── FOOTER ─── */
+.footer{
+  background:var(--black);
+  color:var(--text-muted);
+  padding:var(--space-lg) 0 var(--space-md);
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+.footer__grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:var(--space-lg);
+  margin-bottom:var(--space-lg);
+}
+.footer__brand h3{
+  font-family:var(--font-display);
+  font-size:1.5rem;
+  color:var(--white);
+  margin-bottom:var(--space-sm);
+  letter-spacing:2px;
+}
+.footer__brand h3 span{color:var(--gold)}
+.footer__brand p{
+  font-size:0.9rem;
+  line-height:1.7;
+  max-width:280px;
+}
+.footer__links h4,.footer__contact h4{
+  font-size:0.7rem;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:var(--space-sm);
+}
+.footer__links ul{list-style:none}
+.footer__links li{margin-bottom:var(--space-xs)}
+.footer__links a{
+  font-size:0.9rem;
+  color:var(--text-muted);
+}
+.footer__links a:hover{color:var(--gold)}
+.footer__contact p{
+  font-size:0.9rem;
+  margin-bottom:var(--space-xs);
+}
+.footer__social{
+  display:flex;
+  gap:var(--space-sm);
+  margin-top:var(--space-sm);
+}
+.footer__social a{
+  width:40px;
+  height:40px;
+  background:var(--black-light);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:0.9rem;
+  color:var(--text-muted);
+  transition:all 0.3s;
+}
+.footer__social a:hover{background:var(--gold);color:var(--black)}
+.footer__bottom{
+  text-align:center;
+  padding-top:var(--space-md);
+  border-top:1px solid rgba(255,255,255,0.05);
+  font-size:0.85rem;
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1024px){
+  .footer__grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .about__grid,.location__grid{grid-template-columns:1fr}
+  .about__visual,.location__map{height:350px;margin-top:var(--space-md)}
+  .about__content{padding-right:0}
+}
+@media(max-width:768px){
+  .menu-toggle{display:block}
+  .header__nav{
+    position:fixed;
+    top:0;right:-280px;
+    width:280px;
+    height:100vh;
+    background:var(--black);
+    flex-direction:column;
+    justify-content:center;
+    padding:var(--space-lg);
+    gap:var(--space-md);
+    transition:right 0.4s;
+    box-shadow:var(--shadow);
+  }
+  .header__nav.active{right:0}
+  .header__nav a{font-size:1rem;letter-spacing:3px}
+  .header__cta{display:none}
+  .team__grid{grid-template-columns:1fr}
+  .hours .container{flex-direction:column;text-align:center}
+  .hours__schedule{flex-direction:column;gap:var(--space-sm)}
+  .footer__grid{grid-template-columns:1fr;text-align:center}
+  .footer__brand p{margin:0 auto var(--space-md)}
+  .footer__social{justify-content:center}
+}
+@media(max-width:500px){
+  .services__grid{grid-template-columns:1fr}
+  .products__list{flex-direction:column;align-items:center}
+}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms!important;
+    transition-duration:0.01ms!important;
+  }
+  html{scroll-behavior:auto}
+}
+</style>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  "name": "Maher Profesional",
+  "description": "Salon profesional pentru bărbați în București, Sector 2. Servicii de tuns, bărbierit, tratamente faciale și grooming complet.",
+  "url": "https://www.maher.ro/",
+  "telephone": ["+40734297274", "+40733763372"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Șos. Ștefan cel Mare nr. 35",
+    "addressLocality": "București",
+    "addressRegion": "Sector 2",
+    "addressCountry": "RO"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "11:00",
+      "closes": "20:00"
+    }
+  ],
+  "priceRange": "50-500 RON",
+  "sameAs": [
+    "https://www.facebook.com/SalonMaher",
+    "https://www.instagram.com/haser.maher/"
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Salt la conținut</a>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <a href="#" class="header__logo">MAHER <span>PROFESIONAL</span></a>
+    <button type="button" class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" class="header__nav" aria-label="Navigare principală">
+      <a href="#about">Despre</a>
+      <a href="#team">Echipă</a>
+      <a href="#services">Servicii</a>
+      <a href="#location">Contact</a>
+    </nav>
+    <a href="tel:+40734297274" class="header__cta">Programare</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__content">
+      <p class="hero__subtitle">Salon pentru Bărbați</p>
+      <h1 id="hero-title">MAHER<span>PROFESIONAL</span></h1>
+      <p class="hero__tagline">"Servicii de excepție pentru bărbatul modern"</p>
+      <a href="tel:+40734297274" class="hero__cta">Programează-te Acum</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__content">
+          <p class="about__label">Despre Noi</p>
+          <h2 id="about-title">Un Salon de Clasă</h2>
+          <p class="about__text">
+            Maher Profesional este un salon dedicat exclusiv bărbaților, situat în inima
+            Bucureștiului pe Șoseaua Ștefan cel Mare. Oferim o gamă completă de servicii
+            de grooming într-un mediu rafinat și profesionist.
+          </p>
+          <p class="about__text">
+            Echipa noastră de experți combină tehnicile tradiționale cu tendințele moderne
+            pentru a oferi fiecărui client o experiență personalizată și rezultate impecabile.
+          </p>
+        </div>
+        <div class="about__visual">
+          <div class="about__icon" aria-hidden="true">✂</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="team" aria-labelledby="team-title">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-header__label">Echipa Noastră</p>
+        <h2 id="team-title">Experți cu Experiență</h2>
+        <div class="section-divider" role="presentation"></div>
+      </header>
+      <div class="team__grid">
+        <article class="team-card">
+          <div class="team-card__image">
+            <div class="team-card__icon" aria-hidden="true">👤</div>
+          </div>
+          <h3>MAHER</h3>
+          <p class="team-card__role">Expert Stilist</p>
+          <p class="team-card__phone"><a href="tel:+40734297274">0734 297 274</a></p>
+        </article>
+        <article class="team-card">
+          <div class="team-card__image">
+            <div class="team-card__icon" aria-hidden="true">👤</div>
+          </div>
+          <h3>OSAMA</h3>
+          <p class="team-card__role">Expert Stilist</p>
+          <p class="team-card__phone"><a href="tel:+40733763372">0733 763 372</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services" aria-labelledby="services-title">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-header__label">Serviciile Noastre</p>
+        <h2 id="services-title">Meniu și Prețuri</h2>
+        <p>Servicii profesionale de grooming pentru bărbați</p>
+        <div class="section-divider" role="presentation"></div>
+      </header>
+      <div class="services__grid">
+        <article class="service-card">
+          <div class="service-card__header">
+            <h3>Tuns cu Spălat și Styling</h3>
+            <span class="service-card__price">150 <span>RON</span></span>
+          </div>
+          <p>Tunsoare profesională inclusiv spălare și aranjare finală cu produse premium.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-card__header">
+            <h3>Tuns + Barbă + Styling</h3>
+            <span class="service-card__price">180 <span>RON</span></span>
+          </div>
+          <p>Pachet complet: tunsoare, aranjat barbă, spălare și styling profesionist.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-card__header">
+            <h3>Aranjat Barbă cu Contur</h3>
+            <span class="service-card__price">100 <span>RON</span></span>
+          </div>
+          <p>Conturare și aranjare completă a bărbii pentru un aspect îngrijit și definit.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-card__header">
+            <h3>Vopsit Barbă</h3>
+            <span class="service-card__price">50 <span>RON</span></span>
+          </div>
+          <p>Colorare profesională pentru o barbă uniformă și cu aspect natural.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-card__header">
+            <h3>Serviciu la Domiciliu</h3>
+            <span class="service-card__price">2.500 <span>RON</span></span>
+          </div>
+          <p>Tuns și aranjat barbă în confortul casei tale. Serviciu premium VIP.</p>
+        </article>
+      </div>
+
+      <!-- Groom Package -->
+      <div class="premium-package">
+        <h3>GROOM PACKAGE</h3>
+        <div class="premium-package__price">500 <span>RON</span></div>
+        <p>Experiența completă de grooming: tuns, aranjat barbă, vopsit, tratament facial și styling. Pachetul suprem pentru bărbatul modern.</p>
+      </div>
+
+      <!-- Products -->
+      <div class="products">
+        <h3>Produse Disponibile</h3>
+        <div class="products__list">
+          <div class="product-tag">Gel de păr <span>60-100 RON</span></div>
+          <div class="product-tag">Ceară mată <span>80-120 RON</span></div>
+          <div class="product-tag">Ulei pentru barbă <span>80-150 RON</span></div>
+          <div class="product-tag">Șampon profesional <span>100-200 RON</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="location" aria-labelledby="location-title">
+    <div class="container">
+      <div class="location__grid">
+        <div class="location__info">
+          <h2 id="location-title">Găsește-ne</h2>
+          <div class="location__detail">
+            <div class="location__icon" aria-hidden="true">📍</div>
+            <div class="location__text">
+              <h4>Adresă</h4>
+              <p>Șos. Ștefan cel Mare nr. 35<br>Sector 2, București</p>
+            </div>
+          </div>
+          <div class="location__detail">
+            <div class="location__icon" aria-hidden="true">📞</div>
+            <div class="location__text">
+              <h4>Telefon</h4>
+              <p>
+                <a href="tel:+40734297274">Maher: 0734 297 274</a><br>
+                <a href="tel:+40733763372">Osama: 0733 763 372</a>
+              </p>
+            </div>
+          </div>
+          <div class="location__detail">
+            <div class="location__icon" aria-hidden="true">📱</div>
+            <div class="location__text">
+              <h4>Social Media</h4>
+              <p>
+                <a href="https://www.facebook.com/SalonMaher" target="_blank" rel="noopener">Facebook: SalonMaher</a><br>
+                <a href="https://www.instagram.com/haser.maher/" target="_blank" rel="noopener">Instagram: @haser.maher</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="location__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.2!2d26.1105!3d44.4555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zU29zLiBTdGVmYW4gY2VsIE1hcmUgMzU!5e0!3m2!1sro!2sro!4v1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Locația Maher Profesional">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours -->
+  <section class="hours" aria-labelledby="hours-title">
+    <div class="container">
+      <div class="hours__text">
+        <h3 id="hours-title">Program de Lucru</h3>
+        <p>Te așteptăm cu programare prealabilă</p>
+      </div>
+      <div class="hours__schedule">
+        <div class="hours__day">
+          <div class="hours__day-label">Luni</div>
+          <div class="hours__day-time">11:00 - 20:00</div>
+        </div>
+        <div class="hours__day">
+          <div class="hours__day-label">Marți</div>
+          <div class="hours__day-time hours__closed">Închis</div>
+        </div>
+        <div class="hours__day">
+          <div class="hours__day-label">Mie - Sâm</div>
+          <div class="hours__day-time">11:00 - 20:00</div>
+        </div>
+        <div class="hours__day">
+          <div class="hours__day-label">Duminică</div>
+          <div class="hours__day-time hours__closed">Închis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title">Programează-te Astăzi</h2>
+      <p>Sună pentru o programare și experimentează servicii de excepție.</p>
+      <a href="tel:+40734297274" class="cta__btn">0734 297 274</a>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <h3>MAHER <span>PROFESIONAL</span></h3>
+        <p>Salon profesional pentru bărbați în București, Sector 2. Servicii de grooming de excepție pentru bărbatul modern.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Link-uri</h4>
+        <ul>
+          <li><a href="#about">Despre Noi</a></li>
+          <li><a href="#team">Echipă</a></li>
+          <li><a href="#services">Servicii</a></li>
+          <li><a href="#location">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contact</h4>
+        <p>Șos. Ștefan cel Mare 35</p>
+        <p>Sector 2, București</p>
+        <p><a href="tel:+40734297274">0734 297 274</a></p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/SalonMaher" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          <a href="https://www.instagram.com/haser.maher/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 Maher Profesional. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header scroll effect
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.pageYOffset > 50);
+}, { passive: true });
+
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.header__nav');
+
+menuToggle.addEventListener('click', () => {
+  const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+  menuToggle.setAttribute('aria-expanded', !isOpen);
+  nav.classList.toggle('active');
+});
+
+// Close menu on link click
+document.querySelectorAll('.header__nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('active');
+  });
+});
+
+// Close menu on escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && nav.classList.contains('active')) {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('active');
+    menuToggle.focus();
+  }
+});
+</script>
+</body>
+</html>
